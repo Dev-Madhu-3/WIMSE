@@ -1,0 +1,38 @@
+.home {
+
+    /* background-image: url("https://res.cloudinary.com/dpk6qsn0e/image/upload/v1725721072/smiling-brunette-with-textbook_wj3mtt.jpg"); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.home-heading {
+    background-color: rgba(255, 255, 255, 0.212);
+    width: auto;
+}
+
+.home h1 {
+    font-size: 30px;
+    color: rgb(41, 10, 10);
+    margin: 0;
+}
+
+.home p {
+    color: rgb(0, 136, 25);
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.slider-container {
+    width: 90%;
+    height: 80vh;
+    background-color: aqua;
+}
+
+img {
+    height: 100%;
+}
