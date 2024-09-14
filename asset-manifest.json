@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/WIMSE/static/css/main.02448254.css",
+    "main.css": "/WIMSE/static/css/main.d38398f6.css",
     "main.js": "/WIMSE/static/js/main.e74521f8.js",
     "static/js/453.cd81bcd0.chunk.js": "/WIMSE/static/js/453.cd81bcd0.chunk.js",
     "static/media/EDUCATIONAL CONSULTANCY.png": "/WIMSE/static/media/EDUCATIONAL CONSULTANCY.f698f9b857e0190baf8f.png",
@@ -9,12 +9,12 @@
     "static/media/slick.ttf": "/WIMSE/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/WIMSE/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/WIMSE/index.html",
-    "main.02448254.css.map": "/WIMSE/static/css/main.02448254.css.map",
+    "main.d38398f6.css.map": "/WIMSE/static/css/main.d38398f6.css.map",
     "main.e74521f8.js.map": "/WIMSE/static/js/main.e74521f8.js.map",
     "453.cd81bcd0.chunk.js.map": "/WIMSE/static/js/453.cd81bcd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02448254.css",
+    "static/css/main.d38398f6.css",
     "static/js/main.e74521f8.js"
   ]
 }
