@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons from react-icons
 import './index.css'
+import logoImg from "../../assets/EDUCATIONAL CONSULTANCY.png"
 
 
 function Header() {
@@ -12,7 +13,7 @@ function Header() {
     }
     return (
         <nav className='navbar'>
-            <img className='logo' src='' alt='LOGO' />
+            <img className='logo' src={logoImg} alt='LOGO' />
             <ul className={isMobileMenuOpen ? 'nav-links-mobile expand' : 'nav-links'}>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
