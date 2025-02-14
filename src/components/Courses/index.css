@@ -1,0 +1,50 @@
+.institute-courses-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+}
+
+.institute-intro{
+
+}
+
+.institute-title{
+  font-size: 4rem;
+}
+
+.institute-sub-title{
+  font-size: 1rem;
+}
+
+.institute-description {
+  font-size: 0.6rem;
+  color: #000000;
+}
+
+.institute-courses{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.each-course-item{
+display: flex;
+align-items: flex-start;
+}
+.each-course-item img{
+height: 40px;
+width: 40px;
+background-color: red;
+}
+.each-course-item-text-con{
+  display: flex;
+  flex-direction: column;
+}
+.each-course-item-text-con>h3{
+  font-size: 0.8rem;
+}
+.each-course-item-text-con>p{
+  font-size: 0.6rem;
+}

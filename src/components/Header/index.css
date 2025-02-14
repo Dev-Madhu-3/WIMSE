@@ -1,37 +1,87 @@
-.navbar {
+
+.top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 50px;
     background-color: #333333;
-    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+
+  .header-left {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
 }
 
 .logo {
     width: 150px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li {
-    list-style: none;
-    margin: 0px 20px;
-
-}
-
-.nav-links li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #bababa;
-}
-
 .mobile-menu-icon {
     display: none;
 }
 
+/* Top Header Styles */
+
+  /* Sticky Header Styles */
+
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .back-now {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-now:hover {
+    background-color: #0056b3;
+  }
+  
+
 @media (max-width:768px) {
+    .top-header {
+        padding: 10px 25px;
+    }
+    .navbar {
+        padding: 10px 25px;
+    }
+    .back-now {
+        padding: 8px 15px;
+        margin: 0;
+    }
     .nav-links {
         display: none;
         align-items: center;
@@ -42,7 +92,7 @@
         font-size: 20px;
         background-color: transparent;
         border-width: 0px;
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
     .nav-links-mobile {

@@ -6,7 +6,7 @@ import './index.css'
 function Footer() {
 
     return (
-        <footer className="footer">
+        <footer id='#contact' className="footer">
             <div className="footer-content">
                 <div className="footer-section address">
                     <h4>Address</h4>

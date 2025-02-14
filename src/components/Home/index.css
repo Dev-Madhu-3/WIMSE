@@ -9,10 +9,10 @@
 
 .home-heading {
     height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
 .home h1 {
@@ -22,36 +22,13 @@
 }
 
 .home p {
-    color: rgb(0, 136, 25);
     font-size: 20px;
     font-weight: 400;
     margin-top: 10px;
     margin-right: 20px;
 }
 
-.sliders-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: visible;
-}
-.slider-container {
-    
-}
-
-.slides-image {
-    width: 100vw;
-    height: 500px;
-}
 
 @media (max-width:768px) {
-    .sliders-container {
-        height: 400px;
-    }
 
-    .slides-image {
-        width: 100vw;
-        height: 200px;
-    }
 }
