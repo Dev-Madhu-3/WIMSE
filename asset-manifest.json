@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WIMSE/static/css/main.2449a7ec.css",
-    "main.js": "/WIMSE/static/js/main.fe6af2de.js",
+    "main.css": "/WIMSE/static/css/main.becb3dfb.css",
+    "main.js": "/WIMSE/static/js/main.12ba6f7f.js",
     "static/js/453.cd81bcd0.chunk.js": "/WIMSE/static/js/453.cd81bcd0.chunk.js",
     "static/media/multiethnic-group-young-cheerful-students-walking.jpg": "/WIMSE/static/media/multiethnic-group-young-cheerful-students-walking.cdc4fc9ff724fd43260a.jpg",
     "static/media/back-school-university-concept-portrait-young-cheerful-male-student-with-dreads-hipster-going.jpg": "/WIMSE/static/media/back-school-university-concept-portrait-young-cheerful-male-student-with-dreads-hipster-going.83c95d7afb7e82b1e34b.jpg",
@@ -13,12 +13,12 @@
     "static/media/slick.ttf": "/WIMSE/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/WIMSE/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/WIMSE/index.html",
-    "main.2449a7ec.css.map": "/WIMSE/static/css/main.2449a7ec.css.map",
-    "main.fe6af2de.js.map": "/WIMSE/static/js/main.fe6af2de.js.map",
+    "main.becb3dfb.css.map": "/WIMSE/static/css/main.becb3dfb.css.map",
+    "main.12ba6f7f.js.map": "/WIMSE/static/js/main.12ba6f7f.js.map",
     "453.cd81bcd0.chunk.js.map": "/WIMSE/static/js/453.cd81bcd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2449a7ec.css",
-    "static/js/main.fe6af2de.js"
+    "static/css/main.becb3dfb.css",
+    "static/js/main.12ba6f7f.js"
   ]
 }
