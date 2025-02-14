@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/WIMSE/static/css/main.d38398f6.css",
-    "main.js": "/WIMSE/static/js/main.e74521f8.js",
+    "main.css": "/WIMSE/static/css/main.0995eb5c.css",
+    "main.js": "/WIMSE/static/js/main.7b2a56ab.js",
     "static/js/453.cd81bcd0.chunk.js": "/WIMSE/static/js/453.cd81bcd0.chunk.js",
+    "static/media/multiethnic-group-young-cheerful-students-walking.jpg": "/WIMSE/static/media/multiethnic-group-young-cheerful-students-walking.cdc4fc9ff724fd43260a.jpg",
+    "static/media/back-school-university-concept-portrait-young-cheerful-male-student-with-dreads-hipster-going.jpg": "/WIMSE/static/media/back-school-university-concept-portrait-young-cheerful-male-student-with-dreads-hipster-going.83c95d7afb7e82b1e34b.jpg",
+    "static/media/marvin-meyer-SYTO3xs06fU-unsplash.jpg": "/WIMSE/static/media/marvin-meyer-SYTO3xs06fU-unsplash.72106d2a5edd2351e75c.jpg",
+    "static/media/jason-goodman-Oalh2MojUuk-unsplash.jpg": "/WIMSE/static/media/jason-goodman-Oalh2MojUuk-unsplash.d7905af3668780dd18d1.jpg",
     "static/media/EDUCATIONAL CONSULTANCY.png": "/WIMSE/static/media/EDUCATIONAL CONSULTANCY.f698f9b857e0190baf8f.png",
     "static/media/slick.svg": "/WIMSE/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/WIMSE/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/WIMSE/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/WIMSE/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/WIMSE/index.html",
-    "main.d38398f6.css.map": "/WIMSE/static/css/main.d38398f6.css.map",
-    "main.e74521f8.js.map": "/WIMSE/static/js/main.e74521f8.js.map",
+    "main.0995eb5c.css.map": "/WIMSE/static/css/main.0995eb5c.css.map",
+    "main.7b2a56ab.js.map": "/WIMSE/static/js/main.7b2a56ab.js.map",
     "453.cd81bcd0.chunk.js.map": "/WIMSE/static/js/453.cd81bcd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d38398f6.css",
-    "static/js/main.e74521f8.js"
+    "static/css/main.0995eb5c.css",
+    "static/js/main.7b2a56ab.js"
   ]
 }
