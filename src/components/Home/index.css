@@ -15,7 +15,7 @@
     padding: 20px;
 }
 
-.home h1 {
+/* .home h1 {
     font-size: 30px;
     color: rgb(41, 10, 10);
     margin: 0;
@@ -26,7 +26,7 @@
     font-weight: 400;
     margin-top: 10px;
     margin-right: 20px;
-}
+}*/
 
 
 @media (max-width:768px) {
