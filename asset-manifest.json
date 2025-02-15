@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/WIMSE/static/css/main.9ddd166e.css",
-    "main.js": "/WIMSE/static/js/main.0303915a.js",
+    "main.css": "/WIMSE/static/css/main.b271eac4.css",
+    "main.js": "/WIMSE/static/js/main.62941146.js",
     "static/js/453.cd81bcd0.chunk.js": "/WIMSE/static/js/453.cd81bcd0.chunk.js",
-    "static/media/wimelogo.png": "/WIMSE/static/media/wimelogo.436249757674ffca07f4.png",
     "static/media/slick.svg": "/WIMSE/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/WIMSE/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/WIMSE/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/WIMSE/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/WIMSE/index.html",
-    "main.9ddd166e.css.map": "/WIMSE/static/css/main.9ddd166e.css.map",
-    "main.0303915a.js.map": "/WIMSE/static/js/main.0303915a.js.map",
+    "main.b271eac4.css.map": "/WIMSE/static/css/main.b271eac4.css.map",
+    "main.62941146.js.map": "/WIMSE/static/js/main.62941146.js.map",
     "453.cd81bcd0.chunk.js.map": "/WIMSE/static/js/453.cd81bcd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ddd166e.css",
-    "static/js/main.0303915a.js"
+    "static/css/main.b271eac4.css",
+    "static/js/main.62941146.js"
   ]
 }
