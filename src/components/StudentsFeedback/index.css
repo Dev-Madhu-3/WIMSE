@@ -1,0 +1,76 @@
+.feedback-container {
+    padding: 10px 25% 5% 25%;
+    background-color: #000000e3;
+}
+
+.feedback-container-title {
+    color: #cfcfcf;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.feedback-card {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.student-profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: aquamarine;
+}
+
+.feedback-student-text {
+    font-size: 0.8rem;
+    color: #e0e0e0;
+    max-width: 600px;
+    text-align: center;
+}
+
+.feedback-student-name {
+    color: #e04242;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.feedback-student-symbol {
+    font-size: 40px;
+    color: white;
+}
+
+.feedback-student-course {
+    color: #f4f4f4;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+@media (max-width:768px) {
+    .student-profile-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feedback-container {
+        padding: 10px 10% 5% 10%;
+    }
+
+    .feedback-student-text {
+        font-size: 0.7rem;
+    }
+
+    .feedback-student-name {
+        font-size: 0.9rem;
+    }
+
+    .feedback-student-course {
+        font-size: 0.6rem;
+    }
+}

@@ -1,7 +1,8 @@
 .mySwiper {
   width: 100%;
-  min-height: 400px;
+  min-height: 350px;
   height: 95vh;
+  background-color: var(--primary-color);
 }
 
 .slide-content {
@@ -10,12 +11,12 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   text-align: center;
   padding: 20px;
   background-size: cover;
+
 }
 
 .animated-text {
@@ -24,104 +25,12 @@
   animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 0.5s;
+  color: aliceblue;
+  background-color: rgba(36, 36, 36, 0.276);
 }
 
-.fade-in {
-  animation-name: fadeIn;
-}
-
-.slide-up {
-  animation-name: slideUp;
-}
-
-.zoom-in {
-  animation-name: zoomIn;
-}
-
-.slide-left {
-  animation-name: slideLeft;
-}
-
-.slide-right {
-  animation-name: slideRight;
-}
-
-.rotate-in {
-  animation-name: rotateIn;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes rotateIn {
-  from {
-    opacity: 0;
-    transform: rotate(-180deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: rotate(0);
-  }
-}
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .mySwiper {
-    height: 40vh;
+    height: 30vh;
   }
 }

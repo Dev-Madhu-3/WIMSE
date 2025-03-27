@@ -1,56 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Jacquarda+Bastarda+9&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+
 .footer {
-    background-color: #333;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    .footer-content {
+    background: linear-gradient(to bottom right, #dfdfdf, #8071d7, #3b269b, #020072e4);
+    color: #ffffff;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.logo-text-container {
+    text-align: left;
+}
+
+.footer-logo-text {
+    color: #602c97;
+    margin-bottom: 0;
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer-logo-text-span {
+    color: #602c97;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 3rem;
+    letter-spacing: 2px;
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 20px;
-    }
-    
-    .footer-section {
-        flex: 1;
-        margin: 10px;
-    }
-    
-    .footer-section h4 {
-        margin-bottom: 10px;
-    }
-    
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
-    .icon {
-        margin: 0 10px;
-        font-size: 24px;
-        color: white;
-        transition: color 0.3s;
-    }
-    
-    .icon:hover {
-        color: #00aced;
-    }
-    
-    .footer-bottom {
-        border-top: 1px solid #444;
-        margin-top: 20px;
-        padding-top: 10px;
-    }
-    
-    @media (max-width: 768px) {
-        .footer-content {
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 0.2rem;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #ffffffe5;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #522fff;
+}
+
+.footer-bottom {
+    border-top: 2px solid #313131;
+    padding-bottom: 0.1em;
+}
+
+
+.useful-links {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.useful-links ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.useful-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.useful-links a {
+    color: #ffffffe2;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.3s;
+    margin: 0px
+}
+
+.useful-links a:hover {
+    color: #9000ffdb;
+}
+
+.twitter-form {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1.3rem;
+    width: 23rem;
+}
+
+.twitter-form h3 {
+    color: #fffffffe;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.twitter-form input,
+.twitter-form textarea {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #8624ff;
+    background-color: #34495e;
+    color: rgb(255, 255, 255);
+    width: 95%;
+    outline: none;
+}
+
+.twitter-form button {
+    padding: 0.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.twitter-form button:hover {
+    background-color: #2980b9;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .useful-links {
+        margin-top: 3rem;
+    }
+
     .footer-section {
-            margin-bottom: 20px;
-        }
+        margin-bottom: 20px;
+    }
+
+
+    .twitter-form {
+        width: 15rem;
     }
 }

@@ -1,0 +1,75 @@
+.universities-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+.university-card {
+    position: relative;
+}
+
+.university-cards-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    border-radius: 5px;
+}
+
+.university-card-image {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 5px;
+
+}
+
+.university-card-upper-layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    background-image: linear-gradient(to bottom, transparent, #000000c0);
+    overflow: hidden;
+    font-size: 30pox;
+}
+
+.university-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    color: beige;
+    transition: all 0.2s ease-in;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.university-button:hover {
+    color: rgb(254, 194, 255);
+    scale: 1.1;
+}
+
+.university-card:hover .university-card-upper-layer {
+    height: 100%;
+}
+
+.universities-container-heading {
+    font-size: 2rem;
+    color: #494949;
+}
+
+@media (max-width:768px) {
+    .university-cards-container {
+        justify-content: center;
+    }
+
+}

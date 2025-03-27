@@ -1,0 +1,176 @@
+.institute-courses-container {
+  padding: 5% 10%;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+
+.institute-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: monospace;
+  color: #0e0e0ed5;
+}
+
+.institute-sub-title {
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: rgba(159, 54, 54, 0.941);
+}
+
+.institute-description {
+  font-size: 1rem;
+  color: #001700d7;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.institute-courses {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 40px;
+  margin-top: 30px;
+}
+
+.each-course-item {
+  display: flex;
+  width: 30rem;
+  gap: 10px;
+}
+
+.each-course-item-img {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.each-course-item-text-con {
+  display: flex;
+  flex-direction: column;
+}
+
+.each-course-item-text-con-h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin: 0;
+  font-weight: 500;
+  color: #999100ed;
+}
+
+.each-course-item-text-con-p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #1b1b1be3;
+}
+
+/* .form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 50px;
+  background: #2f1f6db9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #34495e;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+} */
+
+@media (max-width:768px) {
+
+  .institute-sub-title {
+    font-size: 0.8rem;
+  }
+
+  .institute-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .institute-description {
+    font-size: 0.9rem;
+  }
+
+  .institute-courses-container {
+    padding: 10% 5%;
+  }
+
+  .each-course-item {
+    width: 90%;
+  }
+
+  .institute-courses {
+    padding: 40px 0%;
+  }
+
+  .institute-courses-container {
+    padding: 10%;
+  }
+}

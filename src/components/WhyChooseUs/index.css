@@ -1,0 +1,94 @@
+.why-choose-us-container {
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    font-size: 0.9rem;
+    color: #000000c5;
+    gap: 20px;
+}
+
+.why-choose-us-inner-container {
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.why-choose-us-heding {
+    font-size: 2.2rem;
+    color: #d33c3cf1;
+    font-family: sans-serif;
+}
+
+.why-choose-us-heding-span {
+    border-bottom: 3px solid #d33c3ce6;
+    padding-bottom: 2px;
+    color: #000000ea;
+}
+
+.why-choose-us-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.red-background {
+    background-color: #d33c3cec;
+}
+
+.black-background {
+    background-color: #161616ed;
+}
+
+.why-choose-us-icon-background {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-choose-us-icon {
+    font-size: 35px;
+    color: white;
+    padding: 15px;
+}
+
+.why-choose-us-card-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.why-choose-us-img {
+    width: 40%;
+}
+
+.why-choose-us-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 10px;
+}
+
+@media (max-width:768px) {
+    .why-choose-us-img {
+        display: none;
+    }
+
+    .why-choose-us-icon {
+        font-size: 25px;
+    }
+
+    .why-choose-us-icons-container {
+        gap: 7%;
+        justify-content: center;
+    }
+
+    .why-choose-us-container {
+        padding: 20px 5%;
+    }
+
+    .why-choose-us-inner-container {
+        padding: 40px 5%;
+        margin-top: 1.5rem;
+    }
+}
