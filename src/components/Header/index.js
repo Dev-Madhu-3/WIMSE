@@ -8,6 +8,7 @@ import { Zoom } from "react-awesome-reveal"
 import AppContext from '../Context/context'
 import { courses } from '../../assets/data'
 import { BsChevronDown } from "react-icons/bs"
+import { LuGraduationCap } from "react-icons/lu"
 
 
 
@@ -83,33 +84,37 @@ function Header() {
 
                     <Link onClick={scrollToTop} className='nav-link-item' to="/">Home</Link>
                     <div className='nav-link-item nav-item-courses'>
-                        <div className='header-courses-dropdown-container'>
-                            Courses
-                            <BsChevronDown className={`course-dropdown-logo ${isVisibleCourses && 'course-dropdown-logo-open'}`} onClick={() => setVisibleCourses((prev) => !prev)} />
+                        <div className='header-courses-dropdown-container' onClick={() => setVisibleCourses((prev) => !prev)} >
+                            <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration'>
+                                Distance Learning
+                            </Link>
+                            <BsChevronDown className={`course-dropdown-logo ${isVisibleCourses && 'course-dropdown-logo-open'}`} />
                         </div>
                         <div className={`courses-container-header ${isVisibleCourses && 'visible'}`}>
                             <button onClick={() => onClickCourses("")} className='courses-container-header-items'>
-                                <Link to='/courses' className='no-text-decoration'>All Courses</Link>
+                                <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> All Courses</Link>
                             </button>
                             {courses.map(each =>
                                 <button key={each.icon} onClick={() => onClickCourses(each.icon)} className='courses-container-header-items'>
-                                    <Link to='/courses' className='no-text-decoration'>{each.course}</Link>
+                                    <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> {each.course}</Link>
                                 </button>)
                             }
                         </div>
                     </div>
 
+
                     <Link className='nav-link-item' to="/universities">Universities</Link>
-                    <Link className='nav-link-item' to="/student-support">Student Support</Link>
+                    {/* <Link className='nav-link-item' to="/student-support">Student Support</Link> */}
                     <Link className='nav-link-item' to="/about">About Us</Link>
                     <div onClick={scrollToFooter} className='nav-link-item'>Contact</div>
+                    <Link className='nav-link-item highlight-text' to="/courses/regular">Regular</Link>
                 </nav>
                 <button className="back-now" onClick={onChangeFormStatus}>Enqiry Now</button>
 
                 <button className="mobile-menu-icon" aria-label="Toggle Menu" onClick={toggleMenu}>
                     {isMobileMenuOpen ? <FaTimes /> : <FaBars />} {/* Change icon based on state */}
                 </button>
-            </header>
+            </header >
         </>
     )
 }

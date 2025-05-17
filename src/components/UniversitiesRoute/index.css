@@ -41,12 +41,13 @@
 }
 
 .university-button {
+    font-weight: 600;
     display: flex;
     align-items: center;
     text-decoration: none;
     gap: 5px;
     color: beige;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
     font-size: 1.1rem;
     background-color: transparent;
     border: 0;
@@ -54,8 +55,8 @@
 }
 
 .university-button:hover {
-    color: rgb(254, 194, 255);
     scale: 1.1;
+    font-weight: 700;
 }
 
 .university-card:hover .university-card-upper-layer {

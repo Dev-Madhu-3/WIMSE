@@ -1,12 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './index.css'
 import { Rotate } from 'react-awesome-reveal'
-
-const links = ['Our Courses', 'University', 'Help', 'About Us']
+import { Link } from 'react-router-dom'
 
 function Footer() {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
     return (<>
         <footer id='footer' className="footer">
@@ -48,12 +51,12 @@ function Footer() {
                     </div>
                     <div className="useful-links">
                         <h3>Useful Links</h3>
-                        <div>
-                            {links.map((link, index) => (
-                                <nav key={index}>
-                                    <a href="#Home">{link}</a>
-                                </nav>
-                            ))}
+                        <div className='footer-nav-links'>
+                            <Link className='nav-link-item' onClick={scrollToTop} to="/">Home</Link>
+                            <Link to='/courses' className='no-text-decoration'>All Courses</Link>
+                            <Link className='nav-link-item' to="/universities">Universities</Link>
+                            {/* <Link className='nav-link-item' to="/student-support">Student Support</Link> */}
+                            <Link className='nav-link-item' to="/about">About Us</Link>
                         </div>
                     </div>
 

@@ -4,8 +4,19 @@
     animation-duration: 0.5s;
 }
 
+.whatsapp-icon{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 4;
+    height: 100px;
+    width: 100px;
+    /* border: 5px solid yellow;
+    border-radius: 50%; */
+}
+
 :root {
-    --primary-color: #f0f2f5; /*#f0f2f5    #fffffffb*/
+    --primary-color: #f6f7fa; /*#f0f2f5    #fffffffb*/
 }
 
 .fade-in {
@@ -99,5 +110,12 @@
     to {
         opacity: 1;
         transform: rotate(0);
+    }
+}
+
+@media (max-width:768px) {
+    .whatsapp-icon{
+        height: 80px;
+        width: 80px;
     }
 }

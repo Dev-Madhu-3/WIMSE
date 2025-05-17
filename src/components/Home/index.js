@@ -14,87 +14,36 @@ import DoubtsSection from '../DoubtsSection'
 import {Universities} from '../UniversitiesRoute'
 import { FaRegSmile } from "react-icons/fa"
 import { LuNotepadText } from "react-icons/lu"
-import { MdPeopleOutline } from "react-icons/md"
 import { LiaUniversitySolid } from "react-icons/lia"
+import { LiaCertificateSolid } from "react-icons/lia";
 import { Zoom } from 'react-awesome-reveal'
 
 
 
 function Home() {
-    // const [coursesCount, setCoursesCount] = useState(0)
-    // const [studentsCount, setStudentsCount] = useState(0)
-    // const [clientsCount, setClientsCount] = useState(0)
-    // const [univercityCount, setUnivercityCount] = useState(0)
 
-
-    // useEffect(()=>{
-    //    TotalCourses=25
-    //    TotalStudents=78
-    //    TotalClients=80
-    //    TotalUnivercity=15
-    //    const timer1 = setInterval(()=>{
-    //     if(coursesCount<=TotalClients){
-
-    //     }
-    //     setClientsCount()
-    //     setCoursesCount()
-    //     setStudentsCount()
-    //     setUnivercityCount()
-
-    //    },10)
-    //    const timer2 = setInterval(()=>{
-    //     if(coursesCount<=TotalClients){
-
-    //     }
-    //     setClientsCount()
-    //     setCoursesCount()
-    //     setStudentsCount()
-    //     setUnivercityCount()
-
-    //    },10)
-    //    const timer = setInterval(()=>{
-    //     if(coursesCount<=TotalClients){
-
-    //     }
-    //     setClientsCount()
-    //     setCoursesCount()
-    //     setStudentsCount()
-    //     setUnivercityCount()
-
-    //    },10)
-    //    const timer = setInterval(()=>{
-    //     if(coursesCount<=TotalClients){
-
-    //     }
-    //     setClientsCount()
-    //     setCoursesCount()
-    //     setStudentsCount()
-    //     setUnivercityCount()
-
-    //    },10)
-    // })
 
     const AwardsWonSection = () => (
         <div className='awards-won'>
             <Zoom cascade damping={0.2}>
                 <div className='center-text'>
                     <FaRegSmile className='awards-won-icon' />
-                    <p className='awards-won-heading'>78+</p>
+                    <p className='awards-won-heading'>15000+</p>
                     <p className='awards-won-text'>Happy Students</p>
                 </div>
                 <div className='center-text'>
                     <LuNotepadText className='awards-won-icon' />
-                    <p className='awards-won-heading'>25</p>
+                    <p className='awards-won-heading'>200+</p>
                     <p className='awards-won-text'>Our Courses</p>
                 </div>
                 <div className='center-text'>
-                    <MdPeopleOutline className='awards-won-icon' />
-                    <p className='awards-won-heading'>80</p>
-                    <p className='awards-won-text'>Our Clients</p>
+                    <LiaCertificateSolid className='awards-won-icon' />
+                    <p className='awards-won-heading'>25+</p>
+                    <p className='awards-won-text'>Years of Excellence</p>
                 </div>
                 <div className='center-text'>
                     <LiaUniversitySolid className='awards-won-icon' />
-                    <p className='awards-won-heading'>15+</p>
+                    <p className='awards-won-heading'>30+</p>
                     <p className='awards-won-text'>Universities</p>
                 </div>
             </Zoom>
@@ -134,7 +83,7 @@ function Home() {
                     />
                     <img
                         className='image2'
-                        src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739937496/kriti_shetty_ko4qj0.jpg'
+                        src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745665861/dont-waste-time-motivational-mobile-38x68k2ukrkke1x1_gq2akx.webp'
                         alt='no-img2'
                     />
                 </div>

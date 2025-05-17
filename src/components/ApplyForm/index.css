@@ -11,7 +11,6 @@
     left: 0;
     z-index: 4;
 }
-
 .error-msg {
     color: red;
     font-size: 0.8rem;
@@ -26,7 +25,7 @@
 }
 
 .apply-form {
-    width: 25rem;
+    width: 30rem;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px #0000001a;
@@ -67,7 +66,7 @@
 }
 
 .apply-form-select {
-    width: 100%;
+    width: 95%;
 }
 
 .apply-form-input:focus,
@@ -81,7 +80,7 @@
 }
 
 .apply-form-button {
-    width: 100%;
+    width: 95%;
     height: 35px;
     font-weight: bold;
     border-radius: 0.25rem;

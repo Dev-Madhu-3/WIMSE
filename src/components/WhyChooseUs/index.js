@@ -22,11 +22,11 @@ const customAnimation = keyframes`
 const WhyChooseUs = () => {
     return (
         <div className='why-choose-us-container'>
-            <img className='why-choose-us-img' src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739608201/1_cyzkyv.png' alt='student' />
+            <img className='why-choose-us-img' src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745663922/istockphoto-123500051-612x612-removebg-preview_rhr9s6.png' alt='student' />
             <div className='why-choose-us-inner-container'>
                 <Slide keyframes={customAnimation} cascade damping={0.4}>
                     <h1 className='why-choose-us-heding animated-item slide-left'><span className='why-choose-us-heding-span'>Why</span> Choose Us?</h1>
-                    <p> Our extensive experience and deep understanding of the Indian education landscape
+                    <p className='why-choose-us-content'> Our extensive experience and deep understanding of the Indian education landscape
                         enable us to provide personalized guidance, helping students navigate the complexities
                         of university applications and choose the best path to achieve their academic and career goals.
                         At Wimse, we're committed to your success, offering expert advice and support every step of the way.

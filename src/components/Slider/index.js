@@ -7,10 +7,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const slides = [
-  { id: 1, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/88_bz6wl4.jpg", text: 'First Slide' },
-  { id: 2, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/2147617635_dgtlqj.jpg", text: 'Second Slide' },
-  { id: 3, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/uwp4587535_acsgxg.jpg", text: 'Third Slide' },
-  { id: 4, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/pexels-emily-ranquist-493228-1205651_ovdauq.jpg", text: 'Fourth Slide' },
+  { id: 1, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/88_bz6wl4.jpg", heading: '', text: '' },
+  { id: 2, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745648052/WhatsApp_Image_2025-04-19_at_12.31.46_PM_verjfw.jpg", heading: '', text: '' },
+  { id: 3, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745747015/wes-hicks-4-EeTnaC1S4-unsplash_allj7z.jpg", heading: '', text: '' },
+  { id: 4, image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745747016/sanket-mishra-PTv_5DNvIBI-unsplash_bw04m0.jpg", heading: '', text: '' },
 ];
 
 const ImageSlider = () => {
@@ -27,7 +27,8 @@ const ImageSlider = () => {
     >
       {slides.map((each, idx) => <SwiperSlide key={idx}>
         <div className="slide-content" style={{ backgroundImage: `url(${each.image})` }}>
-          <h2 className="animated-text fade-in">Your Text Goes Here</h2>
+
+          <h2 className="animated-text fade-in"></h2>
           <p className="animated-text slide-up">{each.text}</p>
         </div>
       </SwiperSlide>)}

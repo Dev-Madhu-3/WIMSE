@@ -58,6 +58,11 @@
     letter-spacing: 2px;
 }
 
+.why-choose-us-content {
+    font-size: 1rem;
+    color: #2d2d2d;
+}
+
 .why-choose-us-img {
     width: 40%;
 }
