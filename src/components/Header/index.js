@@ -80,7 +80,7 @@ function Header() {
             </div>
             <header className='navbar'>
 
-                <nav className={`nav-links ${isMobileMenuOpen ? ' nav-links-open' : ''}`}>
+                <nav className={`nav-links ${isMobileMenuOpen && ' nav-links-open'}`}>
 
                     <Link onClick={scrollToTop} className='nav-link-item' to="/">Home</Link>
                     <div className='nav-link-item nav-item-courses'>

@@ -17,7 +17,7 @@ const CoursesSection = () => {
                 {studentsFeedback.map((each, idx) => (
                     <SwiperSlide key={idx} className='feedback-card'>
                         <img className='student-profile-image' src={each.profilePicture} alt='profile' />
-                        <p className='feedback-student-text'>{each.feedBack}</p>
+                        <p className='text-slate-300 text-md text-center my-3 sm:text-sm'>{each.feedBack}</p>
                         <RiDoubleQuotesL className='feedback-student-symbol' />
                         <p className='feedback-student-name'>{each.name}</p>
                         <p className='feedback-student-course'>{each.course}</p>

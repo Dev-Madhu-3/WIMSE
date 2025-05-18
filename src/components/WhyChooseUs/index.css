@@ -47,15 +47,16 @@
 }
 
 .why-choose-us-icon {
-    font-size: 35px;
+    font-size: 4rem;
     color: white;
     padding: 15px;
 }
 
 .why-choose-us-card-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 2px;
+    margin-top: 10px;
 }
 
 .why-choose-us-content {
@@ -80,7 +81,7 @@
     }
 
     .why-choose-us-icon {
-        font-size: 25px;
+        font-size: 3.5rem;
     }
 
     .why-choose-us-icons-container {

@@ -11,7 +11,7 @@ import Header from '../Header'
 import FeedbackSection from '../StudentsFeedback'
 import CoursesSection from '../CoursesSection'
 import DoubtsSection from '../DoubtsSection'
-import {Universities} from '../UniversitiesRoute'
+import { Universities } from '../UniversitiesRoute'
 import { FaRegSmile } from "react-icons/fa"
 import { LuNotepadText } from "react-icons/lu"
 import { LiaUniversitySolid } from "react-icons/lia"
@@ -26,22 +26,22 @@ function Home() {
     const AwardsWonSection = () => (
         <div className='awards-won'>
             <Zoom cascade damping={0.2}>
-                <div className='center-text'>
+                <div className='flex flex-col items-center'>
                     <FaRegSmile className='awards-won-icon' />
                     <p className='awards-won-heading'>15000+</p>
                     <p className='awards-won-text'>Happy Students</p>
                 </div>
-                <div className='center-text'>
+                <div className='flex flex-col items-center'>
                     <LuNotepadText className='awards-won-icon' />
                     <p className='awards-won-heading'>200+</p>
                     <p className='awards-won-text'>Our Courses</p>
                 </div>
-                <div className='center-text'>
+                <div className='flex flex-col items-center'>
                     <LiaCertificateSolid className='awards-won-icon' />
                     <p className='awards-won-heading'>25+</p>
                     <p className='awards-won-text'>Years of Excellence</p>
                 </div>
-                <div className='center-text'>
+                <div className='flex flex-col items-center'>
                     <LiaUniversitySolid className='awards-won-icon' />
                     <p className='awards-won-heading'>30+</p>
                     <p className='awards-won-text'>Universities</p>

@@ -112,7 +112,7 @@ const ApplyForm = () => {
                     </div>
                     {errorMsg && <p className='text-left text-red-500 text-[1.1rem] mt-1'>*{errorMsg}</p>}
                     <div className='apply-form-label-input-container'>
-                        <button type="submit" onClick={sendEmail} className="apply-form-button">Send</button>
+                        <button type="submit" onClick={sendEmail} className="apply-form-button ">Submit</button>
                     </div>
                 </form>
             }

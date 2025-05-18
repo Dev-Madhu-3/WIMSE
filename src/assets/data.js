@@ -710,13 +710,13 @@ export const studentsFeedback = [
     {
         name: "Madhu",
         course: "b.tech",
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896688/1734683909330_dg7pdv.jpg',
+        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577410/student1_ihjaba.jpg',
         feedBack: 'My experience with wits institute of managment and science is superb. i got each and everything from this institute which was required for my education.'
     },
     {
         name: "Kishore",
         course: "MBA",
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896688/1738576178837_jhcm4q.jpg',
+        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577409/student2_eueple.jpg',
         feedBack: 'Thanks to wits institute of managment and science by virtue of which i was able to complete my mba. when i joined WIMS, i was not very good in terms of acedmics. WIMS motivated me to complete my study.'
     },
     {

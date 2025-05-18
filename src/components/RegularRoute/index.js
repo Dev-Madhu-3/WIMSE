@@ -17,9 +17,9 @@ const RegularRoute = () => {
         <>
             <Header />
             <main className='bg-white flex flex-col items-center gap-10 mt-10'>
-                <section className='flex flex-col items-center justify-center m-5 px-20 w-5/6'>
-                    <h2 className='text-slate-700 text-4xl font-medium m-5'> Welcome to <span className='text-blue-700'>WIMSE</span> Educational consultancy</h2>
-                    <p className='text-md text-slate-600 m-2 text-center' >
+                <section className='flex flex-col items-center justify-center m-10 sm:w-[90%] w-5/6'>
+                    <h2 className='text-slate-700 text-4xl font-medium text-center'> Welcome to <span className='text-blue-700'>WIMSE</span> Educational consultancy</h2>
+                    <p className='text-md text-slate-600 mt-10 sm:text-start text-center' >
                         We are a team of experienced consultants who are passionate about helping students achieve their academic goals and reach their full potential.
                         Our company was founded in 2004 with the mission of providing personalized and comprehensive admission consulting services to students applying to college,
                         graduate school, business school, law school, medical school, and other professional programs. We understand that the admission process can be overwhelming and stressful,
@@ -31,8 +31,8 @@ const RegularRoute = () => {
                         We look forward to working with you and helping you achieve your dreams!
                     </p>
                 </section>
-                <section className='w-5/6'>
-                    <h2 className='text-4xl font-bold m-5 text-slate-700 text-center'>TOP <span className='text-[#61387e]'>COLLEGES</span> IN INDIA</h2>
+                <section className='sm:w-[90%] w-5/6'>
+                    <h2 className='text-4xl font-bold mb-10 text-slate-700 text-center'>TOP <span className='text-[#61387e]'>COLLEGES</span> IN INDIA</h2>
                     <div className='flex flex-wrap justify-center gap-10'>
                         {regularUniversities.map((university) => (
                             <div className='w-[320px] flex flex-col bg-white p-2 shadow-md rounded transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg group'>
@@ -53,7 +53,7 @@ const RegularRoute = () => {
                         ))}
                     </div>
                 </section>
-                <section className='text-center w-5/6'>
+                <section className='text-center sm:w-[90%] w-5/6'>
                     <h2 className='text-red-900 text-4xl font-bold m-5'>Select Your Study Abroad</h2>
                     <p className='text-md text-slate-600 mb-10 text-center'>
                         Spread your wings, the entire world is open for you !
@@ -71,7 +71,7 @@ const RegularRoute = () => {
                     </div>
                     <p className='text-md text-slate-600 m-2 text-center'>With new medical colleges coming up in neighbouring countries, the process to find a seat is much easier—some of the popular choices for Indian students, Students wanting to apply for MBBS abroad would be required to have an aggregate percentage of at least 50%</p>
                 </section>
-                <section className='w-5/6 text-center'>
+                <section className='sm:w-[90%] w-5/6 text-center'>
                     <h2 className='text-blue-900 text-xl font-semibold mb-5'>Well-versed in all aspects of admissions through the Best Admission Consultancy in Dhanbad</h2>
                     <p className='text-md text-slate-600 m-2'>Reset your research strategy with top admission consultancy in Dhanbad by browsing through
                         our lists of top colleges, exams, courses, and careers based on your area of interest!</p>
@@ -90,7 +90,7 @@ const RegularRoute = () => {
                         ))}
                     </div>
                 </section>
-                <section className='flex flex-col items-center m-5 w-3/5 text-center'>
+                <section className='sm:w-[90%] flex flex-col items-center m-5 w-3/5 text-center'>
                     <hr className='text-center w-[60px] bg-blue-400 h-[6px] rounded' />
                     <h2 className='text-2xl font-bold m-2 text-slate-300 tracking-wide'>HOW WE CAN HELP</h2>
                     <p className='text-4xl font-bold mb-5 text-slate-900'>

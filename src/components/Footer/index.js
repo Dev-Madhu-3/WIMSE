@@ -14,9 +14,8 @@ function Footer() {
     return (<>
         <footer id='footer' className="footer">
             <div className="footer-content">
-
                 <div className="footer-section address">
-                    <div className='logo-container'>
+                    <div className='logo-container my-5'>
                         <img
                             className='logo'
                             src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png'
@@ -31,7 +30,6 @@ function Footer() {
                     <p>23/1219, SODHAN NAGAR, BEHIND APSRTC BUSSTAND, NELLORE, ANDHRA PRADESH -524001</p>
                     <p>Phone: +917382744791, +919030030126</p>
                     <p>Email: WIMSE51@GMAIL.COM</p>
-
                 </div>
 
                 <div className="footer-section links">

@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
             <div className='why-choose-us-inner-container'>
                 <Slide keyframes={customAnimation} cascade damping={0.4}>
                     <h1 className='why-choose-us-heding animated-item slide-left'><span className='why-choose-us-heding-span'>Why</span> Choose Us?</h1>
-                    <p className='why-choose-us-content'> Our extensive experience and deep understanding of the Indian education landscape
+                    <p className='why-choose-us-content mt-3'> Our extensive experience and deep understanding of the Indian education landscape
                         enable us to provide personalized guidance, helping students navigate the complexities
                         of university applications and choose the best path to achieve their academic and career goals.
                         At Wimse, we're committed to your success, offering expert advice and support every step of the way.

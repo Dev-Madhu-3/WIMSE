@@ -1,7 +1,8 @@
 @keyframes borderAnimation {
   0% {
-    color: white;
+    border-color: green;
   }
+
   /* 25% {
     color: rgb(75, 228, 255);
   } */
@@ -255,7 +256,7 @@
 
   .visible {
     opacity: 1;
-    max-height: 200px;
+    max-height: none;
     padding: 10px;
   }
 
@@ -356,13 +357,13 @@
     gap: 5px;
     transition: max-height 0.5s ease;
     box-sizing: border-box;
-    padding: 0px 20px;
     background-color: var(--primary-color);
+    padding: 0px 20px;
   }
 
   .nav-links-open {
-    max-height: 360px;
-
+    max-height: none;
+    padding: 10px 20px;
   }
 
   .nav-link-item {

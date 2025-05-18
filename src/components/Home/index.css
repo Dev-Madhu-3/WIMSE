@@ -65,7 +65,8 @@
 
 .awards-won-heading {
     font-size: 1.6rem;
-    margin: 5px 0px;
+    margin: 0.5rem 0px;
+    margin-top: 0.5rem;
 }
 
 
@@ -79,7 +80,6 @@
 
 .awards-won-text {
     font-size: 1.2rem;
-    margin-top: 5px;
     color: #cff9ff;
 }
 
