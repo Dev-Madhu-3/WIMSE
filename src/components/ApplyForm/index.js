@@ -42,7 +42,7 @@ const ApplyForm = () => {
             setErrorMsg('Mobile number is required')
         } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
             setErrorMsg('Invalid mobile number')
-        } else if (formData.course.trim()) {
+        } else if (!formData.course.trim()) {
             setErrorMsg('Courese name is required')
         } else {
             setFormLoading(true)
@@ -63,6 +63,7 @@ const ApplyForm = () => {
                 })
         }
     }
+
 
     return (
         <Fade duration={300} className="apply-form-section">

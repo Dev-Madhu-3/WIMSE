@@ -1,6 +1,5 @@
 import './index.css'
 import { Fade } from "react-awesome-reveal"
-import { courses } from '../../assets/data'
 import { CoursesList } from '../../assets/data'
 const Welcome = () => {
 
@@ -31,7 +30,7 @@ const Welcome = () => {
 
                   <div>
                     <h3 className='each-course-item-text-con-h3'>{courseData.title}</h3>
-                    <p className='each-course-item-text-con-p'>{courseData.about}</p>
+                    <p className='text-sm'>{courseData.about}</p>
                   </div>
                 </div>
               ))}

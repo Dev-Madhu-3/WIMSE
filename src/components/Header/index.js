@@ -46,7 +46,7 @@ function Header() {
     return (
         <>
             <div className="top-header">
-                <div className='logo-container'>
+                <Link to='/' className='logo-container'>
                     <img
                         className='logo'
                         src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png'
@@ -57,7 +57,7 @@ function Header() {
                         <h5 className='logo-text-span'>EDUCATIONAL CONSULTANCY</h5>
                     </div>
 
-                </div>
+                </Link>
                 <div className="header-right">
                     <Zoom cascade duration={1500} damping={0.2}>
                         <a href='tel:+917382744791' className='header-right-inner-container'>

@@ -16,14 +16,17 @@ const RegularRoute = () => {
     return (
         <>
             <Header />
-            <main className='bg-white flex flex-col items-center gap-10 mt-10'>
-                <section className='flex flex-col items-center justify-center m-10 sm:w-[90%] w-5/6'>
-                    <h2 className='text-slate-700 text-4xl font-medium text-center'> Welcome to <span className='text-blue-700'>WIMSE</span> Educational consultancy</h2>
-                    <p className='text-md text-slate-600 mt-10 sm:text-start text-center' >
+            <main className='bg-white flex flex-col items-center gap-10'>
+                <section className='flex flex-col items-center justify-center m-5 sm:w-[85%] w-5/6'>
+                    <h2 className='text-slate-700 sm:text-2xl text-4xl font-medium text-center'> Welcome to <span className='text-blue-700'>WIMSE</span> Educational consultancy</h2>
+                    <p className='text-md text-slate-600 sm:text-[1rem] mt-5 sm:text-start text-center' >
                         We are a team of experienced consultants who are passionate about helping students achieve their academic goals and reach their full potential.
                         Our company was founded in 2004 with the mission of providing personalized and comprehensive admission consulting services to students applying to college,
                         graduate school, business school, law school, medical school, and other professional programs. We understand that the admission process can be overwhelming and stressful,
-                        and we are here to guide you through every step of the way. Our team consists of former admissions officers, academic advisors, and industry experts who have years of experience in the field.
+                        and we are here to guide you through every step of the way.
+                        <br />
+                        <br />
+                        Our team consists of former admissions officers, academic advisors, and industry experts who have years of experience in the field.
                         We bring a wealth of knowledge and insight to the table and are committed to helping you craft a compelling and authentic application that showcases your unique strengths, accomplishments, and aspirations.
                         Our services include one-on-one consultations, application review and editing, essay coaching, interview preparation, and more.
                         We work with you to create a customized plan that meets your individual needs and goals. At our admission consulting company, we believe that every student has the potential to succeed,
@@ -32,7 +35,7 @@ const RegularRoute = () => {
                     </p>
                 </section>
                 <section className='sm:w-[90%] w-5/6'>
-                    <h2 className='text-4xl font-bold mb-10 text-slate-700 text-center'>TOP <span className='text-[#61387e]'>COLLEGES</span> IN INDIA</h2>
+                    <h2 className='text-4xl font-bold sm:text-2xl mb-10 text-slate-700 text-center'>TOP <span className='text-[#61387e]'>COLLEGES</span> IN INDIA</h2>
                     <div className='flex flex-wrap justify-center gap-10'>
                         {regularUniversities.map((university) => (
                             <div className='w-[320px] flex flex-col bg-white p-2 shadow-md rounded transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg group'>
@@ -48,18 +51,17 @@ const RegularRoute = () => {
 
                                 </div>
                                 <button onClick={onTriggerApply} className=' justify-self-end text-sm text-slate-100 bg-red-500 rounded py-2 px-3 hover:text-slate-200 hover:bg-red-600  transition-all duration-300 ease-in-out '>Enquiry Now</button>
-
                             </div>
                         ))}
                     </div>
                 </section>
                 <section className='text-center sm:w-[90%] w-5/6'>
-                    <h2 className='text-red-900 text-4xl font-bold m-5'>Select Your Study Abroad</h2>
-                    <p className='text-md text-slate-600 mb-10 text-center'>
+                    <h2 className='text-red-900 sm:text-2xl text-4xl font-bold m-5'>Select Your Study Abroad</h2>
+                    <p className='text-md sm:text-sm text-slate-600 mb-10 text-center'>
                         Spread your wings, the entire world is open for you !
                         Here is a platform to guide and assist students interested in securing higher education in Georgia
                     </p>
-                    <h2 className='text-slate-700 text-2xl font-medium mt-5'>COUNTRIES WE PROVIDE SERVICES IN Abroad!</h2>
+                    <h2 className='text-slate-700 sm:text-xl text-2xl font-medium mt-5'>COUNTRIES WE PROVIDE SERVICES IN Abroad!</h2>
                     <h3 className='text-blue-800 text-xl font-thin'>MBBS in neighbouring countries:</h3>
                     <div className='flex justify-center items-center flex-wrap gap-10 m-10'>
                         {regularCountriesData.map((each) => (
@@ -71,17 +73,17 @@ const RegularRoute = () => {
                     </div>
                     <p className='text-md text-slate-600 m-2 text-center'>With new medical colleges coming up in neighbouring countries, the process to find a seat is much easier—some of the popular choices for Indian students, Students wanting to apply for MBBS abroad would be required to have an aggregate percentage of at least 50%</p>
                 </section>
-                <section className='sm:w-[90%] w-5/6 text-center'>
-                    <h2 className='text-blue-900 text-xl font-semibold mb-5'>Well-versed in all aspects of admissions through the Best Admission Consultancy in Dhanbad</h2>
+                <section className='sm:w-[95%] w-5/6 text-center'>
+                    <h2 className='text-blue-900  text-xl font-semibold mb-5'>Well-versed in all aspects of admissions through the Best Admission Consultancy in Dhanbad</h2>
                     <p className='text-md text-slate-600 m-2'>Reset your research strategy with top admission consultancy in Dhanbad by browsing through
                         our lists of top colleges, exams, courses, and careers based on your area of interest!</p>
-                    <div className='flex flex-wrap justify-center m-10'>
+                    <div className='flex flex-wrap justify-center p-2'>
                         {regulardashBoardData.map((each) => (
-                            <div className='flex justify-center p-[50px] items-start gap-2 w-[380px] border-solid border-[1px] border-slate-300'>
+                            <div className='flex justify-center p-[50px] sm:p-[1.5rem] items-start gap-2 sm:w-[85%] w-[24rem] border-solid border-[1px] border-slate-300'>
                                 <img className='w-[70px] mt-2' src={each.image} alt='' />
                                 <div className='text-center'>
-                                    <h4 className='font-bold text-2xl text-slate-600 mb-3'>{each.title}</h4>
-                                    <p className='text-slate-600 text-md' >
+                                    <h4 className='font-bold text-2xl text-slate-600 sm:text-xl mb-3'>{each.title}</h4>
+                                    <p className='sm:text-sm text-slate-600 text-md' >
                                         {each.description}
                                     </p>
                                     {/* <button className='bg-red-500 text-slate-100 rounded px-3 py-1'>Make Enquiry</button> */}
@@ -91,12 +93,12 @@ const RegularRoute = () => {
                     </div>
                 </section>
                 <section className='sm:w-[90%] flex flex-col items-center m-5 w-3/5 text-center'>
-                    <hr className='text-center w-[60px] bg-blue-400 h-[6px] rounded' />
-                    <h2 className='text-2xl font-bold m-2 text-slate-300 tracking-wide'>HOW WE CAN HELP</h2>
-                    <p className='text-4xl font-bold mb-5 text-slate-900'>
+                    <hr className='text-center w-[60px] bg-blue-400 sm:w-[40px] h-[6px] rounded' />
+                    <h2 className='text-2xl font-bold m-2 text-slate-300 tracking-wide sm:text-sm'>HOW WE CAN HELP</h2>
+                    <p className='text-4xl font-bold mb-5 text-slate-900 sm:text-xl'>
                         Well-versed in all aspects of admissions through the Best Admission Consultancy in Nellore
                     </p>
-                    <p className='text-xl font-semibold m-5 text-slate-400'>Reset your research strategy with top admission consultancy in Nellore by browsing through our lists
+                    <p className='text-xl font-semibold text-slate-400 sm:text-lg'>Reset your research strategy with top admission consultancy in Nellore by browsing through our lists
                         of top colleges, exams, courses and careers based on your area of interest!</p>
                 </section>
             </main>
