@@ -708,16 +708,16 @@ export const courses = [
 
 export const studentsFeedback = [
     {
-        name: "Madhu",
-        course: "b.tech",
+        name: "Vijay Kumar",
+        course: "BLisc",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577410/student1_ihjaba.jpg',
-        feedBack: 'My experience with wits institute of managment and science is superb. i got each and everything from this institute which was required for my education.'
+        feedBack: 'My experience with WIMSE educational cunsultancy is superb. i got each and everything from this institute which was required for my education.'
     },
     {
         name: "Kishore",
         course: "MBA",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577409/student2_eueple.jpg',
-        feedBack: 'Thanks to wits institute of managment and science by virtue of which i was able to complete my mba. when i joined WIMS, i was not very good in terms of acedmics. WIMS motivated me to complete my study.'
+        feedBack: 'Thanks to WIMSE institute of managment and science by virtue of which i was able to complete my mba. when i joined WIMS, i was not very good in terms of acedmics. WIMS motivated me to complete my study.'
     },
     {
         name: "Venkata Ramana",
@@ -955,69 +955,88 @@ export const regulardashBoardData = [
 
 export const regularCountriesData = [
     {
-        country: 'Bangladesh',
+        country: 'Kazakhstan',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp'
     },
     {
-        country: 'Nepal',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/nepal.png_q9fxpg.webp'
-    }, {
         country: 'Kyrgyzstan',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/kazakistan.png_wvlqxj.webp'
     }, {
         country: 'Georgia',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/gorgia.png_be5yrb.webp'
-    }, {
+    },
+    {
+        country: 'Bangaldesh',
+        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp'
+    },{
         country: 'Russia',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/russia.png_uteqx5.webp'
     },
 
 ]
 
-export const regularUniversities = [
+export const topCities = [
     {
-        title: 'VIT',
-        place: 'VELLORE, TAMIL NADU',
-        since: '1984',
+        title: 'Bengaluru',
         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487672/VIT.jpg_x3chl6.webp'
-    }, {
-        title: 'SRM',
-        place: 'CHENNAI, TAMIL NADU',
-        since: '1984',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487672/SRM.jpeg_melvyr.webp'
-    }, {
-        title: 'HIT',
-        place: ' KOLKATA, WEST BENGAL',
-        since: '2001',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487672/HIT.png_ztt2iy.webp'
-    }, {
-        title: 'KIIT',
-        place: 'BHUBANESWAR, ORRISA',
-        since: '1992',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487669/KIIT.jpg_fkrs4k.webp'
-    }, {
-        title: 'BHARATI VIDYAPEETH DEEMED UNIVERSITY',
-        place: 'PUNE, MAHARASHTRA',
-        since: '1964',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487669/BHARATI-VIDYAPEETH-DEEMED-UNIVERSITY-300x203.jpg_tmjgn0.webp'
-    }, {
-        title: 'Maharashtra Institute Of Technology(MIT)',
-        place: 'PUNE, MAHARASHTRA',
-        since: '1983',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487668/MIT-WORLD-PEACE-UNIVERSITY-300x203.jpg_roaea2.webp'
-    }, {
-        title: 'Greater Noida Institute of Technology',
-        place: 'GREATER NOIDA',
-        since: '2001',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487668/GNIOT-300x201.jpeg_dc87u8.webp'
-    }, {
-        title: 'GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY',
-        place: ' GREATER NOIDA(UP)',
-        since: '1999',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487668/GALGOTIAS-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY--300x203.jpg_gwjnxu.webp'
     },
-]
-
+    {
+        title: 'Delhi',
+        imgUrl: 'https://images.unsplash.com/photo-1587474260585-94d8c7a61b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Mumbai',
+        imgUrl: 'https://images.unsplash.com/photo-1570168007204-d8a55fd35119?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Kolkata',
+        imgUrl: 'https://images.unsplash.com/photo-1574618143293-b4a3f8d56a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Chennai',
+        imgUrl: 'https://images.unsplash.com/photo-1597062151924-f23c6a66f623?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Hyderabad',
+        imgUrl: 'https://images.unsplash.com/photo-1597753797852-f1f8543794e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Ahmedabad',
+        imgUrl: 'https://images.pexels.com/photos/10106676/pexels-photo-10106676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Pune',
+        imgUrl: 'https://images.pexels.com/photos/17894402/pexels-photo-17894402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Surat',
+        imgUrl: 'https://images.pexels.com/photos/16993846/pexels-photo-16993846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Jaipur',
+        imgUrl: 'https://images.unsplash.com/photo-1544636331-e2685eee4da5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        title: 'Lucknow',
+        imgUrl: 'https://images.pexels.com/photos/10789824/pexels-photo-10789824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Kanpur',
+        imgUrl: 'https://images.pexels.com/photos/18121522/pexels-photo-18121522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Nagpur',
+        imgUrl: 'https://images.pexels.com/photos/18009390/pexels-photo-18009390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Indore',
+        imgUrl: 'https://images.pexels.com/photos/16993847/pexels-photo-16993847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    },
+    {
+        title: 'Visakhapatnam',
+        imgUrl: 'https://images.unsplash.com/photo-1613402050280-f6c2c1a0e590?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+    }
+];
 
 // export const coursesConstants = [
 //     "M.A","M.Sc","MBA","B.D"

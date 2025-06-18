@@ -1,7 +1,6 @@
 import './index.css'
 import Header from '../Header'
 import Footer from '../Footer'
-import Slider from '../Slider'
 
 const About = () => {
 
@@ -33,7 +32,7 @@ const About = () => {
                         <strong className="contactHeading">Contact Us</strong>
                     </div>
                 </div>
-                <img className='about-container-img' src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745744312/about-02_ke6gis.png" alt='about'/>
+                <img className='about-container-img' src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745744312/about-02_ke6gis.png" alt='about' />
             </div>)
     }
 
