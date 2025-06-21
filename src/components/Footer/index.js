@@ -51,7 +51,11 @@ function Footer() {
                         <h3>Useful Links</h3>
                         <div className='footer-nav-links'>
                             <Link className='nav-link-item' onClick={scrollToTop} to="/">Home</Link>
-                            <Link to='/courses' className='no-text-decoration'>All Courses</Link>
+                            {/* <Link to='/courses' className='no-text-decoration'>All Courses</Link> */}
+                            <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration'>
+                                Distance Learning
+                            </Link>
+                            <Link className='nav-link-item' to="/courses/regular">Regular Cources</Link>
                             <Link className='nav-link-item' to="/universities">Universities</Link>
                             {/* <Link className='nav-link-item' to="/student-support">Student Support</Link> */}
                             <Link className='nav-link-item' to="/about">About Us</Link>

@@ -10,6 +10,8 @@ import ApplyForm from './components/ApplyForm'
 import { useEffect, useState } from 'react'
 import AppContext from './components/Context/context'
 import RegularRoute from './components/RegularRoute'
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -30,34 +32,40 @@ function App() {
   }, [])
 
   return (
-    <HelmetProvider>
-      <AppContext.Provider
-        value={{
-          openedApplyForm, isThemeDark, updateTheme, changeApplyFormStatus, courseName, updateCourceName, activeCourseTab, changeActiveCourseTab
-        }}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/courses/distance' element={<CoursesRoute />} />
-            <Route path='/student-support' element={<StudentSupport />} />
-            <Route path='/about' element={<AboutRoute />} />
-            <Route path='/universities' element={<UniversitiesRoute />} />
-            <Route path='/courses/regular' element={<RegularRoute />} />
-          </Routes>
-        </BrowserRouter>
-        {openedApplyForm && <ApplyForm />}
-        {showIcon && (
-          <a href='https://wa.me/9989857197'>
-            <img
-              className="whatsapp-icon"
-              src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745944409/372108180_WHATSAPP_ICON_400_ilpdct.gif"
-              alt="whatsapp-icon"
-            />
-          </a>
+    <>
+      <HelmetProvider>
+        <AppContext.Provider
+          value={{
+            openedApplyForm, isThemeDark, updateTheme, changeApplyFormStatus, courseName, updateCourceName, activeCourseTab, changeActiveCourseTab
+          }}>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/courses/distance' element={<CoursesRoute />} />
+              <Route path='/student-support' element={<StudentSupport />} />
+              <Route path='/about' element={<AboutRoute />} />
+              <Route path='/universities' element={<UniversitiesRoute />} />
+              <Route path='/courses/regular' element={<RegularRoute />} />
+            </Routes>
+          </BrowserRouter>
+          {openedApplyForm && <ApplyForm />}
+          
+          {showIcon && (
+            <a href='https://wa.me/7382744791'>
+              <img
+                className="whatsapp-icon"
+                src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745944409/372108180_WHATSAPP_ICON_400_ilpdct.gif"
+                alt="whatsapp-icon"
+              />
+            </a>
 
-        )}
-      </AppContext.Provider>
-    </HelmetProvider>
+          )}
+        </AppContext.Provider>
+      </HelmetProvider>
+      <SpeedInsights />
+      <Analytics />
+    </>
+
   )
 }
 

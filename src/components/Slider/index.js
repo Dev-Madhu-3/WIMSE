@@ -28,7 +28,7 @@ const ImageSlider = () => {
       {slides.map((each, idx) => <SwiperSlide key={idx}>
         <div className="slide-content" style={{ backgroundImage: `url(${each.image})` }}>
 
-          <h2 className="animated-text fade-in"></h2>
+          <h2 className="animated-text fade-in">.</h2>
           <p className="animated-text slide-up">{each.text}</p>
         </div>
       </SwiperSlide>)}

@@ -50,7 +50,7 @@ const ApplyForm = () => {
             setFormLoading(true)
             emailjs
                 .send(
-                    "service_5q5t3d",  // Your EmailJS Service ID
+                    "service_5q5t3da",  // Your EmailJS Service ID
                     "template_b4x1p5g", // Your EmailJS Template ID
                     formData,
                     "5WS9x7gFrYdpyQ_Vi"  // Your EmailJS Public Key

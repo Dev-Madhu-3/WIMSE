@@ -711,37 +711,37 @@ export const studentsFeedback = [
         name: "Vijay Kumar",
         course: "BLisc",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577410/student1_ihjaba.jpg',
-        feedBack: 'My experience with WIMSE educational cunsultancy is superb. i got each and everything from this institute which was required for my education.'
+        feedBack: 'My experience with WIMSE educational consultancy has been superb! I received comprehensive support for my education, and I\'m incredibly grateful for their guidance and resources.'
     },
     {
         name: "Kishore",
         course: "MBA",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577409/student2_eueple.jpg',
-        feedBack: 'Thanks to WIMSE institute of managment and science by virtue of which i was able to complete my mba. when i joined WIMS, i was not very good in terms of acedmics. WIMS motivated me to complete my study.'
+        feedBack: 'Thanks to WIMSE Institute of Management and Science, I successfully completed my MBA. When I joined, my academic confidence was low, but WIMSE truly motivated me to excel in my studies.'
     },
     {
         name: "Venkata Ramana",
         course: "MCA",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896689/1712166883930_v4cqwv.jpg',
-        feedBack: 'Faculty Of Wits institute of managment and science is very helpful. signing up to study at WIMS has been one of the best decisions i have ever made. i strongly reccommend this institute to everyone. '
+        feedBack: 'The faculty at WIMSE Institute of Management and Science is incredibly helpful. Deciding to study at WIMSE has been one of my best decisions, and I strongly recommend this institute to everyone!'
     },
     {
-        name: "Erri Hook Rafi",
+        name: "Shaik Mohammad Rafi",
         course: "Hotel Management",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896692/1708097843118_ikrato.jpg',
-        feedBack: 'Thanks to wits institute of managment and science by virtue of which i was able to complete my mba. when i joined WIMS, i was not very good in terms of acedmics. WIMS motivated me to complete my study. '
+        feedBack: 'WIMSE Institute of Management and Science played a crucial role in helping me complete my Hotel Management program. Their personalized support and excellent faculty made a significant difference in my academic journey.'
     },
     {
-        name: "Thagubothu Vinod",
+        name: "N Vinod",
         course: "BSc",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896688/1738576178837_jhcm4q.jpg',
-        feedBack: 'My experience with wits institute of managment and science is superb. i got each and everything from this institute which was required for my education.'
+        feedBack: 'My experience with WIMSE Institute of Management and Science has been outstanding. They provided all the necessary resources and support for my BSc program, exceeding all my expectations.'
     },
     {
-        name: "Jilaani Gaadu",
+        name: "Jilani Basha",
         course: "MA",
         profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896692/1708097843118_ikrato.jpg',
-        feedBack: 'fuck you tony fuck you tony fuck you tony fuck you tony fuck you tony'
+        feedBack: 'WIMSE\'s guidance was invaluable for my MA studies. The structured approach and dedicated faculty helped me achieve my academic goals with confidence. Highly recommended for anyone seeking quality education.'
     }
 ]
 
@@ -968,7 +968,7 @@ export const regularCountriesData = [
     {
         country: 'Bangaldesh',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp'
-    },{
+    }, {
         country: 'Russia',
         image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/russia.png_uteqx5.webp'
     },
