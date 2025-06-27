@@ -15,7 +15,7 @@
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
-  background-size:cover;
+  background-size: cover;
 }
 
 .animated-text {
@@ -30,6 +30,7 @@
 
 @media (max-width: 768px) {
   .mySwiper {
-    height: 30vh;
+    min-height: 25vh;
+    height: 25vh;
   }
 }

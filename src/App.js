@@ -1,31 +1,44 @@
 import './App.css'
 import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
-import CoursesRoute from './components/CoursesRoute'
-import UniversitiesRoute from './components/UniversitiesRoute'
-import AboutRoute from './components/AboutRoute'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import Home from './pages/Home'
+import CoursesRoute from './pages/CoursesRoute'
+import UniversitiesRoute from './pages/UniversitiesRoute'
+import AboutRoute from './pages/AboutRoute'
 import StudentSupport from './components/StudentSupport'
 import ApplyForm from './components/ApplyForm'
 import { useEffect, useState } from 'react'
-import AppContext from './components/Context/context'
-import RegularRoute from './components/RegularRoute'
+import AppContext from './Context/context'
+import RegularRoute from './pages/RegularRoute'
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
+import { AnimatePresence } from 'framer-motion'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Motion from './components/Motion'
 
+function AnimatedAppRoutes() {
+  const location = useLocation()
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path='/' element={<Motion><Home /></Motion>} />
+        <Route path='/courses/distance' element={<Motion><CoursesRoute /></Motion>} />
+        <Route path='/student-support' element={<Motion><StudentSupport /></Motion>} />
+        <Route path='/about' element={<Motion><AboutRoute /></Motion>} />
+        <Route path='/universities' element={<Motion><UniversitiesRoute /></Motion>} />
+        <Route path='/courses/regular' element={<Motion><RegularRoute /></Motion>} />
+      </Routes>
+    </AnimatePresence>
+  )
+}
 
 function App() {
   const [openedApplyForm, changeApplyFormStatus] = useState(false)
   const [isThemeDark, updateTheme] = useState(false)
   const [courseName, updateCourceName] = useState('')
   const [activeCourseTab, changeActiveCourseTab] = useState('')
-  const [showIcon, setShowIcon] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowIcon(true) // toggle visibility
-    }, 4000)
-  }, [])
 
   useEffect(() => {
     changeApplyFormStatus(!openedApplyForm)
@@ -36,36 +49,33 @@ function App() {
       <HelmetProvider>
         <AppContext.Provider
           value={{
-            openedApplyForm, isThemeDark, updateTheme, changeApplyFormStatus, courseName, updateCourceName, activeCourseTab, changeActiveCourseTab
-          }}>
+            openedApplyForm, isThemeDark, updateTheme,
+            changeApplyFormStatus, courseName, updateCourceName,
+            activeCourseTab, changeActiveCourseTab
+          }}
+        >
           <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/courses/distance' element={<CoursesRoute />} />
-              <Route path='/student-support' element={<StudentSupport />} />
-              <Route path='/about' element={<AboutRoute />} />
-              <Route path='/universities' element={<UniversitiesRoute />} />
-              <Route path='/courses/regular' element={<RegularRoute />} />
-            </Routes>
+            <Header />
+            <AnimatedAppRoutes />
+            <Footer />
           </BrowserRouter>
+
           {openedApplyForm && <ApplyForm />}
-          
-          {showIcon && (
+
+          {!openedApplyForm && (
             <a href='https://wa.me/7382744791'>
               <img
-                className="whatsapp-icon"
+                className="fixed bottom-[20px] right-[30px] z-10 h-[5rem] w-[5rem] max-sm:h-[80px] max-sm:w-[80px]"
                 src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745944409/372108180_WHATSAPP_ICON_400_ilpdct.gif"
                 alt="whatsapp-icon"
               />
             </a>
-
           )}
         </AppContext.Provider>
       </HelmetProvider>
       <SpeedInsights />
       <Analytics />
     </>
-
   )
 }
 

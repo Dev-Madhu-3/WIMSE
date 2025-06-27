@@ -1,11 +1,10 @@
 import './index.css'
 import { useContext } from 'react'
-import Header from '../Header'
-import Footer from '../Footer'
 import { FaRegCalendar } from "react-icons/fa"
-import AppContext from '../Context/context'
+import AppContext from '../../Context/context'
 import { courses } from '../../assets/data'
-import { Fade } from 'react-awesome-reveal'
+// import { Fade } from 'react-awesome-reveal'
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 const CoursesRoute = () => {
@@ -18,7 +17,7 @@ const CoursesRoute = () => {
     }
 
     const CourseCard = ({ data }) => {
-        const { name, duration, semester, description, image } = data //image
+        const { name, duration, semester, description, image } = data
         return (
             <div className='course-card-container'>
                 <div className='course-card-image-container'>
@@ -46,14 +45,12 @@ const CoursesRoute = () => {
     const currentCourse = courses.filter(each => each.icon === activeCourseTab)[0]
 
     return (
-        <>
-            <Header />
-            <main className='courses-main-container'>
-                <div className='speacial-course-container'>
-                    <div className='speacial-course-heading-container'>
-                        <h1 className='speacial-course-heading text-[1.3rem]'>{currentCourse ? `${currentCourse.course}` : 'All Courses'}</h1>
-                    </div>
-                    {/* <div className='courses-specializations-container'>
+        <main className='courses-main-container'>
+            <div className='speacial-course-container'>
+                <div className='speacial-course-heading-container'>
+                    <h1 className='speacial-course-heading text-[1.3rem]'>{currentCourse ? `${currentCourse.course}` : 'All Courses'}</h1>
+                </div>
+                {/* <div className='courses-specializations-container'>
                         <button
                             className={`course-specialization-btn ${activeCourseTab === "" && 'course-specialization-btn-active'}`}
                             onClick={() => changeActiveCourseTab("")}
@@ -69,17 +66,29 @@ const CoursesRoute = () => {
                             </button>
                         )}
                     </div> */}
-                    <div className='courses-container'>
-                        <Fade cascade damping={0}>
-                            {courses.filter((e) => e.icon.includes(activeCourseTab)).map(each => each.specializations.map((each) => <CourseCard data={each} />))}
-                        </Fade>
-                    </div>
-
+                <div className='courses-container'>
+                    <AnimatePresence>
+                        {courses
+                            .filter((e) => e.icon.includes(activeCourseTab))
+                            .flatMap(each =>
+                                each.specializations.map((course, index) => (
+                                    <motion.div
+                                        key={course.name + index}
+                                        initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+                                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                        exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
+                                        transition={{ duration: 0.4, delay: index * 0.05 }}
+                                    >
+                                        <CourseCard data={course} />
+                                    </motion.div>
+                                ))
+                            )}
+                    </AnimatePresence>
                 </div>
 
-            </main>
-            <Footer />
-        </>
+            </div>
+
+        </main>
     )
 
 }

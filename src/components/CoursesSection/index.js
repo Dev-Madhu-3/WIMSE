@@ -2,7 +2,7 @@ import './index.css'
 import { Fade } from "react-awesome-reveal"
 import { courses } from '../../assets/data'
 import { Link } from 'react-router-dom'
-import AppContext from '../Context/context'
+import AppContext from '../../Context/context'
 import { useContext } from 'react'
 
 

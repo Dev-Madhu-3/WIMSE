@@ -5,10 +5,11 @@ import './index.css'
 import { FaSquarePhone } from "react-icons/fa6"
 import { GoClock } from "react-icons/go"
 import { Zoom } from "react-awesome-reveal"
-import AppContext from '../Context/context'
+import AppContext from '../../Context/context'
 import { courses } from '../../assets/data'
 import { BsChevronDown } from "react-icons/bs"
 import { LuGraduationCap } from "react-icons/lu"
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -16,11 +17,18 @@ function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isVisibleCourses, setVisibleCourses] = useState(false)
     const { openedApplyForm, changeApplyFormStatus, updateCourceName, changeActiveCourseTab } = useContext(AppContext)
+    const path = useLocation().pathname
+
 
     // Toggle the mobile menu
     const toggleMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen)
     }
+
+
+
+    console.log(useLocation().pathname);
+
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -41,6 +49,7 @@ function Header() {
     const onClickCourses = (id) => {
         changeActiveCourseTab(id)
         toggleMenu()
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     return (
@@ -58,6 +67,7 @@ function Header() {
                     </div>
 
                 </Link>
+
                 <div className="header-right">
                     <Zoom cascade duration={1500} damping={0.2}>
                         <a href='tel:+917382744791' className='header-right-inner-container'>
@@ -82,32 +92,62 @@ function Header() {
 
                 <nav className={`nav-links ${isMobileMenuOpen && ' nav-links-open'}`}>
 
-                    <Link onClick={scrollToTop} className='nav-link-item' to="/">Home</Link>
-                    <div className='nav-link-item nav-item-courses'>
+                    <Link onClick={() => {
+                        scrollToTop()
+                        setIsMobileMenuOpen(false)
+                    }}
+                        className={`nav-link-item ${path === '/' && 'text-black'}`} to="/" >
+                        Home
+                    </Link>
+                    <Link onClick={() => {
+                        scrollToTop()
+                        setIsMobileMenuOpen(false)
+                    }}
+                        className={`nav-link-item highlight-text ${path === '/courses/regular' && 'text-black'}`}
+                        to="/courses/regular">
+                        Regular
+                    </Link>
+                    <div {...(!isMobileMenuOpen && {
+                        onMouseEnter: () => setVisibleCourses(true),
+                        onMouseLeave: () => setVisibleCourses(false),
+                    })} className={`nav-link-item nav-item-courses ${path === '/courses/distance' && 'text-black'}`}>
                         <div className='header-courses-dropdown-container' onClick={() => setVisibleCourses((prev) => !prev)} >
-                            <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration'>
+                            <Link
+
+                                onClick={() => {
+                                    scrollToTop()
+                                    setIsMobileMenuOpen(false)
+                                }} to='/courses/distance'
+                                className={`course-dropdown-icon-container no-text-decoration`}
+
+                            >
                                 Distance Learning
                             </Link>
                             <BsChevronDown className={`course-dropdown-logo ${isVisibleCourses && 'course-dropdown-logo-open'}`} />
                         </div>
                         <div className={`courses-container-header ${isVisibleCourses && 'visible'}`}>
                             <button onClick={() => onClickCourses("")} className='courses-container-header-items'>
-                                <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> All Courses</Link>
+                                <Link onClick={() => setVisibleCourses((prev) => !prev)} to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> All Courses</Link>
                             </button>
                             {courses.map(each =>
                                 <button key={each.icon} onClick={() => onClickCourses(each.icon)} className='courses-container-header-items'>
-                                    <Link to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> {each.course}</Link>
+                                    <Link onClick={() => setVisibleCourses((prev) => !prev)} to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> {each.course}</Link>
                                 </button>)
                             }
                         </div>
                     </div>
 
 
-                    <Link className='nav-link-item' to="/universities">Universities</Link>
+                    <Link onClick={() => {
+                        scrollToTop()
+                        setIsMobileMenuOpen(false)
+                    }} className={`nav-link-item ${path === '/universities' && 'text-black'}`} to="/universities">Universities</Link>
                     {/* <Link className='nav-link-item' to="/student-support">Student Support</Link> */}
-                    <Link className='nav-link-item' to="/about">About Us</Link>
-                    <div onClick={scrollToFooter} className='nav-link-item'>Contact</div>
-                    <Link className='nav-link-item highlight-text' to="/courses/regular">Regular</Link>
+                    <Link onClick={() => {
+                        scrollToTop()
+                        setIsMobileMenuOpen(false)
+                    }} className={`nav-link-item ${path === '/about' && 'text-black'}`} to="/about">About Us</Link>
+                    <div onClick={scrollToFooter} className={`nav-link-item`}>Contact</div>
                 </nav>
                 <button className="back-now" onClick={onChangeFormStatus}>Enqiry Now</button>
 

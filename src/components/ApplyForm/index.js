@@ -2,7 +2,7 @@ import './index.css'
 import { useContext, useState } from 'react'
 import emailjs from "@emailjs/browser"
 import { MdClose } from "react-icons/md"
-import AppContext from '../Context/context'
+import AppContext from '../../Context/context'
 import { Fade } from "react-awesome-reveal"
 import { RotatingLines } from 'react-loader-spinner'
 
@@ -58,6 +58,18 @@ const ApplyForm = () => {
                 .then((response) => {
                     setFormLoading(false)
                     setShowSuccess(true)
+
+                    // ✅ Push GTM Event
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: "form_submit",
+                        form_id: "apply_form",
+                        form_name: "Apply Now Form",
+                        form_destination: window.location.href,
+                        form_length: Object.values(formData).join(" ").length,
+                        send_to: "G-JML27WPBBP" // Change if needed
+                    });
+
                     setTimeout(() => {
                         setShowSuccess(false)
                         changeApplyFormStatus(!openedApplyForm)

@@ -1,14 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from '../Slider';
-import Welcome from '../Welcome';
-import WhyChooseUsSection from '../WhyChooseUs';
-import Footer from '../Footer';
-import Header from '../Header';
-import FeedbackSection from '../StudentsFeedback';
-import CoursesSection from '../CoursesSection';
-import DoubtsSection from '../DoubtsSection';
+import Slider from '../../components/Slider';
+import Welcome from '../../components/Welcome';
+import WhyChooseUsSection from '../../components/WhyChooseUs';
+import FeedbackSection from '../../components/StudentsFeedback';
+import CoursesSection from '../../components/CoursesSection';
+import DoubtsSection from '../../components/DoubtsSection';
 import { Universities } from '../UniversitiesRoute';
 import { FaRegSmile } from "react-icons/fa";
 import { LuNotepadText } from "react-icons/lu";
@@ -52,7 +50,6 @@ function Home() {
             </Helmet>
             <div className='relative w-full'>
                 <div className='w-full'>
-                    <Header />
                     <main>
                         <Slider />
                         <Welcome />
@@ -63,11 +60,10 @@ function Home() {
                         <FeedbackSection />
                         <DoubtsSection />
                     </main>
-                    <Footer />
                 </div>
 
                 {/* Behind Layer */}
-                <div className='fixed top-0 left-0 w-[100vw] h-[100vh] z-[-5] bg-gradient-to-b from-[#282828] via-[#ff4b4b] to-[#7717fd]'>
+                {/* <div className='fixed top-0 left-0 w-[100vw] h-[100vh] z-[-5] bg-gradient-to-b from-[#282828] via-[#ff4b4b] to-[#7717fd]'>
                     <img
                         className='w-full h-full sm:hidden'
                         src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739542914/pexels-emily-ranquist-493228-1205651_ovdauq.jpg'
@@ -78,7 +74,7 @@ function Home() {
                         src='https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745665861/dont-waste-time-motivational-mobile-38x68k2ukrkke1x1_gq2akx.webp'
                         alt='no-img2'
                     />
-                </div>
+                </div> */}
             </div>
         </>
     );

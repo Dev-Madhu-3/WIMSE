@@ -2,11 +2,9 @@ import './index.css'
 // import { FaExternalLinkAlt } from "react-icons/fa"
 // import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import Header from '../Header'
-import Footer from '../Footer'
 import { Fade } from "react-awesome-reveal"
 import { universitiesData } from '../../assets/data'
-import AppContext from '../Context/context'
+import AppContext from '../../Context/context'
 
 
 
@@ -14,7 +12,7 @@ import AppContext from '../Context/context'
 
 
 export const Universities = () => {
-    const { openedApplyForm,changeApplyFormStatus, updateCourceName } = useContext(AppContext)
+    const { openedApplyForm, changeApplyFormStatus, updateCourceName } = useContext(AppContext)
 
     const onChangeFormStatus = () => {
         updateCourceName('')
@@ -58,11 +56,9 @@ export const Universities = () => {
 }
 
 const UniversitiesRoute = () => {
-    return (<>
-        <Header />
+    return (
         <Universities />
-        <Footer />
-    </>)
+    )
 }
 
 

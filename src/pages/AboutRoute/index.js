@@ -1,9 +1,6 @@
 import './index.css'
-import Header from '../Header'
-import Footer from '../Footer'
 
 const About = () => {
-
 
     const aboutComponent = () => {
         return (
@@ -37,15 +34,7 @@ const About = () => {
     }
 
 
-    return (
-        <>
-            <Header />
-            {/* <Slider /> */}
-            <>{aboutComponent()}</>
-            <Footer />
-        </>
-
-    )
+    return (<>{aboutComponent()}</>)
 
 }
 
