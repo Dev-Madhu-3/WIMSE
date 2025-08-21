@@ -16,13 +16,7 @@ const About = () => {
 
                     <p className="description">
                         We are happy to introduce ourselves as the only professional higher education admission consultancy services in India with registered offices in all universities specializing in
-                        <span className="highlight"> arts and science</span>,
-                        <span className="highlight"> engineering</span>,
-                        <span className="highlight"> mbbs</span>,
-                        <span className="highlight"> bds</span>,
-                        <span className="highlight"> md</span>,
-                        <span className="highlight"> ms</span>,
-                        <span className="highlight"> abroad admissions</span>.
+                        <span className="highlight"> arts, commerce,science, engineering, management mbbs, bds, md, ms and  abroad admissions</span>.
                     </p>
 
                     <div className="contactSection">

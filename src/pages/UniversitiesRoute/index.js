@@ -42,7 +42,7 @@ export const Universities = () => {
     return (
         <>
             <section className='universities-container'>
-                <h1 className='universities-container-heading'>Universities</h1>
+                <h1 className='font-bold text-[#7d0053] text-[2rem] mb-5 ml-5'>Top Universities we offer</h1>
                 <div className='university-cards-container'>
                     <Fade cascade damping={0.1}>
                         {universitiesData.map((each, idx) => <UniversityCard key={idx} universityData={each} />)}

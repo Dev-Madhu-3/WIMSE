@@ -33,16 +33,16 @@ const RegularRoute = () => {
                 <h2 className='text-4xl font-bold sm:text-2xl mb-10 text-slate-700 text-center'>TOP CITIES YOU CAN <span className='text-[#61387e]'>STUDY WITH US</span> IN INDIA</h2>
                 <div className='flex flex-wrap justify-center gap-10'>
                     {topCities.map((city) => (
-                        <div className='w-[320px] flex flex-col bg-white p-2 shadow-md rounded transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg group'>
-                            <div className='h-50 w-full bg-gradient-to-r from-[#2a2a2a] to-[#5d007c] rounded flex items-center justify-center overflow-hidden'>
-                                <img className='w-[93%] h-[90%] rounded transition-transform duration-700 ease-in-out group-hover:scale-125' src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1749295466/pexels-soumya-ranjan-205042-1276133_mmlsvq.jpg" alt='city' />
+                        <div className='w-[320px] flex flex-col bg-white shadow-md rounded transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg group'>
+                            <div className='relative h-50 w-full bg-gradient-to-r from-[#2a2a2a] to-[#5d007c] rounded flex items-center justify-center overflow-hidden'>
+                                <img className='w-[20rem] h-[10rem] rounded transition-transform duration-700 ease-in-out group-hover:scale-125' src={city.imgUrl} alt={city.title} />
+                                <div className='absolute rounded-br-md px-2 bg-[#1b1b1ba1] top-0 left-0 flex items-center gap-2'><FaLocationDot className="text-white" /><p className='font-medium text-xl text-white'>{city.title}</p></div>
                             </div>
-                            <div className='flex justify-between items-end p-5'>
+                            {/* <div className='flex justify-between items-end p-5'>
                                 <div className='flex flex-col gap-2'>
-                                    <div className='flex items-center gap-2'><FaLocationDot /><p className='font-medium text-xl'>{city.title}</p></div>
                                 </div>
-                            </div>
-                            <button onClick={onTriggerApply} className='justify-self-end text-sm text-slate-100 bg-red-500 rounded py-2 px-3 hover:text-slate-200 hover:bg-red-600 transition-all duration-300 ease-in-out'>Enquiry Now</button>
+                            </div> */}
+                            <button onClick={onTriggerApply} className='justify-self-end text-sm text-slate bg-blue-200 rounded mt-3 py-2 px-3 hover:text-slate-200 hover:bg-red-600 transition-all duration-300 ease-in-out'>Enquiry Now</button>
                         </div>
                     ))}
                 </div>

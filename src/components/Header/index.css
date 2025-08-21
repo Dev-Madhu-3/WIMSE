@@ -160,9 +160,6 @@
   }
 }
 
-.nav-link-item:hover {
-  color: #cdcdcde6;
-}
 
 
 
@@ -196,24 +193,30 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 68px;
+  top: 75px;
   left: 15%;
   width: 40%;
   z-index: 7;
-  background-color: var(--primary-color);
+  background-color: #61387edf;
   transition: all 0.4s ease-in-out;
-  gap: 30px;
+  gap: 20px;
   padding: 20px;
   border-radius: 5px;
   overflow: hidden;
   opacity: 0;
   flex-wrap: wrap;
+  box-shadow: rgb(0, 0, 0) 1px 0px 5px 0px;
   /* border: 1px solid black; */
 }
 
 .courses-container-header-items {
+  transition: all 0.2s ease-in-out;
   background-color: transparent;
   border: 0;
+}
+
+.courses-container-header-items:hover {
+  scale: 1.1;
 }
 
 .no-text-decoration {
@@ -241,17 +244,17 @@
   display: none;
 }
 
-.text-black {
-  color: #000000;
-}
-
-.text-black:hover {
-  color: #180077;
-}
-
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+.nav-indicator {
+  position: absolute;
+  top: 70%; /* positions underline at the bottom of nav links */
+  height: 2px;
+  background-color: #fffb00; /* or your theme color */
+  transition: left 0.5s ease, width 0.3s ease; /* smooth sliding & resizing */
 }
 
 
@@ -282,6 +285,10 @@
     transition: all 0.3s ease-in-out;
     gap: 10px;
     border: 0;
+    background-color: transparent;
+    color: black;
+    box-shadow: none;
+    overflow: hidden;
   }
 
   /* .nav-item-courses:hover .courses-container-header {
@@ -406,5 +413,10 @@
     color: #000000e1;
     padding: 2px 20px;
     border-radius: 4px;
+    width: 100%;
+  }
+  .text-black {
+    color: black;
+    background-color: #cf23ff79;
   }
 }

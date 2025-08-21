@@ -978,65 +978,67 @@ export const regularCountriesData = [
 export const topCities = [
     {
         title: 'Bengaluru',
-        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747487672/VIT.jpg_x3chl6.webp'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422665/benguluru_pgl68f.jpg'
     },
     {
         title: 'Delhi',
-        imgUrl: 'https://images.unsplash.com/photo-1587474260585-94d8c7a61b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422628/delhi_k6fqb7.jpg'
     },
     {
         title: 'Mumbai',
-        imgUrl: 'https://images.unsplash.com/photo-1570168007204-d8a55fd35119?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422618/mumbai_qw8nbo.jpg' // Replace with direct Reuters image URL
     },
     {
         title: 'Kolkata',
-        imgUrl: 'https://images.unsplash.com/photo-1574618143293-b4a3f8d56a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422614/kolkatha_b21lg2.jpg'
     },
     {
         title: 'Chennai',
-        imgUrl: 'https://images.unsplash.com/photo-1597062151924-f23c6a66f623?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422643/chennai_kuoswo.jpg'
     },
     {
         title: 'Hyderabad',
-        imgUrl: 'https://images.unsplash.com/photo-1597753797852-f1f8543794e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422613/hyd_akwbhx.jpg'
     },
     {
         title: 'Ahmedabad',
-        imgUrl: 'https://images.pexels.com/photos/10106676/pexels-photo-10106676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422593/ahmadabad_nwqglb.jpg'
     },
     {
         title: 'Pune',
-        imgUrl: 'https://images.pexels.com/photos/17894402/pexels-photo-17894402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755427442/Pune_2_vqna9a.jpg'
     },
     {
         title: 'Surat',
-        imgUrl: 'https://images.pexels.com/photos/16993846/pexels-photo-16993846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422592/Surat_daiixc.jpg'
     },
     {
         title: 'Jaipur',
-        imgUrl: 'https://images.unsplash.com/photo-1544636331-e2685eee4da5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422669/Jaipur_bcywfs.jpg'
     },
     {
         title: 'Lucknow',
-        imgUrl: 'https://images.pexels.com/photos/10789824/pexels-photo-10789824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422673/Lucknow_e0srhz.jpg'
     },
     {
         title: 'Kanpur',
-        imgUrl: 'https://images.pexels.com/photos/18121522/pexels-photo-18121522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422668/Kanpur_ugs0qw.jpg'
     },
     {
         title: 'Nagpur',
-        imgUrl: 'https://images.pexels.com/photos/18009390/pexels-photo-18009390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422587/Nagpur_cz0pkk.jpg'
     },
     {
         title: 'Indore',
-        imgUrl: 'https://images.pexels.com/photos/16993847/pexels-photo-16993847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422589/Indore_jng1xq.jpg'
     },
     {
         title: 'Visakhapatnam',
-        imgUrl: 'https://images.unsplash.com/photo-1613402050280-f6c2c1a0e590?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
+         imgUrl: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1755422645/Vishakapatnam_s3c05o.jpg'
     }
 ];
+
+
 
 // export const coursesConstants = [
 //     "M.A","M.Sc","MBA","B.D"

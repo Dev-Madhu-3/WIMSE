@@ -16,6 +16,7 @@ import { AnimatePresence } from 'framer-motion'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Motion from './components/Motion'
+import SocialPopup from './components/SocialPopup'
 
 function AnimatedAppRoutes() {
   const location = useLocation()
@@ -59,18 +60,7 @@ function App() {
             <AnimatedAppRoutes />
             <Footer />
           </BrowserRouter>
-
-          {openedApplyForm && <ApplyForm />}
-
-          {!openedApplyForm && (
-            <a href='https://wa.me/7382744791'>
-              <img
-                className="fixed bottom-[20px] right-[30px] z-10 h-[5rem] w-[5rem] max-sm:h-[80px] max-sm:w-[80px]"
-                src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745944409/372108180_WHATSAPP_ICON_400_ilpdct.gif"
-                alt="whatsapp-icon"
-              />
-            </a>
-          )}
+          {openedApplyForm ? <ApplyForm />:<SocialPopup/>}
         </AppContext.Provider>
       </HelmetProvider>
       <SpeedInsights />

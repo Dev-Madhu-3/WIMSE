@@ -8,23 +8,15 @@
 }
 
 .speacial-course-heading-container {
-    background-color: #61387e;
     text-align: center;
     padding: 20px;
 }
 
 .speacial-course-heading {
-    color: #e8e8e8;
-    font-weight: 500;
+    color: #61387e;
+    font-weight: 700;
     letter-spacing: 2px;
-}
-
-.courses-specializations-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2%;
+    font-size: 1.5rem;
 }
 
 .course-specialization-btn {
@@ -54,7 +46,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     gap: 50px;
     flex-wrap: wrap;
     background-color: var(--primary-color);
@@ -191,5 +186,8 @@
 
     .courses-container {
         gap: 20px;
+    }
+    .some{
+        color: #7d0053;
     }
 }

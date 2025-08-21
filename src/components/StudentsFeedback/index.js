@@ -7,7 +7,7 @@ import { studentsFeedback } from '../../assets/data';
 const CoursesSection = () => {
     return (
         <section className='feedback-container'>
-            <h2 className='feedback-container-title'>Our Happy Students Say</h2>
+            <h2 className='feedback-container-title'>What's Our Students Think</h2>
             <Swiper modules={[Autoplay]}
                 effect="fade"
                 autoplay={{ delay: 3000, disableOnInteraction: false }}

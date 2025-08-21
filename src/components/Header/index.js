@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect,useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, } from 'react-icons/fa' // Import icons from react-icons
 import './index.css'
@@ -16,9 +16,19 @@ import { useLocation } from 'react-router-dom'
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isVisibleCourses, setVisibleCourses] = useState(false)
-    const { openedApplyForm, changeApplyFormStatus, updateCourceName, changeActiveCourseTab } = useContext(AppContext)
+    const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+    const { openedApplyForm, changeApplyFormStatus, updateCourceName,activeCourseTab, changeActiveCourseTab } = useContext(AppContext)
     const path = useLocation().pathname
 
+    const navRef = useRef(null);
+
+    useEffect(() => {
+        const activeLink = navRef.current?.querySelector(".nav-link-item.text-black");
+        if (activeLink) {
+            const { offsetLeft, offsetWidth } = activeLink;
+            setIndicatorStyle({ left: offsetLeft, width: offsetWidth });
+        }
+    }, [path]);
 
     // Toggle the mobile menu
     const toggleMenu = () => {
@@ -48,7 +58,9 @@ function Header() {
 
     const onClickCourses = (id) => {
         changeActiveCourseTab(id)
-        toggleMenu()
+        if (window.innerWidth <= 991) { // only close in mobile view
+        toggleMenu();
+    }
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -90,7 +102,9 @@ function Header() {
             </div>
             <header className='navbar'>
 
-                <nav className={`nav-links ${isMobileMenuOpen && ' nav-links-open'}`}>
+                <nav ref={navRef} className={`nav-links ${isMobileMenuOpen && ' nav-links-open'}`}>
+                   {(window.innerWidth <= 991)||<span className="nav-indicator" style={indicatorStyle}></span>} 
+
 
                     <Link onClick={() => {
                         scrollToTop()
@@ -99,19 +113,22 @@ function Header() {
                         className={`nav-link-item ${path === '/' && 'text-black'}`} to="/" >
                         Home
                     </Link>
-                    <Link onClick={() => {
+                    <div className={`nav-link-item ${path === '/courses/regular' && 'text-black'}`}>
+                        <Link onClick={() => {
                         scrollToTop()
                         setIsMobileMenuOpen(false)
                     }}
-                        className={`nav-link-item highlight-text ${path === '/courses/regular' && 'text-black'}`}
+                        className=" highlight-text"
                         to="/courses/regular">
                         Regular
                     </Link>
+                    </div>
+                    
                     <div {...(!isMobileMenuOpen && {
                         onMouseEnter: () => setVisibleCourses(true),
                         onMouseLeave: () => setVisibleCourses(false),
                     })} className={`nav-link-item nav-item-courses ${path === '/courses/distance' && 'text-black'}`}>
-                        <div className='header-courses-dropdown-container' onClick={() => setVisibleCourses((prev) => !prev)} >
+                        <div className='header-courses-dropdown-container'  onClick={() => setVisibleCourses((prev) => !prev)}>
                             <Link
 
                                 onClick={() => {
@@ -127,11 +144,11 @@ function Header() {
                         </div>
                         <div className={`courses-container-header ${isVisibleCourses && 'visible'}`}>
                             <button onClick={() => onClickCourses("")} className='courses-container-header-items'>
-                                <Link onClick={() => setVisibleCourses((prev) => !prev)} to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> All Courses</Link>
+                                <Link onClick={() => setVisibleCourses(false)} to='/courses/distance' className={`course-dropdown-icon-container no-text-decoration text-white sm:text-black ${activeCourseTab===""?'font-bold':'font-light'}`}> <LuGraduationCap className='course-dropdown-icon' /> All Courses</Link>
                             </button>
                             {courses.map(each =>
                                 <button key={each.icon} onClick={() => onClickCourses(each.icon)} className='courses-container-header-items'>
-                                    <Link onClick={() => setVisibleCourses((prev) => !prev)} to='/courses/distance' className='course-dropdown-icon-container no-text-decoration text-slate-500'> <LuGraduationCap className='course-dropdown-icon' /> {each.course}</Link>
+                                    <Link onClick={() => setVisibleCourses(false)} to='/courses/distance' className={`course-dropdown-icon-container no-text-decoration text-white sm:text-black ${activeCourseTab===each.icon?'font-bold':'font-light'}`}> <LuGraduationCap className='course-dropdown-icon sm: whitespace-nowrap' /> {each.course}</Link>
                                 </button>)
                             }
                         </div>

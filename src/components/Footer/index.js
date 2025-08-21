@@ -27,7 +27,7 @@ function Footer() {
                         </div>
 
                     </div>
-                    <p>23/1219, SODHAN NAGAR, BEHIND APSRTC BUSSTAND, NELLORE, ANDHRA PRADESH -524001</p>
+                    <p>23/1219, SODHAN NAGAR, BEHIND APSRTC BUS STAND, NELLORE, ANDHRA PRADESH -524001</p>
                     <p>Phone: +917382744791, +919030030126</p>
                     <p>Email: WIMSE51@GMAIL.COM</p>
                 </div>
