@@ -23,6 +23,12 @@ function Footer() {
         { name: "About Us", path: "/about" }
     ];
 
+    const developerInfo = {
+        name: "Mr. Madhu",
+        url: "https://mrmadhu.vercel.app/",
+        title: "Web Developer"
+    };
+
     return (
         <footer className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white pt-10 pb-2 overflow-hidden">
             {/* Background decoration */}
@@ -176,8 +182,18 @@ function Footer() {
                     viewport={{ once: true }}
                     className="border-t border-white/10 mt-2 pt-6 text-center"
                 >
-                    <p className="text-blue-200 text-[0.8rem]">&copy; {new Date().getFullYear()} WIMSE CONSULTANCY. All Rights Reserved.</p>
-
+                    <p className="text-blue-200 text-[0.8rem]">
+                        &copy; {new Date().getFullYear()} WIMSE CONSULTANCY. All Rights Reserved. | 
+                        <span> Designed & Developed by </span>
+                        <a 
+                            href={developerInfo.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-green-300 hover:text-green-200 transition-colors duration-300 font-medium"
+                        >
+                            {developerInfo.name}
+                        </a>
+                    </p>
                     <motion.button
                         onClick={scrollToTop}
                         whileHover={{ y: -5 }}

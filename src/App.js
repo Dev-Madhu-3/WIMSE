@@ -1,10 +1,9 @@
 import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import { AnimatePresence } from 'framer-motion'
-
 import AppContext from './Context/context'
 import Home from './pages/Home'
 import CoursesRoute from './pages/CoursesRoute'
@@ -29,11 +28,11 @@ function AnimatedAppRoutes() {
   const location = useLocation()
 
   return (
-    // <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<MainLayout><Home/></MainLayout>} />
-        <Route path="/courses/distance" element={<MainLayout><CoursesRoute/></MainLayout>} />
-        <Route path="/courses/regular" element={<MainLayout><RegularRoute/></MainLayout>} />
+        <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+        <Route path="/courses/distance" element={<MainLayout><CoursesRoute /></MainLayout>} />
+        <Route path="/courses/regular" element={<MainLayout><RegularRoute /></MainLayout>} />
         <Route path="/universities" element={<MainLayout><UniversitiesRoute /></MainLayout>} />
         <Route path="/about" element={<MainLayout><AboutRoute /></MainLayout>} />
         <Route path="/student-support" element={<MainLayout><StudentSupport /></MainLayout>} />
@@ -42,7 +41,7 @@ function AnimatedAppRoutes() {
         <Route path="/not-found" element={<MinimalLayout><NotFound /></MinimalLayout>} />
         <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
-    // </AnimatePresence>
+    </AnimatePresence>
   )
 }
 
@@ -55,8 +54,9 @@ function App() {
   const location = useLocation()
 
   useEffect(() => {
-    changeApplyFormStatus(!openedApplyForm)
+    setTimeout(() => changeApplyFormStatus(!openedApplyForm), 10000)
   }, [])
+
 
   const isNotFoundPage = location.pathname === "/not-found"
 
@@ -72,7 +72,7 @@ function App() {
         >
           {/* ✅ Persistent Header & Footer */}
           {!isNotFoundPage && <Header />}
-          
+
           <AnimatedAppRoutes />
 
           {!isNotFoundPage && <Footer />}

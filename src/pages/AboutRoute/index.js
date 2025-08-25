@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaAward, FaUsers, FaHandshake } from "react-icons/fa";
+import React, { useContext } from 'react'
+import AppContext from '../../Context/context'
 
 const About = () => {
+  const { openedApplyForm, changeApplyFormStatus, updateCourceName } = useContext(AppContext)
+    
+    const onChangeFormStatus = () => {
+        updateCourceName('')
+        changeApplyFormStatus(!openedApplyForm)
+    }
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -136,6 +144,7 @@ const About = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={onChangeFormStatus}
             >
               Contact Us
             </motion.button>

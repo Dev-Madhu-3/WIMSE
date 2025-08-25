@@ -145,7 +145,7 @@ const CoursesRoute = () => {
                 </motion.div>
 
                 {/* Floating Action Button */}
-                <motion.div 
+                {/* <motion.div 
                     className="fixed bottom-8 right-8 z-50"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -159,7 +159,7 @@ const CoursesRoute = () => {
                     >
                         <FaGraduationCap className="text-2xl" />
                     </motion.button>
-                </motion.div>
+                </motion.div> */}
             </div>
         </main>
     );
