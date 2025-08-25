@@ -1,66 +1,63 @@
-import { useContext, useState, useRef, useEffect } from "react"
-import emailjs from "@emailjs/browser"
-import { MdClose } from "react-icons/md"
-import AppContext from "../../Context/context"
-import { Fade } from "react-awesome-reveal"
-import { RotatingLines } from "react-loader-spinner"
+import { useContext, useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import { MdClose, MdPerson, MdEmail, MdPhone, MdSchool, MdBook } from "react-icons/md";
+import AppContext from "../../Context/context";
+import { motion, AnimatePresence } from "framer-motion";
+import { RotatingLines } from "react-loader-spinner";
 
 const ApplyForm = () => {
-  const [showSuccess, setShowSuccess] = useState(false)
-  const { openedApplyForm, changeApplyFormStatus, courseName } =
-    useContext(AppContext)
-
+  const [showSuccess, setShowSuccess] = useState(false);
+  const { openedApplyForm, changeApplyFormStatus, courseName } = useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
     email: "",
     course: courseName,
     mode: "distance",
-  })
-
-  const [errorMsg, setErrorMsg] = useState(null)
-  const [submissionError, setSubmissionError] = useState(null)
-  const [formLoading, setFormLoading] = useState(false)
-  const formRef = useRef(null)
+  });
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [submissionError, setSubmissionError] = useState(null);
+  const [formLoading, setFormLoading] = useState(false);
+  const formRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
-        onClose()
+        onClose();
       }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
+    };
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const onFormChange = (e) => {
-    setErrorMsg(null)
-    setSubmissionError(null)
-    setFormData({ ...formData, [e.target.name]: e.target.value.trimStart() })
-  }
+    setErrorMsg(null);
+    setSubmissionError(null);
+    setFormData({ ...formData, [e.target.name]: e.target.value.trimStart() });
+  };
 
   const onClose = () => {
-    changeApplyFormStatus(!openedApplyForm)
-  }
+    changeApplyFormStatus(!openedApplyForm);
+  };
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!formData.name.trim()) {
-      setErrorMsg("Name is required")
+      setErrorMsg("Name is required");
     } else if (!formData.email) {
-      setErrorMsg("Email is required")
+      setErrorMsg("Email is required");
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setErrorMsg("Email is invalid")
+      setErrorMsg("Email is invalid");
     } else if (!formData.mobile) {
-      setErrorMsg("Mobile number is required")
+      setErrorMsg("Mobile number is required");
     } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
-      setErrorMsg("Invalid mobile number")
+      setErrorMsg("Invalid mobile number");
     } else if (!formData.course.trim()) {
-      setErrorMsg("Course name is required")
+      setErrorMsg("Course name is required");
     } else {
-      setFormLoading(true)
+      setFormLoading(true);
       emailjs
         .send(
           "service_5q5t3da",
@@ -69,200 +66,294 @@ const ApplyForm = () => {
           "5WS9x7gFrYdpyQ_Vi"
         )
         .then(() => {
-          setFormLoading(false)
-          setShowSuccess(true)
-
+          setFormLoading(false);
+          setShowSuccess(true);
           // GTM push
-          window.dataLayer = window.dataLayer || []
+          window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: "form_submit",
             form_id: "apply_form",
             form_name: "Apply Now Form",
             form_destination: window.location.href,
             form_length: Object.values(formData).join(" ").length,
-          })
-
+          });
           setTimeout(() => {
-            setShowSuccess(false)
-            changeApplyFormStatus(!openedApplyForm)
-          }, 3500)
+            setShowSuccess(false);
+            changeApplyFormStatus(!openedApplyForm);
+          }, 3500);
         })
         .catch((error) => {
-          setFormLoading(false)
-          console.error("Error sending email:", error)
-          setSubmissionError("Something went wrong. Please try again.")
-        })
+          setFormLoading(false);
+          console.error("Error sending email:", error);
+          setSubmissionError("Something went wrong. Please try again.");
+        });
     }
-  }
+  };
 
   return (
-    <Fade
-      duration={300}
-      className="fixed top-0 left-0 z-40 flex min-h-screen w-full items-center justify-center bg-black/80 text-gray-900"
-    >
-      {formLoading ? (
-        <RotatingLines
-          visible={true}
-          height="96"
-          width="96"
-          strokeColor="#9c10ff"
-          strokeWidth="4"
-          animationDuration="0.75"
-          ariaLabel="rotating-lines-loading"
-        />
-      ) : (
-        <>
-          {showSuccess ? (
-            <div className="absolute top-5 right-5 z-50 animate-bounce rounded-lg border border-green-400 bg-green-100 px-6 py-4 text-green-800 shadow-lg transition duration-500 ease-in-out">
-              <p className="font-semibold">✅ Submitted Successfully!</p>
-              <p className="text-sm">We will get back to you shortly.</p>
-            </div>
-          ) : (
-            <form
-              ref={formRef}
-              noValidate
-              onSubmit={sendEmail}
-              className="relative w-[30rem] rounded-lg bg-gray-50 p-8 sm:p-6 text-center shadow-md sm:w-[90%]"
+    <AnimatePresence>
+      {openedApplyForm && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+        >
+          {formLoading ? (
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="flex flex-col items-center justify-center"
             >
-              <MdClose
-                aria-label="Toggle Menu"
-                onClick={onClose}
-                className="absolute right-3 top-3 cursor-pointer text-[25px]"
+              <RotatingLines
+                visible={true}
+                height="80"
+                width="80"
+                strokeColor="#8b5cf6"
+                strokeWidth="4"
+                animationDuration="0.75"
+                ariaLabel="rotating-lines-loading"
               />
-              <h2 className="mb-4 text-[1.8rem] sm:text-[1.4rem] font-bold leading-snug text-[#313131]">
-                {courseName ? "Quick Apply" : "Enquiry Now"}
-              </h2>
-
-              {/* Name */}
-              <div className="mt-3 w-full text-left">
-                <label
-                  htmlFor="name"
-                  className="mb-1 ml-1 block text-gray-800"
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="mt-4 text-white text-lg font-medium"
+              >
+                Submitting your application...
+              </motion.p>
+            </motion.div>
+          ) : (
+            <>
+              {showSuccess ? (
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0, y: 20 }}
+                  animate={{ scale: 1, opacity: 1, y: 0 }}
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 p-6 rounded-2xl shadow-2xl max-w-md w-full"
                 >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  type="text"
-                  onChange={onFormChange}
-                  placeholder="Your name"
-                  required
-                  className="w-full rounded-md border border-gray-300 bg-gray-100 px-2 py-2 outline-none transition focus:border-purple-600 focus:shadow-md"
-                />
-              </div>
-
-              {/* Mobile */}
-              <div className="mt-3 w-full text-left">
-                <label
-                  htmlFor="mobile"
-                  className="mb-1 ml-1 block text-gray-800"
+                  <div className="flex flex-col items-center justify-center text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: "spring", stiffness: 500 }}
+                      className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4"
+                    >
+                      <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </motion.div>
+                    <motion.h3
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-2xl font-bold text-white mb-2"
+                    >
+                      Application Submitted!
+                    </motion.h3>
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="text-white/90"
+                    >
+                      We'll get back to you shortly.
+                    </motion.p>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  ref={formRef}
+                  initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                  animate={{ scale: 1, opacity: 1, y: 0 }}
+                  exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                  transition={{ type: "spring", damping: 25 }}
+                  className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl"
                 >
-                  Mobile
-                </label>
-                <input
-                  id="mobile"
-                  name="mobile"
-                  value={formData.mobile}
-                  type="text"
-                  onChange={onFormChange}
-                  placeholder="Your Mobile Number"
-                  required
-                  className="w-full rounded-md border border-gray-300 bg-gray-100 px-2 py-2 outline-none transition focus:border-purple-600 focus:shadow-md"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="mt-3 w-full text-left">
-                <label
-                  htmlFor="email"
-                  className="mb-1 ml-1 block text-gray-800"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  type="email"
-                  onChange={onFormChange}
-                  placeholder="Your email"
-                  required
-                  className="w-full rounded-md border border-gray-300 bg-gray-100 px-2 py-2 outline-none transition focus:border-purple-600 focus:shadow-md"
-                />
-              </div>
-
-              {/* Course */}
-              <div className="mt-3 w-full text-left">
-                <label
-                  htmlFor="course"
-                  className="mb-1 ml-1 block text-gray-800"
-                >
-                  Course
-                </label>
-                <input
-                  id="course"
-                  name="course"
-                  value={formData.course}
-                  type="text"
-                  onChange={onFormChange}
-                  placeholder="Enter Course Name"
-                  required
-                  className="w-full rounded-md border border-gray-300 bg-gray-100 px-2 py-2 outline-none transition focus:border-purple-600 focus:shadow-md"
-                />
-              </div>
-
-              {/* Mode */}
-              <div className="mt-3 w-full text-left">
-                <label
-                  htmlFor="mode"
-                  className="mb-1 ml-1 block text-gray-800"
-                >
-                  Learning Mode
-                </label>
-                <select
-                  name="mode"
-                  id="mode"
-                  value={formData.mode}
-                  onChange={onFormChange}
-                  required
-                  className="w-full rounded-md border border-gray-300 bg-gray-100 px-2 py-2 outline-none transition focus:border-purple-600 focus:shadow-md"
-                >
-                  <option value="distance">Distance</option>
-                  <option value="online">Online</option>
-                  <option value="regular">Regular</option>
-                  <option value="credit transfer">Credit Transfer</option>
-                </select>
-              </div>
-
-              {/* Errors */}
-              {errorMsg && (
-                <p className="mt-1 text-left text-[1.1rem] text-red-500">
-                  *{errorMsg}
-                </p>
+                  {/* Background Image */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                      alt="Education Background" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-indigo-900/90"></div>
+                  </div>
+                  
+                  {/* Form Content */}
+                  <div className="relative z-10 bg-white/90 backdrop-blur-sm p-8 rounded-2xl">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      onClick={onClose}
+                      className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
+                    >
+                      <MdClose className="text-2xl" />
+                    </motion.button>
+                    
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 }}
+                      className="text-center mb-8"
+                    >
+                      <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                        {courseName ? "Quick Apply" : "Enquiry Now"}
+                      </h2>
+                      <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
+                    </motion.div>
+                    
+                    <form onSubmit={sendEmail} className="space-y-5">
+                      {/* Name Field */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="relative"
+                      >
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <MdPerson className="text-gray-500" />
+                        </div>
+                        <input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          type="text"
+                          onChange={onFormChange}
+                          placeholder="Your name"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        />
+                      </motion.div>
+                      
+                      {/* Mobile Field */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="relative"
+                      >
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <MdPhone className="text-gray-500" />
+                        </div>
+                        <input
+                          id="mobile"
+                          name="mobile"
+                          value={formData.mobile}
+                          type="text"
+                          onChange={onFormChange}
+                          placeholder="Your Mobile Number"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        />
+                      </motion.div>
+                      
+                      {/* Email Field */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="relative"
+                      >
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <MdEmail className="text-gray-500" />
+                        </div>
+                        <input
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          type="email"
+                          onChange={onFormChange}
+                          placeholder="Your email"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        />
+                      </motion.div>
+                      
+                      {/* Course Field */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="relative"
+                      >
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <MdSchool className="text-gray-500" />
+                        </div>
+                        <input
+                          id="course"
+                          name="course"
+                          value={formData.course}
+                          type="text"
+                          onChange={onFormChange}
+                          placeholder="Enter Course Name"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        />
+                      </motion.div>
+                      
+                      {/* Mode Field */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 }}
+                        className="relative"
+                      >
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                          <MdBook className="text-gray-500" />
+                        </div>
+                        <select
+                          name="mode"
+                          id="mode"
+                          value={formData.mode}
+                          onChange={onFormChange}
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all appearance-none"
+                        >
+                          <option value="distance">Distance</option>
+                          <option value="online">Online</option>
+                          <option value="regular">Regular</option>
+                          <option value="credit transfer">Credit Transfer</option>
+                        </select>
+                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                          <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </motion.div>
+                      
+                      {/* Error Messages */}
+                      <AnimatePresence>
+                        {(errorMsg || submissionError) && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            className="text-red-500 text-sm font-medium"
+                          >
+                            *{errorMsg || submissionError}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      
+                      {/* Submit Button */}
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        type="submit"
+                        className="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
+                      >
+                        Submit Application
+                      </motion.button>
+                    </form>
+                  </div>
+                </motion.div>
               )}
-              {submissionError && (
-                <p className="mt-1 text-left text-[1.1rem] text-red-600">
-                  *{submissionError}
-                </p>
-              )}
-
-              {/* Submit */}
-              <div className="mt-4 w-full text-left">
-                <button
-                  type="submit"
-                  className="mt-2 h-[2.7rem] w-full rounded-md bg-purple-600 text-[1.2rem] font-semibold text-white transition hover:bg-purple-800"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+            </>
           )}
-        </>
+        </motion.div>
       )}
-    </Fade>
-  )
-}
+    </AnimatePresence>
+  );
+};
 
-export default ApplyForm
+export default ApplyForm;

@@ -1,37 +1,48 @@
-import './App.css'
 import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
+import { AnimatePresence } from 'framer-motion'
+
+import AppContext from './Context/context'
 import Home from './pages/Home'
 import CoursesRoute from './pages/CoursesRoute'
 import UniversitiesRoute from './pages/UniversitiesRoute'
 import AboutRoute from './pages/AboutRoute'
+import RegularRoute from './pages/RegularRoute'
+import NotFound from './pages/NotFound'
 import StudentSupport from './components/StudentSupport'
 import ApplyForm from './components/ApplyForm'
-import { useEffect, useState } from 'react'
-import AppContext from './Context/context'
-import RegularRoute from './pages/RegularRoute'
-import { SpeedInsights } from "@vercel/speed-insights/react"
-import { Analytics } from "@vercel/analytics/react"
-import { AnimatePresence } from 'framer-motion'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Motion from './components/Motion'
 import SocialPopup from './components/SocialPopup'
+
+function MinimalLayout({ children }) {
+  return <>{children}</>
+}
+function MainLayout({ children }) {
+  return <>{children}</>
+}
 
 function AnimatedAppRoutes() {
   const location = useLocation()
 
   return (
-    <AnimatePresence mode="wait">
+    // <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path='/' element={<Motion><Home /></Motion>} />
-        <Route path='/courses/distance' element={<Motion><CoursesRoute /></Motion>} />
-        <Route path='/student-support' element={<Motion><StudentSupport /></Motion>} />
-        <Route path='/about' element={<Motion><AboutRoute /></Motion>} />
-        <Route path='/universities' element={<Motion><UniversitiesRoute /></Motion>} />
-        <Route path='/courses/regular' element={<Motion><RegularRoute /></Motion>} />
+        <Route path="/" element={<MainLayout><Home/></MainLayout>} />
+        <Route path="/courses/distance" element={<MainLayout><CoursesRoute/></MainLayout>} />
+        <Route path="/courses/regular" element={<MainLayout><RegularRoute/></MainLayout>} />
+        <Route path="/universities" element={<MainLayout><UniversitiesRoute /></MainLayout>} />
+        <Route path="/about" element={<MainLayout><AboutRoute /></MainLayout>} />
+        <Route path="/student-support" element={<MainLayout><StudentSupport /></MainLayout>} />
+
+        {/* NotFound Page */}
+        <Route path="/not-found" element={<MinimalLayout><NotFound /></MinimalLayout>} />
+        <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
-    </AnimatePresence>
+    // </AnimatePresence>
   )
 }
 
@@ -41,9 +52,13 @@ function App() {
   const [courseName, updateCourceName] = useState('')
   const [activeCourseTab, changeActiveCourseTab] = useState('')
 
+  const location = useLocation()
+
   useEffect(() => {
     changeApplyFormStatus(!openedApplyForm)
   }, [])
+
+  const isNotFoundPage = location.pathname === "/not-found"
 
   return (
     <>
@@ -55,12 +70,15 @@ function App() {
             activeCourseTab, changeActiveCourseTab
           }}
         >
-          <BrowserRouter>
-            <Header />
-            <AnimatedAppRoutes />
-            <Footer />
-          </BrowserRouter>
-          {openedApplyForm ? <ApplyForm />:<SocialPopup/>}
+          {/* ✅ Persistent Header & Footer */}
+          {!isNotFoundPage && <Header />}
+          
+          <AnimatedAppRoutes />
+
+          {!isNotFoundPage && <Footer />}
+
+          {/* ✅ Show form/popup only if NOT on NotFound */}
+          {!isNotFoundPage && (openedApplyForm ? <ApplyForm /> : <SocialPopup />)}
         </AppContext.Provider>
       </HelmetProvider>
       <SpeedInsights />
@@ -69,4 +87,5 @@ function App() {
   )
 }
 
-export default App
+
+export default App;

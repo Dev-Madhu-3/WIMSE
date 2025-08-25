@@ -2,7 +2,7 @@ export const courses = [
     {
         course: "Master of Arts (M.A)",
         icon: "M.A",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739783305/Marketing-5f8b69dbef7d404681376b03ebc00dfb_ghinhq.webp',
+        imageURL: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'Master of Arts in English',
@@ -10,7 +10,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Explore advanced literary analysis, linguistics, and critical theory while studying global literature across historical periods and genres.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Hindi',
@@ -18,7 +18,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Dive into classical and modern Hindi literature, folklore, and sociolinguistics while developing advanced creative writing and translation skills.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1588482364533-317a39d8c9f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Telugu',
@@ -26,7 +26,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Analyze Telugu literary heritage, from ancient inscriptions to contemporary works, with emphasis on cultural context and linguistic evolution.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1596495577876-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Sanskrit',
@@ -34,7 +34,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Study Vedic texts, classical Sanskrit poetry, and philosophical treatises while mastering grammatical structures and historical linguistic developments.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1596495578071-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Economics',
@@ -42,7 +42,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Investigate macroeconomic policies, econometric modeling, and developmental economics with practical applications in real-world financial systems.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in History',
@@ -50,7 +50,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Examine global historical narratives, archival research methods, and historiography across ancient, medieval, and modern civilizations.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1533689033436-5ad2e3d0ba8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Political Science',
@@ -58,7 +58,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Analyze comparative governance, political ideologies, and international diplomacy through case studies and policy simulations.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a8929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Sociology',
@@ -66,7 +66,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Investigate social stratification, urbanization trends, and cultural anthropology using qualitative and quantitative research methodologies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Journalism and Mass Communication (JMC)',
@@ -74,7 +74,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Develop multimedia storytelling skills, ethical reporting practices, and strategic communication strategies for digital and traditional media platforms.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Master of Arts in Human Resource Management (HRM)',
@@ -82,14 +82,14 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Master organizational behavior, talent acquisition strategies, and labor law compliance for effective workforce development and management.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     },
     {
         course: "Master of Science (M.Sc)",
         icon: "M.Sc",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739783305/Data_20science-7ada88fd565c4e4d81ae548c6b908399_b2ap3q.webp',
+        imageURL: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'M.Sc Botany',
@@ -97,7 +97,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Investigate plant physiology, genetic engineering, and ecological conservation through laboratory experiments and field research projects.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815325/botany_wilzvc.jpg'
+                image: 'https://images.unsplash.com/photo-1494597564530-871a3e0d6c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Zoology',
@@ -105,7 +105,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Explore animal biodiversity, evolutionary biology, and wildlife conservation techniques using advanced microscopy and genomic tools.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815325/zoology_dkwz0m.jpg'
+                image: 'https://images.unsplash.com/photo-1544635902-8cbbf5d3349c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Microbiology',
@@ -113,7 +113,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Study pathogenic mechanisms, industrial fermentation processes, and antimicrobial resistance through hands-on laboratory experimentation.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/microbiology_uwmapf.jpg'
+                image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Physics',
@@ -121,7 +121,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Delve into quantum field theory, condensed matter physics, and astrophysics with computational modeling and experimental verification.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/physics_xhoyck.jpg'
+                image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Chemistry',
@@ -129,7 +129,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Master spectroscopic analysis, nanomaterial synthesis, and reaction mechanisms in organic/inorganic chemistry laboratories.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/chemistry_ynpmsi.jpg'
+                image: 'https://images.unsplash.com/photo-1532187853781-51cdbb32c3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Mathematics',
@@ -137,7 +137,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Solve complex problems in differential equations, topology, and mathematical modeling for engineering and scientific applications.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/maths_yulxss.jpg'
+                image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Statistics',
@@ -145,7 +145,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Apply Bayesian inference, machine learning algorithms, and multivariate analysis to solve real-world data challenges.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815327/satistics_qnfcqa.jpg'
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Food & Nutrition Science',
@@ -153,7 +153,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Research food chemistry, clinical nutrition, and sustainable diet planning for health promotion and disease prevention.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/food_sybbsm.jpg'
+                image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Computer Science',
@@ -161,7 +161,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Develop expertise in cloud computing, neural networks, and cybersecurity through programming labs and capstone projects.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/computer_wvxfrk.jpg'
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'M.Sc Psychology',
@@ -169,14 +169,14 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Investigate cognitive neuroscience, psychometric testing, and therapeutic interventions through clinical observations and research studies.',
-                image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1742815326/psychology_vhhqen.jpg'
+                image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     },
     {
         course: "Master of Business Administration (MBA)",
         icon: "MBA",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739783305/AI20Ml-776da8f5a73b4c6fb7300838455e83c8_msv1bl.webp',
+        imageURL: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'MBA in Information Technology Management',
@@ -184,7 +184,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Integrate business strategy with IT infrastructure management, cybersecurity, digital transformation, and cloud solutions.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Data Science',
@@ -192,7 +192,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Bridge business analytics with AI-driven decision-making using Python, R, and big data tools.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Petroleum & Natural Gas Management',
@@ -200,7 +200,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Optimize energy sector operations through hydrocarbon economics, sustainable policies, and supply chain management.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Systems and Operations Management',
@@ -208,7 +208,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Enhance business efficiency by optimizing logistics, supply chains, production systems, and process automation.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Healthcare Management',
@@ -216,7 +216,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Learn hospital administration, health policies, medical operations, and financial management for healthcare businesses.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Entrepreneurship and Leadership',
@@ -224,7 +224,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Develop startup strategies, leadership skills, business innovation, risk management, and venture capital knowledge.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in IT & FinTech',
@@ -232,7 +232,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Combine financial technology, blockchain, digital banking, cybersecurity, and AI-driven financial strategies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Artificial Intelligence & Machine Learning',
@@ -240,7 +240,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Master AI applications, deep learning, automation strategies, and intelligent business decision-making techniques.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Agri-Business Management',
@@ -248,7 +248,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Learn agricultural economics, rural marketing, sustainable farming strategies, and agribusiness management policies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in International Business Management',
@@ -256,7 +256,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Understand global trade, cross-border marketing, foreign policies, and multinational business expansion strategies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Power Management',
@@ -264,7 +264,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Focus on energy efficiency, power generation, renewable energy, grid management, and policy-making strategies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Crude Oil and Gas Management',
@@ -272,7 +272,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Specialize in oil exploration, refining, supply chain logistics, sustainability, and petroleum industry management.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in Infrastructure Management',
@@ -280,7 +280,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Plan and manage urban development, real estate, smart city projects, and large-scale infrastructure projects.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'MBA in BFSI (Banking, Financial Services, and Insurance)',
@@ -288,14 +288,14 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: 'Master banking regulations, risk analysis, financial markets, insurance management, and investment banking strategies.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     },
     {
         course: "Master of Computer Applications (MCA)",
         icon: "MCA",
-        imageURL: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739783306/Technology-bb533a88318b4d7389e4ea26c6a5d144_yqvgdy.webp",
+        imageURL: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
         specializations: [
             {
                 name: "MCA General",
@@ -303,7 +303,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Focuses on advanced computer science, programming, and application development. Graduates can pursue careers in software development, database management, and system analysis.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245340/mca_Gerenal_xbgm0u.webp"
+                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Computer Science & IT",
@@ -311,7 +311,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Focuses on software development, database management, and IT system design for real-world applications.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245280/Computer_science_IT_cdwaf5.webp"
+                image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Cyber Security",
@@ -319,7 +319,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Covers network security, encryption, ethical hacking, and digital forensics to protect systems from cyber threats.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245280/Cyber_Security_ott1xz.webp"
+                image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Data Analytics",
@@ -327,7 +327,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Emphasizes data visualization, predictive modeling, and analytical tools for informed decision-making.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245279/Data_Analytics_hrezjn.webp"
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Data Science",
@@ -335,7 +335,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Focuses on machine learning, big data technologies, and data-driven insights for business and research.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245310/Data_Science_vadebl.webp"
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Artificial Intelligence",
@@ -343,7 +343,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Explores neural networks, natural language processing, and AI-driven automation systems.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245279/Artificial_Intelligence_ohfw6n.webp"
+                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Cloud Technology & Information Security",
@@ -351,7 +351,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Combines cloud platform management with cybersecurity protocols for secure data handling.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245279/Cloud_Technology_Information_Security_eiw3on.webp"
+                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Artificial Intelligence & Machine Learning",
@@ -359,7 +359,7 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Specializes in AI algorithms, data modeling, and developing intelligent systems.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245279/Artificial_Intelligence_Machine_Learning_zcaumh.webp"
+                image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             },
             {
                 name: "MCA in Cloud Computing and DevOps",
@@ -367,14 +367,14 @@ export const courses = [
                 duration: 2,
                 semester: 4,
                 description: "Focuses on cloud architecture, automation tools, and continuous development strategies for efficient software delivery.",
-                image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1743245279/Cloud_Computing_and_Devops_er1ayo.webp"
+                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
             }
         ]
     },
     {
         course: "Bachelor Degree",
         icon: "B.D",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739783305/Doctorate_20_1_-19ac9bb7c13840a9b2a89f0097b3c91e_nggb2g.webp',
+        imageURL: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'Bachelor of Computer Applications (BCA)',
@@ -382,7 +382,7 @@ export const courses = [
                 duration: 3,
                 semester: 6,
                 description: 'Master programming languages like Java/Python while learning database management, web development, and software engineering principles.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'B.Com (Hons.)',
@@ -390,7 +390,7 @@ export const courses = [
                 duration: 3,
                 semester: 6,
                 description: 'Gain expertise in corporate accounting, financial markets, and e-commerce strategies with practical auditing experience.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Bachelor of Business Administration (BBA)',
@@ -398,7 +398,7 @@ export const courses = [
                 duration: 3,
                 semester: 6,
                 description: 'Develop leadership skills in operations management, digital marketing, and entrepreneurial ventures through case-based learning.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Bachelor of Arts (B.A.)',
@@ -406,7 +406,7 @@ export const courses = [
                 duration: 3,
                 semester: 6,
                 description: 'Engage with interdisciplinary studies in philosophy, performing arts, and global political systems through electives.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Bachelor of Commerce (B.Com)',
@@ -414,14 +414,14 @@ export const courses = [
                 duration: 3,
                 semester: 6,
                 description: 'Study taxation laws, business ethics, and financial accounting systems for corporate and entrepreneurial careers.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     },
     {
         course: "Advanced Diploma Programs",
         icon: "ADCP",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486776/diploma_deqrkq.jpg',
+        imageURL: 'https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'Advanced Diploma in Dietetics and Therapeutic Nutrition (ADDTN)',
@@ -429,7 +429,7 @@ export const courses = [
                 duration: 1.5,
                 semester: 0,
                 description: 'Focuses on clinical nutrition and diet planning for therapeutic health outcomes. Ideal for careers in hospitals, wellness centers, and nutrition consultancy.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Advanced Diploma in Drug Regulatory Affairs (ADDRA)',
@@ -437,7 +437,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers global drug approval processes, compliance, and regulatory policies. Prepares professionals for pharma regulatory roles across international markets.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Online Advanced Diploma in Medical Record Techniques (ADMRT)',
@@ -445,7 +445,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Trains in health information management, coding, and electronic medical records. Designed for roles in hospitals, clinics, and healthcare administration.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'General Management',
@@ -453,7 +453,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Develops leadership, strategic planning, and organizational skills. Suitable for aspirants seeking versatile management roles across industries.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Human Resource Management',
@@ -461,7 +461,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Teaches HR planning, recruitment, labor law, and performance management. Prepares professionals for effective people management in businesses.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Marketing Management',
@@ -469,7 +469,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers branding, advertising, consumer behavior, and market strategy. Equips learners to lead marketing efforts in competitive markets.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Finance Management',
@@ -477,7 +477,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Focuses on investment, budgeting, and financial analysis. Trains professionals for key roles in corporate finance and banking.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Retail Management',
@@ -485,7 +485,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Teaches store operations, visual merchandising, and customer service. Prepares learners for careers in the retail and FMCG sectors.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Operations Management',
@@ -493,7 +493,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers logistics, supply chain, and production planning. Ideal for managing processes in manufacturing and service industries.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Banking & Finance Management',
@@ -501,7 +501,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Provides knowledge of banking operations, risk management, and financial instruments. Designed for careers in banking and finance sectors.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Information Technology',
@@ -509,7 +509,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers foundational IT skills, networks, databases, and systems. Suitable for beginners entering the tech industry.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Human Resource Management – Advanced',
@@ -517,7 +517,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Explores advanced HR analytics, strategic HRM, and organizational development. Ideal for senior HR roles and consultants.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Marketing Management – Advanced',
@@ -525,7 +525,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Delves into digital strategy, market analytics, and global marketing. Prepares professionals for leadership in marketing departments.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Finance Management – Advanced',
@@ -533,7 +533,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers financial modeling, risk assessment, and global finance. Suited for CFO-track professionals and finance leaders.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Retail Management – Advanced',
@@ -541,7 +541,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Offers deeper insight into retail analytics, supply chain integration, and retail marketing strategy. Best for managerial roles in retail.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Operations Management – Advanced',
@@ -549,7 +549,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Emphasizes lean management, Six Sigma, and enterprise operations. Tailored for professionals managing complex operational systems.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Banking & Finance Management – Advanced',
@@ -557,7 +557,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Focuses on advanced financial regulations, investment banking, and credit analysis. Ideal for strategic finance professionals.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Information Technology – Advanced',
@@ -565,7 +565,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Provides advanced training in cloud computing, cybersecurity, and enterprise IT systems. Prepares candidates for senior IT roles.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Cyber Security Program',
@@ -573,7 +573,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers network security, ethical hacking, and data protection. Equips learners to secure IT systems against cyber threats.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Application Development',
@@ -581,7 +581,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Teaches programming, software lifecycle, and user-centric app creation. Prepares learners for software development roles.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Internet of Things (IoT)',
@@ -589,7 +589,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Focuses on connected devices, sensors, and smart systems. Equips learners for careers in smart tech and automation.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Artificial Intelligence',
@@ -597,7 +597,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Covers machine learning, neural networks, and intelligent systems. Prepares professionals for AI-driven industry applications.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Computer Applications',
@@ -605,7 +605,7 @@ export const courses = [
                 duration: 0.5,
                 semester: 0,
                 description: 'Introduces key software tools for office productivity and data management. Useful for administrative and support roles.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'French Language (Online)',
@@ -613,7 +613,7 @@ export const courses = [
                 duration: 0.5,
                 semester: 0,
                 description: 'Builds reading, writing, and speaking skills in French. Suitable for academic, travel, or international business use.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Naturopathy & Yoga Science',
@@ -621,7 +621,7 @@ export const courses = [
                 duration: 1,
                 semester: 0,
                 description: 'Teaches natural healing, yoga techniques, and holistic wellness. Ideal for careers in alternative medicine and lifestyle coaching.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1506629904605-7f3b0f4e3d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Foreign Language – Japanese',
@@ -629,14 +629,14 @@ export const courses = [
                 duration: 0.5,
                 semester: 0,
                 description: 'Introduces basic grammar, vocabulary, and communication in Japanese. Useful for tourism, trade, and cultural exchange.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     },
     {
         course: "Certificate Courses",
         icon: "C&D",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486775/Certification-courses_n2mdgc.png',
+        imageURL: 'https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
         specializations: [
             {
                 name: 'Certificate in Modern Persian Language (CMPL)',
@@ -644,7 +644,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'This course builds proficiency in reading, writing, and speaking Modern Persian. It enhances cultural understanding and communication skills for academic or professional use.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1588482364533-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Diploma in Professional Arabic (DPA)',
@@ -652,7 +652,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'A comprehensive program in spoken and written Arabic, designed for professional and academic applications. It emphasizes grammar, vocabulary, and real-world usage.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Diploma in Bakery and Confectionery Technology (DBCT)',
@@ -660,7 +660,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'Covers theoretical and practical aspects of baking and confectionery. Prepares students for careers in commercial kitchens, bakeries, and food industries.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Computerized Accounting',
@@ -668,7 +668,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'Focuses on modern accounting software tools like Tally and QuickBooks. Equips learners to manage financial records and reports digitally with precision and efficiency.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Advanced Digital Marketing',
@@ -676,7 +676,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'Teaches SEO, SEM, social media marketing, analytics, and content strategy. Ideal for those looking to excel in online branding and digital business growth.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Android App Development',
@@ -684,7 +684,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'Hands-on course covering Java/Kotlin, UI/UX, and Android Studio. Enables learners to design, develop, and deploy functional mobile applications on the Android platform.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Certificate Course in GST',
@@ -692,7 +692,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'Offers practical knowledge of Goods and Services Tax law and procedures. Equips learners with skills in tax computation, filing returns, and GST compliance.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             },
             {
                 name: 'Business and Finance Professional',
@@ -700,7 +700,7 @@ export const courses = [
                 duration: null,
                 semester: null,
                 description: 'The Business and Finance Professional certificate course provides foundational knowledge in accounting, financial planning, and business strategy. It equips learners with essential skills to make informed financial decisions and manage business operations effectively.',
-                image: ''
+                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
             }
         ]
     }
