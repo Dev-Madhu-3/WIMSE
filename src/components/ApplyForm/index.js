@@ -7,7 +7,7 @@ import { RotatingLines } from "react-loader-spinner";
 
 const ApplyForm = () => {
   const [showSuccess, setShowSuccess] = useState(false);
-  const { openedApplyForm, changeApplyFormStatus, courseName } = useContext(AppContext);
+  const { openedApplyForm, changeApplyFormStatus, courseName,formTitle } = useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -54,8 +54,6 @@ const ApplyForm = () => {
       setErrorMsg("Mobile number is required");
     } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
       setErrorMsg("Invalid mobile number");
-    } else if (!formData.course.trim()) {
-      setErrorMsg("Course name is required");
     } else {
       setFormLoading(true);
       emailjs
@@ -170,14 +168,14 @@ const ApplyForm = () => {
                   className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl"
                 >
                   {/* Background Image */}
-                  <div className="absolute inset-0 z-0">
+                  {/* <div className="absolute inset-0 z-0">
                     <img 
                       src="https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
                       alt="Education Background" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-indigo-900/90"></div>
-                  </div>
+                  </div> */}
                   
                   {/* Form Content */}
                   <div className="relative z-10 bg-white/90 backdrop-blur-sm p-8 rounded-2xl">
@@ -197,7 +195,8 @@ const ApplyForm = () => {
                       className="text-center mb-8"
                     >
                       <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                        {courseName ? "Quick Apply" : "Enquiry Now"}
+                            {formTitle}
+                            {console.log("formTitle",formTitle)}
                       </h2>
                       <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
                     </motion.div>
@@ -285,8 +284,7 @@ const ApplyForm = () => {
                           value={formData.course}
                           type="text"
                           onChange={onFormChange}
-                          placeholder="Enter Course Name"
-                          required
+                          placeholder="Enter Course Name (Optional)"
                           className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                         />
                       </motion.div>

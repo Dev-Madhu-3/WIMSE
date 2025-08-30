@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisibleCourses, setVisibleCourses] = useState(false)
-  const { openedApplyForm, changeApplyFormStatus, updateCourceName, activeCourseTab, changeActiveCourseTab } = useContext(AppContext)
+  const { openedApplyForm, changeApplyFormStatus, updateCourceName,changeFormTitle,  activeCourseTab, changeActiveCourseTab } = useContext(AppContext)
   const path = useLocation().pathname
 
   // 🔹 State for animated underline
@@ -38,6 +38,7 @@ function Header() {
 
   const onChangeFormStatus = () => {
     updateCourceName('')
+    changeFormTitle("Enquire Now")
     changeApplyFormStatus(!openedApplyForm)
   }
 

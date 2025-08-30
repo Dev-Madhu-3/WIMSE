@@ -59,7 +59,7 @@ const CoursesSection = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <Fade direction="down" duration={1000}>
+                    <Fade direction="down" triggerOnce duration={1000}>
                         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             <span className="text-indigo-600">Choose</span> Your Area of Interest
                         </h1>
@@ -67,13 +67,14 @@ const CoursesSection = () => {
                             initial={{ width: 0 }}
                             // whileInView={{ width: 0 }}
                             whileInView={{ width: 96 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 2, delay: 0.2 }} className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></motion.div>
                     </Fade>
                 </div>
 
                 {/* Cards Container */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <Fade cascade damping={0.1} direction="up">
+                    <Fade cascade damping={0.1} triggerOnce direction="up">
                         {/* All Courses Card */}
                         <CousrseCard
                             couresDetainls={{
@@ -92,10 +93,10 @@ const CoursesSection = () => {
 
                 {/* Call to Action */}
                 <div className="mt-16 text-center">
-                    <Fade direction="up" duration={1500}>
+                    <Fade direction="up" triggerOnce duration={1500}>
                         <div className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full p-1 animate-zoomInOut">
                             <Link
-                                to="/courses"
+                                to="/courses/distance"
                                 className="block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
                             >
                                 Explore All Programs

@@ -4,9 +4,10 @@ import AppContext from '../../Context/context';
 import { useContext } from 'react';
 
 export const Universities = () => {
-    const { openedApplyForm, changeApplyFormStatus, updateCourceName } = useContext(AppContext);
+    const { openedApplyForm, changeApplyFormStatus, updateCourceName,changeFormTitle } = useContext(AppContext);
     
     const onChangeFormStatus = () => {
+        changeFormTitle("Apply Now");
         updateCourceName('');
         changeApplyFormStatus(!openedApplyForm);
     };
@@ -57,7 +58,7 @@ export const Universities = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <Fade direction="down" duration={500}>
+                    <Fade triggerOnce direction="down" duration={500}>
                         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600 mb-4">
                             Top Universities We Offer
                         </h1>
@@ -70,7 +71,7 @@ export const Universities = () => {
 
                 {/* Universities Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <Fade cascade damping={0.1} direction="up">
+                    <Fade triggerOnce cascade damping={0.1} direction="up">
                         {universitiesData.map((university, idx) => (
                             <UniversityCard key={idx} universityData={university} />
                         ))}
@@ -79,8 +80,8 @@ export const Universities = () => {
 
                 {/* Call to Action */}
                 <div className="mt-16 text-center">
-                    <Fade direction="up" duration={1000}>
-                        <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-1 animate-zoomInOut">
+                    <Fade triggerOnce direction="up" duration={1000}>
+                        <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-1">
                             <button 
                                 onClick={onChangeFormStatus}
                                 className="block bg-white text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"

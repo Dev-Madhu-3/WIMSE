@@ -34,7 +34,7 @@ const CoursesSection = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
-                <Fade cascade damping={0.2} direction="up" className="text-center mb-16">
+                <Fade triggerOnce cascade damping={0.2} direction="up" className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4">
                         What Our Students Think
                     </h2>
@@ -45,7 +45,7 @@ const CoursesSection = () => {
                 </Fade>
 
                 {/* Swiper Slider */}
-                <Fade className="mt-12">
+                <Fade triggerOnce className="mt-12">
                     <Swiper
                         modules={[Autoplay, Pagination, Navigation]}
                         effect="coverflow"

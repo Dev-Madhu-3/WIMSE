@@ -42,6 +42,7 @@ const RegularRoute = () => {
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
+                            viewport={{ once: true }}
                         >
                             Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">WIMSE</span> Educational Consultancy
                         </motion.h2>
@@ -51,6 +52,7 @@ const RegularRoute = () => {
                             initial={{ width: 0 }}
                             whileInView={{ width: 96 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
+                            viewport={{ once: true }}
                         ></motion.div>
 
                         <motion.p
@@ -58,6 +60,7 @@ const RegularRoute = () => {
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
+                            viewport={{ once: true }}
                         >
                             We are a team of experienced consultants passionate about helping students achieve their academic goals. Founded in 1995, we provide personalized admission consulting services for colleges, graduate schools, and professional programs. Our team of former admissions officers and industry experts is committed to helping you craft a compelling application that showcases your unique strengths and aspirations.
                         </motion.p>
@@ -69,6 +72,7 @@ const RegularRoute = () => {
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.7, delay: 0.6 }}
                         >
                             Get Started
@@ -86,6 +90,7 @@ const RegularRoute = () => {
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
+                            viewport={{ once: true }}
                         >
                             TOP CITIES YOU CAN <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700">STUDY WITH US</span> IN INDIA
                         </motion.h2>
@@ -95,6 +100,7 @@ const RegularRoute = () => {
                             initial={{ width: 0 }}
                             whileInView={{ width: 96 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
+                            viewport={{ once: true }}
                         ></motion.div>
                     </div>
 
@@ -124,6 +130,7 @@ const RegularRoute = () => {
                                             className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg shadow-md transition-all duration-300 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg"
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.98 }}
+                                            viewport={{ once: true }}
                                         >
                                             Enquiry Now
                                         </motion.button>

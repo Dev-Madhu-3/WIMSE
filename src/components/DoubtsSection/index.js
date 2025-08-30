@@ -3,9 +3,17 @@ import { FiChevronDown, FiChevronUp, FiHelpCircle } from "react-icons/fi";
 import { studentsQandA } from '../../assets/data';
 import { motion, AnimatePresence } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
+import AppContext from '../../Context/context';
+import { useContext } from 'react';
 
 const DoubtsSection = () => {
     const [opened, setOpened] = useState(null);
+    const { changeFormTitle,openedApplyForm,changeApplyFormStatus } = useContext(AppContext);
+
+    const onClickContact = () => {
+        changeFormTitle("Enquire Now");
+        changeApplyFormStatus(!openedApplyForm);
+    };
     
     const toggleQuestion = (index) => {
         setOpened(opened === index ? null : index);
@@ -20,7 +28,7 @@ const DoubtsSection = () => {
             
             <div className="max-w-4xl mx-auto relative z-10">
                 {/* Section Header */}
-                <Fade cascade damping={0.2} direction="up" className="text-center mb-16">
+                <Fade cascade damping={0.2} triggerOnce direction="up" className="text-center mb-16">
                     <div className="flex justify-center mb-6">
                         <div className="relative">
                             <FiHelpCircle className="text-5xl text-indigo-600 animate-pulse-slow" />
@@ -44,7 +52,7 @@ const DoubtsSection = () => {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: true }}
                             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             {/* Question */}
@@ -111,8 +119,8 @@ const DoubtsSection = () => {
                 >
                     <div className="inline-block relative group">
                         <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
-                        <button className="relative bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform group-hover:scale-105 flex items-center">
-                            <span>Still Have Questions?</span>
+                        <button onClick={onClickContact} className="relative bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform group-hover:scale-105 flex items-center">
+                            <span>Still Have Questions? Contact Us</span>
                             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>

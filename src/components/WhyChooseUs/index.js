@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Section */}
           <div className="lg:w-2/5 flex justify-center">
-            <Fade direction="left" duration={1500}>
+            <Fade triggerOnce direction="left" duration={1500}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse-slow"></div>
                 <img 
@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
 
           {/* Content Section */}
           <div className="lg:w-3/5">
-            <Fade cascade damping={0.4} direction="right">
+            <Fade triggerOnce cascade damping={0.4} direction="right">
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 transform transition-all duration-500 hover:shadow-2xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
                   <span className="text-indigo-600 border-b-4 border-indigo-600 pb-2">Why</span> Choose Us?
@@ -67,8 +67,8 @@ const WhyChooseUs = () => {
                 </div>
 
                 <div className="mt-12 text-center">
-                  <button className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
-                    Discover More Benefits
+                  <button  className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/student-support">Discover More Benefits</a>
                   </button>
                 </div>
               </div>

@@ -4,11 +4,11 @@ import {
     FaTwitter,
     FaInstagram,
     FaLinkedinIn,
-    FaWhatsapp,
-    FaShareAlt,
+    FaWhatsapp ,
     FaEnvelope,
     FaTimes
 } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
 import { useState, useEffect, useRef } from "react";
 
 const SocialPopup = () => {
@@ -219,7 +219,7 @@ const SocialPopup = () => {
                                 exit={{ rotate: -90, opacity: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <FaShareAlt className="text-xl" />
+                                <FaMessage   className="text-xl" />
                             </motion.div>
                         )}
                     </AnimatePresence>

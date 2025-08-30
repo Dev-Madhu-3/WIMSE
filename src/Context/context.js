@@ -5,6 +5,8 @@ const AppContext = createContext(
         openedApplyForm: false,
         courseName: '',
         activeCourseTab: '',
+        formTitle: '',
+        changeFormTitle:()=>{},
         changeActiveCourseTab:()=>{},
         changeApplyFormStatus: () => { },
         updateCourceName: () => { }

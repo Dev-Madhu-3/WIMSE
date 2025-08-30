@@ -50,11 +50,15 @@ function App() {
   const [isThemeDark, updateTheme] = useState(false)
   const [courseName, updateCourceName] = useState('')
   const [activeCourseTab, changeActiveCourseTab] = useState('')
+  const [formTitle, changeFormTitle] = useState('Enquire Now')
 
   const location = useLocation()
 
   useEffect(() => {
-    setTimeout(() => changeApplyFormStatus(!openedApplyForm), 10000)
+    setTimeout(() => {
+      changeFormTitle("Enquire Now")
+      changeApplyFormStatus(!openedApplyForm)
+    }, 10000)
   }, [])
 
 
@@ -68,6 +72,7 @@ function App() {
             openedApplyForm, isThemeDark, updateTheme,
             changeApplyFormStatus, courseName, updateCourceName,
             activeCourseTab, changeActiveCourseTab
+            , formTitle, changeFormTitle
           }}
         >
           {/* ✅ Persistent Header & Footer */}

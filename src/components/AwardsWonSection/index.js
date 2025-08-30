@@ -43,22 +43,6 @@ const AwardsWonSection = () => {
                     <motion.div
                         key={i}
                         className="absolute rounded-full bg-purple-500/5"
-                        style={{
-                            width: Math.random() * 200 + 50,
-                            height: Math.random() * 200 + 50,
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                        }}
-                        animate={{
-                            x: [0, Math.random() * 100 - 50],
-                            y: [0, Math.random() * 100 - 50],
-                        }}
-                        transition={{
-                            duration: Math.random() * 20 + 10,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            ease: "easeInOut",
-                        }}
                     />
                 ))}
             </div>
@@ -71,6 +55,7 @@ const AwardsWonSection = () => {
                         whileInView={{ opacity: 1, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
                     >
                         Our Achievements
                     </motion.h2>
@@ -80,6 +65,7 @@ const AwardsWonSection = () => {
                         // whileInView={{ width: 0 }}
                         whileInView={{ width: 96 }}
                         transition={{ duration: 0.7, delay: 0.2 }}
+                        viewport={{ once: true }}
                     ></motion.div>
                     <motion.p 
                         className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto"
@@ -87,6 +73,7 @@ const AwardsWonSection = () => {
                         // whileInView={{ opacity: 0.5 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.4 }}
+                        viewport={{ once: true }}
                     >
                         Numbers that speak volumes about our commitment to excellence in education.
                     </motion.p>
@@ -99,6 +86,7 @@ const AwardsWonSection = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                             whileHover={{ y: -10 }}
                             className="group"
                         >
@@ -116,6 +104,7 @@ const AwardsWonSection = () => {
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ delay: 0.5 + index * 0.1 }}
+                                    viewport={{ once: true }}
                                 >
                                     {stat.value}
                                 </motion.div>

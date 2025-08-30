@@ -5,11 +5,12 @@ import { courses } from '../../assets/data';
 import { motion } from 'framer-motion';
 
 const CoursesRoute = () => {
-    const { openedApplyForm, changeApplyFormStatus, updateCourceName, activeCourseTab } = useContext(AppContext);
+    const { openedApplyForm, changeApplyFormStatus, updateCourceName, activeCourseTab, changeFormTitle } = useContext(AppContext);
     
     const onTriggerApply = (name) => {
         changeApplyFormStatus(!openedApplyForm);
         updateCourceName(name);
+        changeFormTitle("Quick Apply");
     };
 
     const currentCourse = courses.filter(each => each.icon === activeCourseTab)[0];
@@ -47,8 +48,9 @@ const CoursesRoute = () => {
                 <motion.div 
                     className="text-center mb-20"
                     initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
                 >
                     <motion.h1 
                         className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"

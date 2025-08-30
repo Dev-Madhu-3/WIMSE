@@ -1,13 +1,24 @@
 import { Fade } from "react-awesome-reveal";
 import { CoursesList } from '../../assets/data';
 import { motion } from "framer-motion";
+import { useContext } from 'react';
+import AppContext from '../../Context/context';
+
 
 const Welcome = () => {
+  const { openedApplyForm, changeApplyFormStatus, changeFormTitle } = useContext(AppContext);
+
+  const onClickStartJourney = () => {
+    changeFormTitle("Start Your Journey");
+    changeApplyFormStatus(!openedApplyForm);
+  }
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <Fade cascade damping={0.2} direction="up" className="text-center mb-16">
+        <Fade triggerOnce cascade damping={0.2} direction="up" className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 animate-float">
             WELCOME TO <span className="text-indigo-600">WIMSE</span> EDUCATIONAL CONSULTANCY
           </h1>
@@ -16,15 +27,16 @@ const Welcome = () => {
             // whileInView={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ duration: 2, delay: 0.2 }}
+            viewport={{ once: true }}
             className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6 rounded-full">
-            </motion.div>
+          </motion.div>
           <h2 className="text-xl md:text-2xl text-indigo-700 font-medium tracking-wider animate-pulse-slow">
             EMPOWERING ACADEMIC AND CAREER SUCCESS SINCE 1995
           </h2>
         </Fade>
 
         {/* Description Section */}
-        <Fade cascade damping={0.2} direction="up" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-16 transform transition-all duration-500 hover:shadow-2xl">
+        <Fade triggerOnce cascade damping={0.2} direction="up" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-16 transform transition-all duration-500 hover:shadow-2xl">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
             We're thrilled you're considering us for your educational journey. At Wimse, we believe that education is the key to unlocking your full potential, and we're here to guide you every step of the way.
           </p>
@@ -38,7 +50,7 @@ const Welcome = () => {
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">OUR PROGRAMS</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {CoursesList.map((courseData, index) => (
-              <Fade duration={1000} delay={index * 100} key={index}>
+              <Fade triggerOnce duration={1000} delay={index * 100} key={index}>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
                   <div className="p-6">
                     <div className="flex items-center mb-4">
@@ -67,9 +79,9 @@ const Welcome = () => {
         </div>
 
         {/* Call to Action */}
-        <Fade cascade damping={0.2} direction="up" className="text-center mt-16">
-          <div className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full p-1 animate-zoomInOut">
-            <button className="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300">
+        <Fade triggerOnce cascade damping={0.2} direction="up" className="text-center mt-16">
+          <div className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full p-1 ">
+            <button onClick={onClickStartJourney} className="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300">
               START YOUR JOURNEY TODAY
             </button>
           </div>
