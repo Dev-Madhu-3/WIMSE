@@ -6,8 +6,8 @@ import { useContext } from 'react';
 export const Universities = () => {
     const { openedApplyForm, changeApplyFormStatus, updateCourceName,changeFormTitle } = useContext(AppContext);
     
-    const onChangeFormStatus = () => {
-        changeFormTitle("Apply Now");
+    const onChangeFormStatus = (value) => {
+        changeFormTitle(value);
         updateCourceName('');
         changeApplyFormStatus(!openedApplyForm);
     };
@@ -36,7 +36,7 @@ export const Universities = () => {
                 {/* Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <button
-                        onClick={onChangeFormStatus}
+                        onClick={()=>onChangeFormStatus("Know More")}
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-bounce-slow"
                     >
                         Know More
@@ -83,7 +83,7 @@ export const Universities = () => {
                     <Fade triggerOnce direction="up" duration={1000}>
                         <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-1">
                             <button 
-                                onClick={onChangeFormStatus}
+                                onClick={()=>onChangeFormStatus("Apply Now")}
                                 className="block bg-white text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
                             >
                                 Apply Now

@@ -58,7 +58,7 @@ const SocialPopup = () => {
             icon: <FaTwitter />,
             color: "#1DA1F2",
             hoverColor: "#0c85d0",
-            link: "/something-went-wrong/",
+            link: "/unavailable",
             aria: "Follow us on Twitter"
         },
         {
@@ -74,7 +74,7 @@ const SocialPopup = () => {
             icon: <FaLinkedinIn />,
             color: "#0077B5",
             hoverColor: "#005885",
-            link: "/something-went-wrong/",
+            link: "/unavailable",
             aria: "Connect with us on LinkedIn"
         },
         {

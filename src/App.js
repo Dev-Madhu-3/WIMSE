@@ -16,12 +16,20 @@ import ApplyForm from './components/ApplyForm'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SocialPopup from './components/SocialPopup'
+import ServiceUnavailable from './components/ServiceUnavailable'
+
 
 function MinimalLayout({ children }) {
   return <>{children}</>
 }
 function MainLayout({ children }) {
-  return <>{children}</>
+  return (
+    <>
+      {/* <Header/> */}
+      {children}
+      {/* <Footer/> */}
+    </>
+  )
 }
 
 function AnimatedAppRoutes() {
@@ -36,6 +44,7 @@ function AnimatedAppRoutes() {
         <Route path="/universities" element={<MainLayout><UniversitiesRoute /></MainLayout>} />
         <Route path="/about" element={<MainLayout><AboutRoute /></MainLayout>} />
         <Route path="/student-support" element={<MainLayout><StudentSupport /></MainLayout>} />
+        <Route path="/unavailable" element={<MinimalLayout><ServiceUnavailable /></MinimalLayout>} />
 
         {/* NotFound Page */}
         <Route path="/not-found" element={<MinimalLayout><NotFound /></MinimalLayout>} />
@@ -62,7 +71,7 @@ function App() {
   }, [])
 
 
-  const isNotFoundPage = location.pathname === "/not-found"
+  const isNotFoundPage = location.pathname === "/not-found" || location.pathname === "/unavailable"
 
   return (
     <>

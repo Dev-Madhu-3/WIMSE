@@ -14,7 +14,7 @@ const slides = [
     heading: "Transform Your Future",
     text: "Discover world-class education opportunities that open doors to global careers.",
     buttonText: "Explore Programs",
-    buttonLink: "/courses"
+    buttonLink: "/courses/regular"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const slides = [
     heading: "Flexible Learning Options",
     text: "Study at your own pace with our distance education programs designed for working professionals.",
     buttonText: "Learn More",
-    buttonLink: "/distance-education"
+    buttonLink: "/courses/distance"
   },
   {
     id: 3,
@@ -45,8 +45,8 @@ const slides = [
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     heading: "Career Support",
     text: "Access our extensive network of employers and career development resources to accelerate your professional growth.",
-    buttonText: "Career Services",
-    buttonLink: "/career-support"
+    buttonText: "Student Support",
+    buttonLink: "/student-support"
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const slides = [
     heading: "Affordable Education",
     text: "Quality education doesn't have to break the bank. Explore our scholarship and financing options.",
     buttonText: "Financial Aid",
-    buttonLink: "/financial-aid"
+    buttonLink: "/unavailable"
   }
 ];
 

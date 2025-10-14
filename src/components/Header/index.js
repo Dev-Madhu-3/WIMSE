@@ -62,9 +62,7 @@ function Header() {
 
   {/* Logo */}
   <Link to="/" className="flex items-center justify-center group relative z-10">
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+    <div
       className="relative"
     >
       <img
@@ -73,8 +71,8 @@ function Header() {
         alt="LOGO"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-    </motion.div>
-    <div className="transform transition-transform duration-300 group-hover:scale-105">
+    </div>
+    <div>
       <h1 className="text-[#602c97] font-bold text-[25px] sm:text-[1.1rem] m-0 tracking-wide">
         WIMSE
       </h1>
@@ -90,7 +88,7 @@ function Header() {
     <motion.a
       href="tel:+917382744791"
       className="flex items-center text-black no-underline sm:gap-1 group"
-      whileHover={{ scale: 1.03 }}
+      // whileHover={{ scale: 1.03 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
@@ -99,7 +97,7 @@ function Header() {
         <FaPhoneSquareAlt className="text-[2.5rem] sm:text-[1.5rem] mr-2 sm:mr-1 text-indigo-600 transition-all duration-300 group-hover:text-indigo-800 group-hover:animate-pulse-slow" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
       </div>
-      <div className="transform transition-transform duration-300 group-hover:translate-x-1">
+      <div>
         <p className="text-[0.8rem] sm:text-[0.6rem] font-light mb-1 sm:mb-0 text-center">
           CALL US TODAY!
         </p>
@@ -219,6 +217,14 @@ function Header() {
 
             <Link
               onClick={() => { scrollToTop(); }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/student-support' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              to="/student-support"
+            >
+              Student Support
+            </Link>
+
+            <Link
+              onClick={() => { scrollToTop(); }}
               className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/about' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
               to="/about"
             >
@@ -257,6 +263,7 @@ function Header() {
             <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/courses/regular" className="block text-white">Regular</Link>
             <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/courses/distance" className="block text-white">Distance Learning</Link>
             <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/universities" className="block text-white">Universities</Link>
+            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/student-support" className="block text-white">Student Support</Link>
             <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/about" className="block text-white">About Us</Link>
 
             <button

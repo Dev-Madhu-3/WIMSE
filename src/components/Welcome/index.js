@@ -36,7 +36,7 @@ const Welcome = () => {
         </Fade>
 
         {/* Description Section */}
-        <Fade triggerOnce cascade damping={0.2} direction="up" className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-16 transform transition-all duration-500 hover:shadow-2xl">
+        <Fade triggerOnce cascade damping={0.2} direction="up" className="bg-slate-200 rounded-2xl shadow-xl p-6 md:p-8 mb-16 transform transition-all duration-500 hover:shadow-2xl">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
             We're thrilled you're considering us for your educational journey. At Wimse, we believe that education is the key to unlocking your full potential, and we're here to guide you every step of the way.
           </p>
@@ -66,11 +66,11 @@ const Welcome = () => {
                     <p className="text-gray-600 leading-relaxed">
                       {courseData.about}
                     </p>
-                    <div className="mt-6">
+                    {/* <div className="mt-6">
                       <button className="w-full py-2 px-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Learn More
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Fade>

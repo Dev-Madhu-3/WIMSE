@@ -75,7 +75,7 @@ const CoursesSection = () => {
                                         <div className="relative mb-6">
                                             <img
                                                 className="w-24 h-24 rounded-full border-4 border-purple-500 shadow-lg object-cover"
-                                                src={student.profilePicture}
+                                                src={student.profilePicture ||'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1757822978/296fe121-5dfa-43f4-98b5-db50019738a7_qcz463.jpg'}
                                                 alt={`${student.name}'s profile`}
                                             />
                                             <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-2">
@@ -107,13 +107,13 @@ const CoursesSection = () => {
 
 
                 {/* Call to Action */}
-                <div className="mt-16 text-center">
+                {/* <div className="mt-16 text-center">
                     <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-1 animate-pulse">
                         <button className="bg-gray-900 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-colors duration-300">
                             Share Your Experience
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

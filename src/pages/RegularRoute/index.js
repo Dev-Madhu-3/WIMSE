@@ -6,11 +6,12 @@ import { regularCountriesData, regulardashBoardData, topCities } from '../../ass
 import { Fade } from "react-awesome-reveal";
 
 const RegularRoute = () => {
-    const { openedApplyForm, changeApplyFormStatus, updateCourceName } = useContext(AppContext);
+    const { openedApplyForm, changeApplyFormStatus, updateCourceName, changeFormTitle} = useContext(AppContext);
 
-    const onTriggerApply = (name) => {
+    const onTriggerApply = name => {
         changeApplyFormStatus(!openedApplyForm);
         updateCourceName('');
+        changeFormTitle(name);
     };
 
     // Animation variants
@@ -66,7 +67,7 @@ const RegularRoute = () => {
                         </motion.p>
 
                         <motion.button
-                            onClick={onTriggerApply}
+                            onClick={()=>onTriggerApply("Get Started")}
                             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -126,7 +127,7 @@ const RegularRoute = () => {
                                     </div>
                                     <div className="p-6">
                                         <motion.button
-                                            onClick={onTriggerApply}
+                                            onClick={()=>onTriggerApply("Enquiry Now")}
                                             className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg shadow-md transition-all duration-300 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg"
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.98 }}
@@ -315,7 +316,7 @@ const RegularRoute = () => {
                     </motion.p>
 
                     <motion.button
-                        onClick={onTriggerApply}
+                        onClick={()=>onTriggerApply("Contact Us Today")}
                         className="px-8 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
