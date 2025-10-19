@@ -421,7 +421,7 @@ export const courses = [
     {
         course: "Advanced Diploma Programs",
         icon: "ADCP",
-        imageURL: 'https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Advance_Diploma_Courses_xnwmji.png',
         specializations: [
             {
                 name: 'Advanced Diploma in Dietetics and Therapeutic Nutrition (ADDTN)',
@@ -636,7 +636,7 @@ export const courses = [
     {
         course: "Certificate Courses",
         icon: "C&D",
-        imageURL: 'https://images.unsplash.com/photo-1521791136064-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Certificate_Cources_vlaxnh.png',
         specializations: [
             {
                 name: 'Certificate in Modern Persian Language (CMPL)',
