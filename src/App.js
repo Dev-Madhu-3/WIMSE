@@ -16,7 +16,7 @@ import ApplyForm from './components/ApplyForm'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SocialPopup from './components/SocialPopup'
-import ServiceUnavailable from './components/ServiceUnavailable'
+import ServiceUnavailable from './pages/ServiceUnavailable'
 
 
 function MinimalLayout({ children }) {

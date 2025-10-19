@@ -11,7 +11,7 @@ const DoubtsSection = () => {
     const { changeFormTitle,openedApplyForm,changeApplyFormStatus } = useContext(AppContext);
 
     const onClickContact = () => {
-        changeFormTitle("Enquire Now");
+        changeFormTitle("Contact Us");
         changeApplyFormStatus(!openedApplyForm);
     };
     

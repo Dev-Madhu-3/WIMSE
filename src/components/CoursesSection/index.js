@@ -39,9 +39,9 @@ const CousrseCard = ({ couresDetainls }) => {
                     
                     {/* Icon/Image */}
                     <div className="flex justify-end mt-4">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center group-hover:animate-bounce-slow">
+                        <div className="absolute bottom-[20px] w-20 h-20 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center group-hover:animate-bounce-slow overflow-hidden">
                             <img 
-                                className="w-10 h-10 object-contain" 
+                                className="h-[120%]" 
                                 src={imageURL} 
                                 alt={`${course} icon`} 
                             />

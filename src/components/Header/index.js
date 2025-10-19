@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisibleCourses, setVisibleCourses] = useState(false)
-  const { openedApplyForm, changeApplyFormStatus, updateCourceName,changeFormTitle,  activeCourseTab, changeActiveCourseTab } = useContext(AppContext)
+  const { openedApplyForm, changeApplyFormStatus, updateCourceName, changeFormTitle, activeCourseTab, changeActiveCourseTab } = useContext(AppContext)
   const path = useLocation().pathname
 
   // 🔹 State for animated underline
@@ -54,84 +54,84 @@ function Header() {
     <>
       {/* Top Header */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center md:px-[10%] px-4 py-3 gap-4 bg-[var(--primary-color)] text-[0.9rem] relative overflow-hidden">
-  {/* Animated background elements */}
-  <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-    <div className="absolute -top-10 -right-10 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
-    <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '1s' }}></div>
-  </div>
+        {/* Animated background elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-10 -right-10 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
+          <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '1s' }}></div>
+        </div>
 
-  {/* Logo */}
-  <Link to="/" className="flex items-center justify-center group relative z-10">
-    <div
-      className="relative"
-    >
-      <img
-        className="w-[55px] h-[50px] sm:w-[50px] sm:h-[45px] mr-2 transition-all duration-300 drop-shadow-md"
-        src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png"
-        alt="LOGO"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-    </div>
-    <div>
-      <h1 className="text-[#602c97] font-bold text-[25px] sm:text-[1.1rem] m-0 tracking-wide">
-        WIMSE
-      </h1>
-      <h5 className="text-[#602c97] font-bold text-[15px] sm:text-[0.8rem] m-0 opacity-90">
-        EDUCATIONAL CONSULTANCY
-      </h5>
-    </div>
-  </Link>
+        {/* Logo */}
+        <Link to="/" className="flex items-center justify-center group relative z-10">
+          <div
+            className="relative"
+          >
+            <img
+              className="w-[55px] h-[50px] sm:w-[50px] sm:h-[45px] mr-2 transition-all duration-300 drop-shadow-md"
+              src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png"
+              alt="LOGO"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
+          </div>
+          <div>
+            <h1 className="text-[#602c97] font-bold text-[25px] sm:text-[1.1rem] m-0 tracking-wide">
+              WIMSE
+            </h1>
+            <h5 className="text-[#602c97] font-bold text-[15px] sm:text-[0.8rem] m-0 opacity-90">
+              EDUCATIONAL CONSULTANCY
+            </h5>
+          </div>
+        </Link>
 
-  {/* Right Side */}
-  <div className="flex items-center justify-center gap-8 sm:gap-6 relative z-10">
-    {/* Call Us */}
-    <motion.a
-      href="tel:+917382744791"
-      className="flex items-center text-black no-underline sm:gap-1 group"
-      // whileHover={{ scale: 1.03 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
-      <div className="relative">
-        <FaPhoneSquareAlt className="text-[2.5rem] sm:text-[1.5rem] mr-2 sm:mr-1 text-indigo-600 transition-all duration-300 group-hover:text-indigo-800 group-hover:animate-pulse-slow" />
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-      </div>
-      <div>
-        <p className="text-[0.8rem] sm:text-[0.6rem] font-light mb-1 sm:mb-0 text-center">
-          CALL US TODAY!
-        </p>
-        <p className="text-[0.9rem] sm:text-[0.7rem] font-bold mt-0 text-indigo-800">
-          +(91)738-274-4791
-        </p>
-      </div>
-    </motion.a>
+        {/* Right Side */}
+        <div className="flex items-center justify-center gap-8 sm:gap-6 relative z-10">
+          {/* Call Us */}
+          <motion.a
+            href="tel:+917382744791"
+            className="flex items-center text-black no-underline sm:gap-1 group"
+            // whileHover={{ scale: 1.03 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="relative">
+              <FaPhoneSquareAlt className="text-[2.5rem] sm:text-[1.5rem] mr-2 sm:mr-1 text-indigo-600 transition-all duration-300 group-hover:text-indigo-800 group-hover:animate-pulse-slow" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            </div>
+            <div>
+              <p className="text-[0.8rem] sm:text-[0.6rem] font-light mb-1 sm:mb-0 text-center">
+                CALL US TODAY!
+              </p>
+              <p className="text-[0.9rem] sm:text-[0.7rem] font-bold mt-0 text-indigo-800">
+                +(91)738-274-4791
+              </p>
+            </div>
+          </motion.a>
 
-    {/* Open Hours */}
-    <motion.div
-      className="flex items-center text-black sm:gap-1"
-      whileHover={{ scale: 1.03 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
-    >
-      <div className="relative">
-        <GoClock className="text-[2.5rem] sm:text-[1.5rem] mr-2 sm:mr-1 text-purple-600 transition-all duration-300 group-hover:text-purple-800" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-1 h-1 bg-purple-500 rounded-full animate-ping"></div>
+          {/* Open Hours */}
+          <motion.div
+            className="flex items-center text-black sm:gap-1"
+            whileHover={{ scale: 1.03 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="relative">
+              <GoClock className="text-[2.5rem] sm:text-[1.5rem] mr-2 sm:mr-1 text-purple-600 transition-all duration-300 group-hover:text-purple-800" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-1 h-1 bg-purple-500 rounded-full animate-ping"></div>
+              </div>
+            </div>
+            <div className="transform transition-transform duration-300 group-hover:translate-x-1">
+              <p className="text-[0.8rem] sm:text-[0.6rem] font-light mb-1 sm:mb-0 text-center">
+                WE ARE OPEN!
+              </p>
+              <p className="text-[0.9rem] sm:text-[0.7rem] font-bold mt-0 text-purple-800">
+                MON-SAT 10:00-18:00
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
-      <div className="transform transition-transform duration-300 group-hover:translate-x-1">
-        <p className="text-[0.8rem] sm:text-[0.6rem] font-light mb-1 sm:mb-0 text-center">
-          WE ARE OPEN!
-        </p>
-        <p className="text-[0.9rem] sm:text-[0.7rem] font-bold mt-0 text-purple-800">
-          MON-SAT 10:00-18:00
-        </p>
-      </div>
-    </motion.div>
-  </div>
-</div>
 
       {/* Main Navigation */}
       <header className='sticky top-0 z-40 bg-gradient-to-r from-[#61387e] via-purple-800 to-indigo-900 shadow-xl py-1'>

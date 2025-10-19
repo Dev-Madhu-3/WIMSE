@@ -32,45 +32,35 @@ const AwardsWonSection = () => {
     ];
 
     return (
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            {/* Background with gradient and pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-black z-0"></div>
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 z-0"></div>
-            
-            {/* Animated background elements */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+            {/* Decorative background elements */}
             <div className="absolute inset-0 overflow-hidden z-0">
-                {[...Array(8)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute rounded-full bg-purple-500/5"
-                    />
-                ))}
+                <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-purple-100 opacity-50 blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-pink-100 opacity-30 blur-3xl"></div>
             </div>
             
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <motion.h2 
-                        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4"
+                        className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
                         initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        Our Achievements
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Achievements</span>
                     </motion.h2>
                     <motion.div 
-                        className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"
+                        className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
                         initial={{ width: 0 }}
-                        // whileInView={{ width: 0 }}
                         whileInView={{ width: 96 }}
                         transition={{ duration: 0.7, delay: 0.2 }}
                         viewport={{ once: true }}
                     ></motion.div>
                     <motion.p 
-                        className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto"
+                        className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto"
                         initial={{ opacity: 0 }}
-                        // whileInView={{ opacity: 0.5 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.4 }}
                         viewport={{ once: true }}
@@ -79,7 +69,7 @@ const AwardsWonSection = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
@@ -90,9 +80,9 @@ const AwardsWonSection = () => {
                             whileHover={{ y: -10 }}
                             className="group"
                         >
-                            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30 shadow-xl h-full flex flex-col items-center justify-center text-center transition-all duration-300 group-hover:border-purple-500/50 group-hover:shadow-2xl">
+                            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full flex flex-col items-center justify-center text-center transition-all duration-300 group-hover:shadow-xl group-hover:border-blue-200">
                                 {/* Icon with gradient background */}
-                                <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-6 bg-gradient-to-br ${stat.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                                <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${stat.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                                     <div className="text-white">
                                         {stat.icon}
                                     </div>
@@ -100,7 +90,7 @@ const AwardsWonSection = () => {
                                 
                                 {/* Value with animated counter effect */}
                                 <motion.div 
-                                    className="text-4xl font-bold text-white mb-2"
+                                    className="text-4xl font-bold text-gray-800 mb-2"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ delay: 0.5 + index * 0.1 }}
@@ -110,7 +100,7 @@ const AwardsWonSection = () => {
                                 </motion.div>
                                 
                                 {/* Label */}
-                                <p className="text-gray-300 text-lg">
+                                <p className="text-gray-600 text-lg font-medium">
                                     {stat.label}
                                 </p>
                                 

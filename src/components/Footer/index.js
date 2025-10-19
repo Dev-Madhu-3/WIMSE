@@ -20,11 +20,12 @@ function Footer() {
         { name: "Distance Learning", path: "/courses/distance" },
         { name: "Regular Courses", path: "/courses/regular" },
         { name: "Universities", path: "/universities" },
+        { name: "Student Support", path: "/student-support" },
         { name: "About Us", path: "/about" }
     ];
 
     const developerInfo = {
-        name: "Mr. Madhu",
+        name: "Mr Madhu",
         url: "https://mrmadhu.vercel.app/",
         title: "Web Developer"
     };
@@ -48,11 +49,9 @@ function Footer() {
                         className="flex flex-col items-center md:items-start"
                     >
                         <div className="flex items-center mb-6">
-                            <motion.img
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ type: "spring", stiffness: 300 }}
+                            <img
                                 className="w-16 h-16 object-contain"
-                                src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png"
+                                src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760853336/WIMSE_logo-white_qxdbfw.png"
                                 alt="WIMSE Logo"
                             />
                             <div className="ml-4">
@@ -121,10 +120,10 @@ function Footer() {
 
                         <div>
                             {/* <h4 className="text-lg font-semibold mb-4 text-center">Useful Links</h4> */}
-                                <h3 className="text-xl font-bold mb-6 text-center relative pb-2">
-                                    <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">Useful Links</span>
-                                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
-                                </h3>
+                            <h3 className="text-xl font-bold mb-6 text-center relative pb-2">
+                                <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">Useful Links</span>
+                                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+                            </h3>
                             <div className="grid gap-3 text-center">
                                 {usefulLinks.map((link, index) => (
                                     <motion.div
@@ -183,11 +182,11 @@ function Footer() {
                     className="border-t border-white/10 mt-2 pt-6 text-center"
                 >
                     <p className="text-blue-200 text-[0.8rem]">
-                        &copy; {new Date().getFullYear()} WIMSE CONSULTANCY. All Rights Reserved. | 
+                        &copy; {new Date().getFullYear()} WIMSE CONSULTANCY. All Rights Reserved. |
                         <span> Designed & Developed by </span>
-                        <a 
-                            href={developerInfo.url} 
-                            target="_blank" 
+                        <a
+                            href={developerInfo.url}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-green-300 hover:text-green-200 transition-colors duration-300 font-medium"
                         >

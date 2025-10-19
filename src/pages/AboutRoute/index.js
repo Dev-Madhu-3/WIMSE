@@ -4,10 +4,11 @@ import React, { useContext } from 'react'
 import AppContext from '../../Context/context'
 
 const About = () => {
-  const { openedApplyForm, changeApplyFormStatus, updateCourceName } = useContext(AppContext)
+  const { openedApplyForm, changeApplyFormStatus, updateCourceName,changeFormTitle } = useContext(AppContext)
     
     const onChangeFormStatus = () => {
-        updateCourceName('')
+      updateCourceName('')
+        changeFormTitle('Contact Us')
         changeApplyFormStatus(!openedApplyForm)
     }
   // Animation variants

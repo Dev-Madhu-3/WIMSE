@@ -1698,63 +1698,63 @@ const CLOUDINARY_OPTIMIZE = 'f_webp,q_auto,w_auto,dpr_auto';
 export const topCities = [
     {
         title: 'Bengaluru',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422665/benguluru_pgl68f.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879684/benguluru2_p83f5l.jpg`
     },
     {
         title: 'Delhi',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422628/delhi_k6fqb7.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/delhi_k9e4ud.jpg`
     },
     {
         title: 'Mumbai',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422618/mumbai_qw8nbo.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879689/mumbai_azv16d.jpg`
     },
     {
         title: 'Kolkata',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422614/kolkatha_b21lg2.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/kolkatha_vszibk.jpg`
     },
     {
         title: 'Chennai',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422643/chennai_kuoswo.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/chennai_k7k681.jpg`
     },
     {
         title: 'Hyderabad',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422613/hyd_akwbhx.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/hyd_ltr3gn.jpg`
     },
     {
         title: 'Ahmedabad',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422593/ahmadabad_nwqglb.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879683/ahmadabad_yzz2e2.jpg`
     },
     {
         title: 'Pune',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755427442/Pune_2_vqna9a.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Pune_x6ajvs.jpg`
     },
     {
         title: 'Surat',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422592/Surat_daiixc.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Surat_plzx8n.jpg`
     },
     {
         title: 'Jaipur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422669/Jaipur_bcywfs.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/Jaipur_dsqxsr.jpg`
     },
     {
         title: 'Lucknow',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422673/Lucknow_e0srhz.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879688/Lucknow_muc4io.jpg`
     },
     {
         title: 'Kanpur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422668/Kanpur_ugs0qw.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879687/Kanpur_dimh5d.jpg`
     },
     {
         title: 'Nagpur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422587/Nagpur_cz0pkk.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Nagpur_asaem0.jpg`
     },
     {
         title: 'Indore',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422589/Indore_jng1xq.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879674/Indore_optimized_450_dixeco.jpg`
     },
     {
         title: 'Visakhapatnam',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1755422645/Vishakapatnam_s3c05o.jpg`
+        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879675/Vishakapatnam_optimized_450_pijcjl.jpg`
     }
 ];
 

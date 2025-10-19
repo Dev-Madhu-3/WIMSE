@@ -16,7 +16,7 @@ export const Universities = () => {
         return (
             <div className="group relative overflow-hidden rounded-2xl shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                 {/* University Image */}
-                <div className="relative h-64 md:h-80 overflow-hidden">
+                <div className="relative overflow-hidden">
                     <img 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                         src={universityData.image} 
@@ -70,7 +70,7 @@ export const Universities = () => {
                 </div>
 
                 {/* Universities Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     <Fade triggerOnce cascade damping={0.1} direction="up">
                         {universitiesData.map((university, idx) => (
                             <UniversityCard key={idx} universityData={university} />
