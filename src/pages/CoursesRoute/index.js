@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { FaRegCalendar, FaGraduationCap, FaBook, FaClock, FaStar, FaFire, FaAward, FaSearch, FaTimes, FaChevronDown } from "react-icons/fa";
+import { FaRegCalendar, FaGraduationCap, FaBook, FaClock, FaStar, FaSearch, FaTimes, FaChevronDown } from "react-icons/fa";
 import AppContext from '../../Context/context';
 import { courses } from '../../assets/data';
 import { motion, AnimatePresence } from 'framer-motion';

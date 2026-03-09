@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaExclamationTriangle, FaHome, FaRedo, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaExclamationTriangle, FaHome, FaRedo, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ServiceUnavailable = () => {

@@ -30,7 +30,7 @@ const ApplyForm = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [onClose]);
 
   const onFormChange = (e) => {
     setErrorMsg(null);
