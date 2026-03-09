@@ -10,6 +10,7 @@ import CoursesRoute from './pages/CoursesRoute'
 import UniversitiesRoute from './pages/UniversitiesRoute'
 import AboutRoute from './pages/AboutRoute'
 import RegularRoute from './pages/RegularRoute'
+import PhDRoute from './pages/PhDRoute'
 import NotFound from './pages/NotFound'
 import StudentSupport from './components/StudentSupport'
 import ApplyForm from './components/ApplyForm'
@@ -38,20 +39,84 @@ function AnimatedAppRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-        <Route path="/courses/distance" element={<MainLayout><CoursesRoute /></MainLayout>} />
-        <Route path="/courses/regular" element={<MainLayout><RegularRoute /></MainLayout>} />
-        <Route path="/universities" element={<MainLayout><UniversitiesRoute /></MainLayout>} />
-        <Route path="/about" element={<MainLayout><AboutRoute /></MainLayout>} />
-        <Route path="/student-support" element={<MainLayout><StudentSupport /></MainLayout>} />
-        <Route path="/unavailable" element={<MinimalLayout><ServiceUnavailable /></MinimalLayout>} />
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/courses/distance"
+          element={
+            <MainLayout>
+              <CoursesRoute />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/courses/regular"
+          element={
+            <MainLayout>
+              <RegularRoute />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/courses/phd"
+          element={
+            <MainLayout>
+              <PhDRoute />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/universities"
+          element={
+            <MainLayout>
+              <UniversitiesRoute />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <MainLayout>
+              <AboutRoute />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/student-support"
+          element={
+            <MainLayout>
+              <StudentSupport />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/unavailable"
+          element={
+            <MinimalLayout>
+              <ServiceUnavailable />
+            </MinimalLayout>
+          }
+        />
 
         {/* NotFound Page */}
-        <Route path="/not-found" element={<MinimalLayout><NotFound /></MinimalLayout>} />
+        <Route
+          path="/not-found"
+          element={
+            <MinimalLayout>
+              <NotFound />
+            </MinimalLayout>
+          }
+        />
         <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
     </AnimatePresence>
-  )
+  );
 }
 
 function App() {

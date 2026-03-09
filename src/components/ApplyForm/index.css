@@ -1,0 +1,110 @@
+.apply-form-section {
+    color: #1a202c;
+    background-color: #000000cb;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.apply-form-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+}
+
+.apply-form {
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px #0000001a;
+    background-color: #f9fafb;
+    text-align: center;
+    position: relative;
+}
+
+.apply-form-label-input-container {
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.apply-form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-self: center;
+    line-height: 1.3;
+    margin: 0;
+    color: #313131;
+}
+
+.apply-form-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+.apply-form-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    background-color: #f3f4f6;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.apply-form-select {
+    width: 100%;
+}
+
+.apply-form-input:focus,
+.apply-form-textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 5px #7c3aed80;
+}
+
+.apply-form-textarea {
+    resize: vertical;
+}
+
+.apply-form-button {
+    width: 100%;
+    height: 2.7rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    background-color: #7c3aed;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+.apply-form-button:hover {
+    background-color: #5b21b6;
+}
+
+
+@media (max-width:768px) {
+    .apply-form {
+        width: 95%;
+    }
+
+    .apply-form-input {
+        padding: 0.3;
+    }
+}

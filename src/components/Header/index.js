@@ -57,14 +57,18 @@ function Header() {
         {/* Animated background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-10 -right-10 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
-          <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '1s' }}></div>
+          <div
+            className="absolute -bottom-10 -left-10 w-16 h-16 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
 
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center group relative z-10">
-          <div
-            className="relative"
-          >
+        <Link
+          to="/"
+          className="flex items-center justify-center group relative z-10"
+        >
+          <div className="relative">
             <img
               className="w-[55px] h-[50px] sm:w-[50px] sm:h-[45px] mr-2 transition-all duration-300 drop-shadow-md"
               src="https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739532323/VIMS_COLLEGE_LOGO_2_copy_1_umczs1.png"
@@ -134,7 +138,7 @@ function Header() {
       </div>
 
       {/* Main Navigation */}
-      <header className='sticky top-0 z-40 bg-gradient-to-r from-[#61387e] via-purple-800 to-indigo-900 shadow-xl py-1'>
+      <header className="sticky top-0 z-40 bg-gradient-to-r from-[#61387e] via-purple-800 to-indigo-900 shadow-xl py-1">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Desktop Nav */}
           <nav
@@ -142,63 +146,83 @@ function Header() {
             className="hidden md:flex items-center space-x-1 relative"
           >
             <Link
-              onClick={() => { scrollToTop(); }}
-              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
               to="/"
             >
               Home
             </Link>
 
             <Link
-              onClick={() => { scrollToTop(); }}
-              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/courses/regular' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/courses/regular" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
               to="/courses/regular"
             >
               Regular
             </Link>
 
+            <Link
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/courses/phd" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
+              to="/courses/phd"
+            >
+              PhD
+            </Link>
+
             <div
               onMouseEnter={() => setVisibleCourses(true)}
               onMouseLeave={() => setVisibleCourses(false)}
-              className={`relative nav-link-item ${path === '/courses/distance' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              className={`relative nav-link-item ${path === "/courses/distance" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
             >
-              <div className='flex items-center space-x-1 px-4 py-2 rounded-lg cursor-pointer transition-all duration-300'>
+              <div className="flex items-center space-x-1 px-4 py-2 rounded-lg cursor-pointer transition-all duration-300">
                 <Link
-                  onClick={() => { scrollToTop(); }}
-                  to='/courses/distance'
+                  onClick={() => {
+                    scrollToTop();
+                  }}
+                  to="/courses/distance"
                   className="flex items-center"
                 >
                   Distance Learning
                 </Link>
-                <BsChevronDown className={`text-xs transition-transform duration-300 ${isVisibleCourses && 'rotate-180'}`} />
+                <BsChevronDown
+                  className={`text-xs transition-transform duration-300 ${isVisibleCourses && "rotate-180"}`}
+                />
               </div>
 
-              <div className={`absolute left-0 top-8 mt-1 z-50 w-64  bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg shadow-xl overflow-hidden transition-all duration-300 transform ${isVisibleCourses ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+              <div
+                className={`absolute left-0 top-8 mt-1 z-50 w-64  bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg shadow-xl overflow-hidden transition-all duration-300 transform ${isVisibleCourses ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
+              >
                 <button
                   onClick={() => onClickCourses("")}
-                  className='w-full text-left px-4 py-3 hover:bg-indigo-700 transition-colors duration-200 flex items-center space-x-3'
+                  className="w-full text-left px-4 py-3 hover:bg-indigo-700 transition-colors duration-200 flex items-center space-x-3"
                 >
-                  <LuGraduationCap className='text-purple-300' />
+                  <LuGraduationCap className="text-purple-300" />
                   <Link
                     onClick={() => setVisibleCourses(false)}
-                    to='/courses/distance'
-                    className={`${activeCourseTab === "" ? 'font-bold text-white' : 'text-indigo-200'}`}
+                    to="/courses/distance"
+                    className={`${activeCourseTab === "" ? "font-bold text-white" : "text-indigo-200"}`}
                   >
                     All Courses
                   </Link>
                 </button>
 
-                {courses.map(each => (
+                {courses.map((each) => (
                   <button
                     key={each.icon}
                     onClick={() => onClickCourses(each.icon)}
-                    className='w-full text-left px-4 py-3 hover:bg-indigo-700 transition-colors duration-200 flex items-center space-x-3'
+                    className="w-full text-left px-4 py-3 hover:bg-indigo-700 transition-colors duration-200 flex items-center space-x-3"
                   >
-                    <LuGraduationCap className='text-purple-300' />
+                    <LuGraduationCap className="text-purple-300" />
                     <Link
                       onClick={() => setVisibleCourses(false)}
-                      to='/courses/distance'
-                      className={`${activeCourseTab === each.icon ? 'font-bold text-white' : 'text-indigo-200'}`}
+                      to="/courses/distance"
+                      className={`${activeCourseTab === each.icon ? "font-bold text-white" : "text-indigo-200"}`}
                     >
                       {each.course}
                     </Link>
@@ -208,24 +232,30 @@ function Header() {
             </div>
 
             <Link
-              onClick={() => { scrollToTop(); }}
-              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/universities' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/universities" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
               to="/universities"
             >
               Universities
             </Link>
 
             <Link
-              onClick={() => { scrollToTop(); }}
-              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/student-support' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/student-support" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
               to="/student-support"
             >
               Student Support
             </Link>
 
             <Link
-              onClick={() => { scrollToTop(); }}
-              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === '/about' ? 'active-link text-white font-semibold' : 'text-indigo-200 hover:text-white'}`}
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`nav-link-item relative px-4 py-2 rounded-lg transition-all duration-300 ${path === "/about" ? "active-link text-white font-semibold" : "text-indigo-200 hover:text-white"}`}
               to="/about"
             >
               About Us
@@ -252,22 +282,83 @@ function Header() {
             aria-label="Toggle Menu"
             onClick={toggleMenu}
           >
-            {isMobileMenuOpen ? <FaTimes className="text-xl" /> : <FaBars className="text-xl" />}
+            {isMobileMenuOpen ? (
+              <FaTimes className="text-xl" />
+            ) : (
+              <FaBars className="text-xl" />
+            )}
           </button>
         </div>
 
         {/* 🔹 Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-gradient-to-b from-purple-800 to-indigo-900 px-4 py-6 space-y-4">
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/" className="block text-white">Home</Link>
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/courses/regular" className="block text-white">Regular</Link>
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/courses/distance" className="block text-white">Distance Learning</Link>
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/universities" className="block text-white">Universities</Link>
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/student-support" className="block text-white">Student Support</Link>
-            <Link onClick={() => { scrollToTop(); toggleMenu(); }} to="/about" className="block text-white">About Us</Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/"
+              className="block text-white"
+            >
+              Home
+            </Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/courses/regular"
+              className="block text-white"
+            >
+              Regular
+            </Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/courses/distance"
+              className="block text-white"
+            >
+              Distance Learning
+            </Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/universities"
+              className="block text-white"
+            >
+              Universities
+            </Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/student-support"
+              className="block text-white"
+            >
+              Student Support
+            </Link>
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/about"
+              className="block text-white"
+            >
+              About Us
+            </Link>
 
             <button
-              onClick={() => { onChangeFormStatus(); toggleMenu(); }}
+              onClick={() => {
+                onChangeFormStatus();
+                toggleMenu();
+              }}
               className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-2 rounded-lg"
             >
               Enquiry Now
@@ -276,7 +367,7 @@ function Header() {
         )}
       </header>
     </>
-  )
+  );
 }
 
 export default Header

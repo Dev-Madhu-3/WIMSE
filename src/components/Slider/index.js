@@ -10,52 +10,58 @@ import { Fade } from 'react-awesome-reveal';
 const slides = [
   {
     id: 1,
-    image: "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1745747016/sanket-mishra-PTv_5DNvIBI-unsplash_bw04m0.jpg",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663892/sanket-mishra-PTv_5DNvIBI-unsplash_bw04m0_nq6bt3_1_optimized_200_eqswvn.jpg",
     heading: "Transform Your Future",
     text: "Discover world-class education opportunities that open doors to global careers.",
     buttonText: "Explore Programs",
-    buttonLink: "/courses/regular"
+    buttonLink: "/courses/regular",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663754/photo-1503676260728-1c00da094a0b_l54l0a.jpg",
     heading: "Flexible Learning Options",
     text: "Study at your own pace with our distance education programs designed for working professionals.",
     buttonText: "Learn More",
-    buttonLink: "/courses/distance"
+    buttonLink: "/courses/distance",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663730/photo-1524178232363-1fb2b075b655_oel7lt.jpg",
     heading: "Expert Guidance",
     text: "Our experienced counselors provide personalized advice to help you make informed decisions.",
     buttonText: "Meet Our Team",
-    buttonLink: "/about"
+    buttonLink: "/about",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663760/photo-1523240795612-9a054b0db644_veidql.jpg",
     heading: "Global Recognition",
     text: "Earn degrees from internationally recognized universities with accreditations worldwide.",
     buttonText: "View Universities",
-    buttonLink: "/universities"
+    buttonLink: "/universities",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663779/photo-1434030216411-0b793f4b4173_ihdb8w.jpg",
     heading: "Career Support",
     text: "Access our extensive network of employers and career development resources to accelerate your professional growth.",
     buttonText: "Student Support",
-    buttonLink: "/student-support"
+    buttonLink: "/student-support",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1766663785/photo-1507003211169-0a1dd7228f2d_eppxqu.jpg",
     heading: "Affordable Education",
     text: "Quality education doesn't have to break the bank. Explore our scholarship and financing options.",
     buttonText: "Financial Aid",
-    buttonLink: "/unavailable"
-  }
+    buttonLink: "/unavailable",
+  },
 ];
 
 const ImageSlider = () => {
