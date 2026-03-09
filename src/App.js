@@ -133,7 +133,7 @@ function App() {
       changeFormTitle("Enquire Now");
       changeApplyFormStatus(!openedApplyForm);
     }, 10000);
-  }, [openedApplyForm]);
+  }, []);
 
 
   const isNotFoundPage = location.pathname === "/not-found" || location.pathname === "/unavailable"
