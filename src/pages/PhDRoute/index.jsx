@@ -1,22 +1,37 @@
 import {
-  FaBuildingColumns, // was FaUniversity
-  FaBook,
+  FaBuildingColumns,
   FaGraduationCap,
   FaMicroscope,
-  FaAtom,
-  FaBrain,
   FaDna,
-  FaFlask,
-  FaChartLine,
   FaGlobe,
-  FaPenToSquare, // was FaEdit
-  FaFileLines, // was FaFileAlt
+  FaFileLines,
   FaDollarSign,
-  FaChalkboardUser, // was FaChalkboardTeacher
-  FaMagnifyingGlass, // was FaSearch
   FaClipboardList,
   FaUserGraduate,
+  FaPenToSquare,
+  FaFileSignature,
+  FaScroll,
+  FaFileCircleCheck,
+
+  // ✅ ADD THESE (FA6-safe replacements)
+  FaGears,
+  FaSeedling,
+  FaUsers,
+  FaBookOpen,
+  FaComputer,
+  FaFlask,
+  FaBrain,
+  FaChartLine,
+  FaChalkboardUser,
+  FaScaleBalanced,
+  FaHouseMedical,
+  FaBook,
+  FaEarthAsia,
+  FaRobot,
+  FaLanguage,
+  FaPalette,
 } from "react-icons/fa6";
+
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import AppContext from "../../Context/context";
@@ -37,103 +52,196 @@ const PhDRoute = () => {
   };
 
   // Dummy data for top universities
-  const topUniversities = [
-    {
-      id: 1,
-      name: "Stanford University",
-      location: "Stanford, USA",
-      imgUrl:
-        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 1,
-    },
-    {
-      id: 2,
-      name: "MIT",
-      location: "Cambridge, USA",
-      imgUrl:
-        "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 2,
-    },
-    {
-      id: 3,
-      name: "Harvard University",
-      location: "Cambridge, USA",
-      imgUrl:
-        "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 3,
-    },
-    {
-      id: 4,
-      name: "Oxford University",
-      location: "Oxford, UK",
-      imgUrl:
-        "https://images.unsplash.com/photo-1589923268447-56fd5dc034b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 4,
-    },
-    {
-      id: 5,
-      name: "Cambridge University",
-      location: "Cambridge, UK",
-      imgUrl:
-        "https://images.unsplash.com/photo-1598300042245-d891c7cf947d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 5,
-    },
-    {
-      id: 6,
-      name: "ETH Zurich",
-      location: "Zurich, Switzerland",
-      imgUrl:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ranking: 6,
-    },
-  ];
+  // const topUniversities = [
+  //   {
+  //     id: 1,
+  //     name: "Stanford University",
+  //     location: "Stanford, USA",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 1,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "MIT",
+  //     location: "Cambridge, USA",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 2,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Harvard University",
+  //     location: "Cambridge, USA",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 3,
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Oxford University",
+  //     location: "Oxford, UK",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1589923268447-56fd5dc034b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 4,
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Cambridge University",
+  //     location: "Cambridge, UK",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1598300042245-d891c7cf947d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 5,
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "ETH Zurich",
+  //     location: "Zurich, Switzerland",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //     ranking: 6,
+  //   },
+  // ];
 
   // Research areas
-  const researchAreas = [
-    {
-      id: 1,
-      name: "Computer Science",
-      icon: <FaAtom />,
-      color: "from-blue-500 to-cyan-600",
-      description: "AI, Machine Learning, Quantum Computing",
-    },
-    {
-      id: 2,
-      name: "Biomedical Sciences",
-      icon: <FaDna />,
-      color: "from-green-500 to-teal-600",
-      description: "Genomics, Neuroscience, Bioinformatics",
-    },
-    {
-      id: 3,
-      name: "Physics",
-      icon: <FaMicroscope />,
-      color: "from-purple-500 to-indigo-600",
-      description: "Quantum Physics, Astrophysics, Particle Physics",
-    },
-    {
-      id: 4,
-      name: "Chemistry",
-      icon: <FaFlask />,
-      color: "from-red-500 to-pink-600",
-      description: "Organic Chemistry, Materials Science, Nanotechnology",
-    },
-    {
-      id: 5,
-      name: "Neuroscience",
-      icon: <FaBrain />,
-      color: "from-yellow-500 to-orange-600",
-      description: "Cognitive Neuroscience, Neurobiology, Brain Imaging",
-    },
-    {
-      id: 6,
-      name: "Data Science",
-      icon: <FaChartLine />,
-      color: "from-indigo-500 to-blue-600",
-      description:
-        "Big Data Analytics, Statistical Modeling, Data Visualization",
-    },
-  ];
+const researchAreas = [
+  {
+    id: 1,
+    name: "Computer Science & AI",
+    icon: <FaComputer />,
+    color: "from-blue-500 to-cyan-600",
+    description: "AI, Machine Learning, Quantum Computing, Cybersecurity",
+  },
+  {
+    id: 2,
+    name: "Data Science & Analytics",
+    icon: <FaChartLine />,
+    color: "from-indigo-500 to-blue-600",
+    description: "Big Data, Statistical Modeling, Data Visualization",
+  },
+  {
+    id: 3,
+    name: "Engineering & Technology",
+    icon: <FaGears />,
+    color: "from-gray-500 to-slate-700",
+    description: "Civil, Mechanical, Electrical, Electronics & Communication",
+  },
+  {
+    id: 4,
+    name: "Physics",
+    icon: <FaMicroscope />,
+    color: "from-purple-500 to-indigo-600",
+    description: "Quantum Physics, Astrophysics, Particle Physics",
+  },
+  {
+    id: 5,
+    name: "Chemistry & Materials Science",
+    icon: <FaFlask />,
+    color: "from-red-500 to-pink-600",
+    description: "Organic Chemistry, Nanotechnology, Materials Science",
+  },
+  {
+    id: 6,
+    name: "Life Sciences & Biotechnology",
+    icon: <FaDna />,
+    color: "from-green-500 to-teal-600",
+    description: "Biotechnology, Microbiology, Biochemistry, Agriculture",
+  },
+  {
+    id: 7,
+    name: "Biomedical & Health Sciences",
+    icon: <FaHouseMedical />,
+    color: "from-rose-500 to-red-600",
+    description: "Genomics, Public Health, Nutrition, Clinical Research",
+  },
+  {
+    id: 8,
+    name: "Neuroscience & Psychology",
+    icon: <FaBrain />,
+    color: "from-yellow-500 to-orange-600",
+    description: "Cognitive Science, Clinical Psychology, Brain Imaging",
+  },
+  {
+    id: 9,
+    name: "Environmental & Earth Sciences",
+    icon: <FaEarthAsia />,
+    color: "from-green-600 to-lime-600",
+    description: "EVS, Climate Change, Geography, Sustainability",
+  },
+  {
+    id: 10,
+    name: "Agricultural & Food Sciences",
+    icon: <FaSeedling />,
+    color: "from-lime-500 to-green-700",
+    description: "Agriculture, Food Technology, Nutrition",
+  },
+  {
+    id: 11,
+    name: "Commerce & Management",
+    icon: <FaBuildingColumns />,
+    color: "from-blue-600 to-indigo-700",
+    description:
+      "Business Management, Economics, Tourism, Public Administration",
+  },
+  {
+    id: 12,
+    name: "Social Sciences",
+    icon: <FaUsers />,
+    color: "from-orange-500 to-amber-600",
+    description:
+      "Sociology, Political Science, History, Social Work, Philosophy",
+  },
+  {
+    id: 13,
+    name: "Arts & Humanities",
+    icon: <FaBookOpen />,
+    color: "from-pink-500 to-rose-600",
+    description:
+      "Languages, Literature, Journalism, Philosophy, Cultural Studies",
+  },
+  {
+    id: 14,
+    name: "Languages & Literature",
+    icon: <FaLanguage />,
+    color: "from-purple-500 to-pink-600",
+    description: "English, Hindi, Sanskrit, Regional Languages",
+  },
+  {
+    id: 15,
+    name: "Fine Arts & Performing Arts",
+    icon: <FaPalette />,
+    color: "from-fuchsia-500 to-purple-600",
+    description: "Music, Dance, Fine Arts, Visual Arts",
+  },
+  {
+    id: 16,
+    name: "Education & Teaching",
+    icon: <FaChalkboardUser />,
+    color: "from-teal-500 to-cyan-600",
+    description: "Education, Physical Education, Yoga",
+  },
+  {
+    id: 17,
+    name: "Law & Legal Studies",
+    icon: <FaScaleBalanced />,
+    color: "from-gray-700 to-gray-900",
+    description: "Law, Legal Research, Human Rights",
+  },
+  {
+    id: 18,
+    name: "Library & Information Science",
+    icon: <FaBook />,
+    color: "from-amber-500 to-yellow-600",
+    description: "Information Management, Archival Science",
+  },
+  {
+    id: 19,
+    name: "Robotics & Automation",
+    icon: <FaRobot />,
+    color: "from-cyan-500 to-blue-700",
+    description: "Robotics, Automation, Embedded Systems, IoT",
+  },
+];
 
   // PhD services
   const phdServices = [
@@ -169,13 +277,13 @@ const PhDRoute = () => {
 
   // PhD Roadmap steps
   // PhD Roadmap steps (12 steps total)
+
   const phdRoadmap = [
     {
       id: 1,
       step: "01",
       title: "Entrance Exam",
-      description:
-        "Qualify in national or university-level entrance examinations",
+      description: "Candidates must qualify the entrance test.",
       icon: <FaPenToSquare />,
       color: "from-blue-500 to-indigo-600",
     },
@@ -184,90 +292,91 @@ const PhDRoute = () => {
       step: "02",
       title: "Admission Form",
       description:
-        "Fill out and submit the application with required documents",
+        "Applicants need to fill and submit the official Ph.D. admission",
       icon: <FaFileLines />,
       color: "from-indigo-500 to-purple-600",
     },
     {
       id: 3,
       step: "03",
-      title: "Interview",
-      description: "Attend the personal interview with the selection committee",
-      icon: <FaMagnifyingGlass />,
+      title: "Entrance Exam",
+      description: "Admission and registration fees to confirm enrollment.",
+      icon: <FaDollarSign />,
       color: "from-purple-500 to-pink-600",
     },
     {
       id: 4,
       step: "04",
-      title: "Fee Payment",
-      description: "Complete the admission process by paying the required fees",
-      icon: <FaDollarSign />,
+      title: "Ph.D. Provisional Registration Letter",
+      description:
+        "The university issues a provisional registration letter after admission approval.",
+      icon: <FaFileSignature />,
       color: "from-pink-500 to-red-600",
     },
     {
       id: 5,
       step: "05",
       title: "Course Work",
-      description: "Complete the mandatory coursework and assignments",
+      description:
+        "coursework related to research methodology and subject specialization.",
       icon: <FaChalkboardUser />,
       color: "from-red-500 to-orange-600",
     },
     {
       id: 6,
       step: "06",
-      title: "Research Topic",
-      description:
-        "Select and finalize your research topic with supervisor guidance",
-      icon: <FaBook />,
+      title: "Synopsis Approval",
+      description: "Get approval for the research topic",
+      icon: <FaFileCircleCheck />,
       color: "from-orange-500 to-yellow-600",
     },
     {
       id: 7,
       step: "07",
-      title: "Literature Review",
+      title: "Synopsis Letter",
       description:
-        "Conduct comprehensive review of existing research in your field",
-      icon: <FaMagnifyingGlass />,
+        "candidate submits a synopsis outlining the proposed research topic.",
+      icon: <FaScroll />,
       color: "from-yellow-500 to-green-600",
     },
     {
       id: 8,
       step: "08",
-      title: "Data Collection",
-      description: "Gather and analyze data relevant to your research question",
-      icon: <FaChartLine />,
+      title: "research work",
+      description: "Provide a brief summary of research.",
+      icon: <FaBook />,
       color: "from-green-500 to-teal-600",
     },
     {
       id: 9,
       step: "09",
-      title: "Research Paper",
-      description: "Write and publish research papers based on your findings",
-      icon: <FaFileLines />,
+      title: "Progress Report",
+      description: "Submit periodic research progress reports.",
+      icon: <FaClipboardList />,
       color: "from-teal-500 to-cyan-600",
     },
     {
       id: 10,
       step: "10",
-      title: "Thesis Writing",
+      title: "Thesis General",
       description:
-        "Draft and refine your doctoral thesis with supervisor feedback",
-      icon: <FaPenToSquare />,
+        "Thesis General Publication(Two), Seminar Certificate (Two), Affidavit",
+      icon: <FaFileLines />,
       color: "from-cyan-500 to-blue-600",
     },
     {
       id: 11,
       step: "11",
-      title: "Thesis Submission",
-      description: "Submit your completed thesis for evaluation",
-      icon: <FaClipboardList />,
+      title: "Master Thesis Submission",
+      description: "Submit the final Ph.D. thesis.",
+      icon: <FaGraduationCap />,
       color: "from-blue-500 to-indigo-600",
     },
     {
       id: 12,
       step: "12",
-      title: "Defense & Award",
-      description: "Defend your thesis and receive your doctoral degree",
+      title: "Thesis General",
+      description: "Defend research in viva voce.",
       icon: <FaUserGraduate />,
       color: "from-indigo-500 to-purple-600",
     },
@@ -689,6 +798,6 @@ const PhDRoute = () => {
       </section>
     </main>
   );
-};;
+};
 
 export default PhDRoute;
