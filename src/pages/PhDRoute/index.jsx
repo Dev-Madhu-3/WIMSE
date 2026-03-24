@@ -1,5 +1,5 @@
 import {
-  FaBuildingColumns,
+  FaBuildingColumns, // was FaUniversity
   FaBook,
   FaGraduationCap,
   FaMicroscope,
@@ -9,6 +9,13 @@ import {
   FaFlask,
   FaChartLine,
   FaGlobe,
+  FaPenToSquare, // was FaEdit
+  FaFileLines, // was FaFileAlt
+  FaDollarSign,
+  FaChalkboardUser, // was FaChalkboardTeacher
+  FaMagnifyingGlass, // was FaSearch
+  FaClipboardList,
+  FaUserGraduate,
 } from "react-icons/fa6";
 import { useContext } from "react";
 import { motion } from "framer-motion";
@@ -160,6 +167,112 @@ const PhDRoute = () => {
     },
   ];
 
+  // PhD Roadmap steps
+  // PhD Roadmap steps (12 steps total)
+  const phdRoadmap = [
+    {
+      id: 1,
+      step: "01",
+      title: "Entrance Exam",
+      description:
+        "Qualify in national or university-level entrance examinations",
+      icon: <FaPenToSquare />,
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      id: 2,
+      step: "02",
+      title: "Admission Form",
+      description:
+        "Fill out and submit the application with required documents",
+      icon: <FaFileLines />,
+      color: "from-indigo-500 to-purple-600",
+    },
+    {
+      id: 3,
+      step: "03",
+      title: "Interview",
+      description: "Attend the personal interview with the selection committee",
+      icon: <FaMagnifyingGlass />,
+      color: "from-purple-500 to-pink-600",
+    },
+    {
+      id: 4,
+      step: "04",
+      title: "Fee Payment",
+      description: "Complete the admission process by paying the required fees",
+      icon: <FaDollarSign />,
+      color: "from-pink-500 to-red-600",
+    },
+    {
+      id: 5,
+      step: "05",
+      title: "Course Work",
+      description: "Complete the mandatory coursework and assignments",
+      icon: <FaChalkboardUser />,
+      color: "from-red-500 to-orange-600",
+    },
+    {
+      id: 6,
+      step: "06",
+      title: "Research Topic",
+      description:
+        "Select and finalize your research topic with supervisor guidance",
+      icon: <FaBook />,
+      color: "from-orange-500 to-yellow-600",
+    },
+    {
+      id: 7,
+      step: "07",
+      title: "Literature Review",
+      description:
+        "Conduct comprehensive review of existing research in your field",
+      icon: <FaMagnifyingGlass />,
+      color: "from-yellow-500 to-green-600",
+    },
+    {
+      id: 8,
+      step: "08",
+      title: "Data Collection",
+      description: "Gather and analyze data relevant to your research question",
+      icon: <FaChartLine />,
+      color: "from-green-500 to-teal-600",
+    },
+    {
+      id: 9,
+      step: "09",
+      title: "Research Paper",
+      description: "Write and publish research papers based on your findings",
+      icon: <FaFileLines />,
+      color: "from-teal-500 to-cyan-600",
+    },
+    {
+      id: 10,
+      step: "10",
+      title: "Thesis Writing",
+      description:
+        "Draft and refine your doctoral thesis with supervisor feedback",
+      icon: <FaPenToSquare />,
+      color: "from-cyan-500 to-blue-600",
+    },
+    {
+      id: 11,
+      step: "11",
+      title: "Thesis Submission",
+      description: "Submit your completed thesis for evaluation",
+      icon: <FaClipboardList />,
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      id: 12,
+      step: "12",
+      title: "Defense & Award",
+      description: "Defend your thesis and receive your doctoral degree",
+      icon: <FaUserGraduate />,
+      color: "from-indigo-500 to-purple-600",
+    },
+  ];
+
   // Animation variants
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -236,8 +349,97 @@ const PhDRoute = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              Ph.D.{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700">
+                Admissions
+              </span>
+            </motion.h2>
+
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-600 mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            ></motion.div>
+
+            <motion.p
+              className="text-lg text-gray-600 mt-6 max-w-3xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              Our Ph.D. program empowers scholars to explore new ideas and
+              create meaningful research. Take the next step in your academic
+              career and make a lasting impact.
+            </motion.p>
+          </div>
+
+          <div className="relative">
+            {/* Roadmap Timeline Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 transform -translate-y-1/2 z-0"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+              {phdRoadmap.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative"
+                >
+                  {/* Connecting Line for Mobile */}
+                  {index < phdRoadmap.length - 1 && (
+                    <div className="md:hidden absolute top-full left-1/2 w-0.5 h-8 bg-gradient-to-b from-purple-500 to-green-500 transform -translate-x-1/2"></div>
+                  )}
+
+                  <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 flex flex-col items-center text-center transform transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl h-full">
+                    <div
+                      className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center mb-4 text-white text-xl relative`}
+                    >
+                      {item.icon}
+                      <span className="absolute -top-2 -right-2 bg-white text-purple-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shadow-md">
+                        {item.step}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <motion.button
+              onClick={() => onTriggerApply("Apply Now")}
+              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-bold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.8 }}
+            >
+              APPLY NOW
+            </motion.button>
+          </div>
+        </div>
+      </section>
+
       {/* Top Universities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <motion.h2
@@ -310,10 +512,10 @@ const PhDRoute = () => {
             </Fade>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Research Areas Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <motion.h2
@@ -374,7 +576,7 @@ const PhDRoute = () => {
       </section>
 
       {/* PhD Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <motion.h2
@@ -431,7 +633,7 @@ const PhDRoute = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
@@ -487,6 +689,6 @@ const PhDRoute = () => {
       </section>
     </main>
   );
-};
+};;
 
 export default PhDRoute;

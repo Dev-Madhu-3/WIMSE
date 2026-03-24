@@ -313,6 +313,18 @@ function Header() {
             >
               Regular
             </Link>
+
+            <Link
+              onClick={() => {
+                scrollToTop();
+                toggleMenu();
+              }}
+              to="/courses/phd"
+              className="block text-white"
+            >
+              PhD
+            </Link>
+
             <Link
               onClick={() => {
                 scrollToTop();
