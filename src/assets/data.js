@@ -1,710 +1,904 @@
+import {
+  FaBuildingColumns,
+  FaGraduationCap,
+  FaMicroscope,
+  FaDna,
+  FaFileLines,
+  FaDollarSign,
+  FaClipboardList,
+  FaUserGraduate,
+  FaPenToSquare,
+  FaFileSignature,
+  FaScroll,
+  FaFileCircleCheck,
+  FaGears,
+  FaUsers,
+  FaBookOpen,
+  FaComputer,
+  FaChalkboardUser,
+  FaScaleBalanced,
+  FaHouseMedical,
+  FaBook,
+} from "react-icons/fa6";
+
 export const courses = [
-    {
-        course: "Master of Arts (M.A)",
-        icon: "M.A",
-        imageURL: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
-        specializations: [
-            {
-                name: 'Master of Arts in English',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Explore advanced literary analysis, linguistics, and critical theory while studying global literature across historical periods and genres.',
-                image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Hindi',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Dive into classical and modern Hindi literature, folklore, and sociolinguistics while developing advanced creative writing and translation skills.',
-                image: 'https://images.unsplash.com/photo-1588482364533-317a39d8c9f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Telugu',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Analyze Telugu literary heritage, from ancient inscriptions to contemporary works, with emphasis on cultural context and linguistic evolution.',
-                image: 'https://images.unsplash.com/photo-1596495577876-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Sanskrit',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Study Vedic texts, classical Sanskrit poetry, and philosophical treatises while mastering grammatical structures and historical linguistic developments.',
-                image: 'https://images.unsplash.com/photo-1596495578071-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Economics',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Investigate macroeconomic policies, econometric modeling, and developmental economics with practical applications in real-world financial systems.',
-                image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in History',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Examine global historical narratives, archival research methods, and historiography across ancient, medieval, and modern civilizations.',
-                image: 'https://images.unsplash.com/photo-1533689033436-5ad2e3d0ba8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Political Science',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Analyze comparative governance, political ideologies, and international diplomacy through case studies and policy simulations.',
-                image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a8929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Sociology',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Investigate social stratification, urbanization trends, and cultural anthropology using qualitative and quantitative research methodologies.',
-                image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Journalism and Mass Communication (JMC)',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Develop multimedia storytelling skills, ethical reporting practices, and strategic communication strategies for digital and traditional media platforms.',
-                image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Master of Arts in Human Resource Management (HRM)',
-                category: 'M.A',
-                duration: 2,
-                semester: 4,
-                description: 'Master organizational behavior, talent acquisition strategies, and labor law compliance for effective workforce development and management.',
-                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    },
-    {
-        course: "Master of Science (M.Sc)",
-        icon: "M.Sc",
-        imageURL: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
-        specializations: [
-            {
-                name: 'M.Sc Botany',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Investigate plant physiology, genetic engineering, and ecological conservation through laboratory experiments and field research projects.',
-                image: 'https://images.unsplash.com/photo-1494597564530-871a3e0d6c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Zoology',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Explore animal biodiversity, evolutionary biology, and wildlife conservation techniques using advanced microscopy and genomic tools.',
-                image: 'https://images.unsplash.com/photo-1544635902-8cbbf5d3349c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Microbiology',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Study pathogenic mechanisms, industrial fermentation processes, and antimicrobial resistance through hands-on laboratory experimentation.',
-                image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Physics',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Delve into quantum field theory, condensed matter physics, and astrophysics with computational modeling and experimental verification.',
-                image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Chemistry',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Master spectroscopic analysis, nanomaterial synthesis, and reaction mechanisms in organic/inorganic chemistry laboratories.',
-                image: 'https://images.unsplash.com/photo-1532187853781-51cdbb32c3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Mathematics',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Solve complex problems in differential equations, topology, and mathematical modeling for engineering and scientific applications.',
-                image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Statistics',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Apply Bayesian inference, machine learning algorithms, and multivariate analysis to solve real-world data challenges.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Food & Nutrition Science',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Research food chemistry, clinical nutrition, and sustainable diet planning for health promotion and disease prevention.',
-                image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Computer Science',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Develop expertise in cloud computing, neural networks, and cybersecurity through programming labs and capstone projects.',
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'M.Sc Psychology',
-                category: 'M.Sc',
-                duration: 2,
-                semester: 4,
-                description: 'Investigate cognitive neuroscience, psychometric testing, and therapeutic interventions through clinical observations and research studies.',
-                image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    },
-    {
-        course: "Master of Business Administration (MBA)",
-        icon: "MBA",
-        imageURL: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
-        specializations: [
-            {
-                name: 'MBA in Information Technology Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Integrate business strategy with IT infrastructure management, cybersecurity, digital transformation, and cloud solutions.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Data Science',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Bridge business analytics with AI-driven decision-making using Python, R, and big data tools.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Petroleum & Natural Gas Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Optimize energy sector operations through hydrocarbon economics, sustainable policies, and supply chain management.',
-                image: 'https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Systems and Operations Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Enhance business efficiency by optimizing logistics, supply chains, production systems, and process automation.',
-                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Healthcare Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Learn hospital administration, health policies, medical operations, and financial management for healthcare businesses.',
-                image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Entrepreneurship and Leadership',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Develop startup strategies, leadership skills, business innovation, risk management, and venture capital knowledge.',
-                image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in IT & FinTech',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Combine financial technology, blockchain, digital banking, cybersecurity, and AI-driven financial strategies.',
-                image: 'https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Artificial Intelligence & Machine Learning',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Master AI applications, deep learning, automation strategies, and intelligent business decision-making techniques.',
-                image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Agri-Business Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Learn agricultural economics, rural marketing, sustainable farming strategies, and agribusiness management policies.',
-                image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in International Business Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Understand global trade, cross-border marketing, foreign policies, and multinational business expansion strategies.',
-                image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Power Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Focus on energy efficiency, power generation, renewable energy, grid management, and policy-making strategies.',
-                image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Crude Oil and Gas Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Specialize in oil exploration, refining, supply chain logistics, sustainability, and petroleum industry management.',
-                image: 'https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in Infrastructure Management',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Plan and manage urban development, real estate, smart city projects, and large-scale infrastructure projects.',
-                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'MBA in BFSI (Banking, Financial Services, and Insurance)',
-                category: 'MBA',
-                duration: 2,
-                semester: 4,
-                description: 'Master banking regulations, risk analysis, financial markets, insurance management, and investment banking strategies.',
-                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    },
-    {
-        course: "Master of Computer Applications (MCA)",
-        icon: "MCA",
-        imageURL: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-        specializations: [
-            {
-                name: "MCA General",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Focuses on advanced computer science, programming, and application development. Graduates can pursue careers in software development, database management, and system analysis.",
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Computer Science & IT",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Focuses on software development, database management, and IT system design for real-world applications.",
-                image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Cyber Security",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Covers network security, encryption, ethical hacking, and digital forensics to protect systems from cyber threats.",
-                image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Data Analytics",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Emphasizes data visualization, predictive modeling, and analytical tools for informed decision-making.",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Data Science",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Focuses on machine learning, big data technologies, and data-driven insights for business and research.",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Artificial Intelligence",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Explores neural networks, natural language processing, and AI-driven automation systems.",
-                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Cloud Technology & Information Security",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Combines cloud platform management with cybersecurity protocols for secure data handling.",
-                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Artificial Intelligence & Machine Learning",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Specializes in AI algorithms, data modeling, and developing intelligent systems.",
-                image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                name: "MCA in Cloud Computing and DevOps",
-                category: "MCA",
-                duration: 2,
-                semester: 4,
-                description: "Focuses on cloud architecture, automation tools, and continuous development strategies for efficient software delivery.",
-                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-            }
-        ]
-    },
-    {
-        course: "Bachelor Degree",
-        icon: "B.D",
-        imageURL: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
-        specializations: [
-            {
-                name: 'Bachelor of Computer Applications (BCA)',
-                category: 'B.D',
-                duration: 3,
-                semester: 6,
-                description: 'Master programming languages like Java/Python while learning database management, web development, and software engineering principles.',
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'B.Com (Hons.)',
-                category: 'B.D',
-                duration: 3,
-                semester: 6,
-                description: 'Gain expertise in corporate accounting, financial markets, and e-commerce strategies with practical auditing experience.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Bachelor of Business Administration (BBA)',
-                category: 'B.D',
-                duration: 3,
-                semester: 6,
-                description: 'Develop leadership skills in operations management, digital marketing, and entrepreneurial ventures through case-based learning.',
-                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Bachelor of Arts (B.A.)',
-                category: 'B.D',
-                duration: 3,
-                semester: 6,
-                description: 'Engage with interdisciplinary studies in philosophy, performing arts, and global political systems through electives.',
-                image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Bachelor of Commerce (B.Com)',
-                category: 'B.D',
-                duration: 3,
-                semester: 6,
-                description: 'Study taxation laws, business ethics, and financial accounting systems for corporate and entrepreneurial careers.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    },
-    {
-        course: "Advanced Diploma Programs",
-        icon: "ADCP",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Advance_Diploma_Courses_xnwmji.png',
-        specializations: [
-            {
-                name: 'Advanced Diploma in Dietetics and Therapeutic Nutrition (ADDTN)',
-                category: 'ADCP',
-                duration: 1.5,
-                semester: 0,
-                description: 'Focuses on clinical nutrition and diet planning for therapeutic health outcomes. Ideal for careers in hospitals, wellness centers, and nutrition consultancy.',
-                image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Advanced Diploma in Drug Regulatory Affairs (ADDRA)',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers global drug approval processes, compliance, and regulatory policies. Prepares professionals for pharma regulatory roles across international markets.',
-                image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Online Advanced Diploma in Medical Record Techniques (ADMRT)',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Trains in health information management, coding, and electronic medical records. Designed for roles in hospitals, clinics, and healthcare administration.',
-                image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'General Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Develops leadership, strategic planning, and organizational skills. Suitable for aspirants seeking versatile management roles across industries.',
-                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Human Resource Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Teaches HR planning, recruitment, labor law, and performance management. Prepares professionals for effective people management in businesses.',
-                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Marketing Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers branding, advertising, consumer behavior, and market strategy. Equips learners to lead marketing efforts in competitive markets.',
-                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Finance Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Focuses on investment, budgeting, and financial analysis. Trains professionals for key roles in corporate finance and banking.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Retail Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Teaches store operations, visual merchandising, and customer service. Prepares learners for careers in the retail and FMCG sectors.',
-                image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Operations Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers logistics, supply chain, and production planning. Ideal for managing processes in manufacturing and service industries.',
-                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Banking & Finance Management',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Provides knowledge of banking operations, risk management, and financial instruments. Designed for careers in banking and finance sectors.',
-                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Information Technology',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers foundational IT skills, networks, databases, and systems. Suitable for beginners entering the tech industry.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Human Resource Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Explores advanced HR analytics, strategic HRM, and organizational development. Ideal for senior HR roles and consultants.',
-                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Marketing Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Delves into digital strategy, market analytics, and global marketing. Prepares professionals for leadership in marketing departments.',
-                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Finance Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers financial modeling, risk assessment, and global finance. Suited for CFO-track professionals and finance leaders.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Retail Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Offers deeper insight into retail analytics, supply chain integration, and retail marketing strategy. Best for managerial roles in retail.',
-                image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Operations Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Emphasizes lean management, Six Sigma, and enterprise operations. Tailored for professionals managing complex operational systems.',
-                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Banking & Finance Management – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Focuses on advanced financial regulations, investment banking, and credit analysis. Ideal for strategic finance professionals.',
-                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Information Technology – Advanced',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Provides advanced training in cloud computing, cybersecurity, and enterprise IT systems. Prepares candidates for senior IT roles.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Cyber Security Program',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers network security, ethical hacking, and data protection. Equips learners to secure IT systems against cyber threats.',
-                image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Application Development',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Teaches programming, software lifecycle, and user-centric app creation. Prepares learners for software development roles.',
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Internet of Things (IoT)',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Focuses on connected devices, sensors, and smart systems. Equips learners for careers in smart tech and automation.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Artificial Intelligence',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Covers machine learning, neural networks, and intelligent systems. Prepares professionals for AI-driven industry applications.',
-                image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Computer Applications',
-                category: 'ADCP',
-                duration: 0.5,
-                semester: 0,
-                description: 'Introduces key software tools for office productivity and data management. Useful for administrative and support roles.',
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'French Language (Online)',
-                category: 'ADCP',
-                duration: 0.5,
-                semester: 0,
-                description: 'Builds reading, writing, and speaking skills in French. Suitable for academic, travel, or international business use.',
-                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Naturopathy & Yoga Science',
-                category: 'ADCP',
-                duration: 1,
-                semester: 0,
-                description: 'Teaches natural healing, yoga techniques, and holistic wellness. Ideal for careers in alternative medicine and lifestyle coaching.',
-                image: 'https://images.unsplash.com/photo-1506629904605-7f3b0f4e3d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Foreign Language – Japanese',
-                category: 'ADCP',
-                duration: 0.5,
-                semester: 0,
-                description: 'Introduces basic grammar, vocabulary, and communication in Japanese. Useful for tourism, trade, and cultural exchange.',
-                image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    },
-    {
-        course: "Certificate Courses",
-        icon: "C&D",
-        imageURL: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Certificate_Cources_vlaxnh.png',
-        specializations: [
-            {
-                name: 'Certificate in Modern Persian Language (CMPL)',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'This course builds proficiency in reading, writing, and speaking Modern Persian. It enhances cultural understanding and communication skills for academic or professional use.',
-                image: 'https://images.unsplash.com/photo-1588482364533-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Diploma in Professional Arabic (DPA)',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'A comprehensive program in spoken and written Arabic, designed for professional and academic applications. It emphasizes grammar, vocabulary, and real-world usage.',
-                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Diploma in Bakery and Confectionery Technology (DBCT)',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'Covers theoretical and practical aspects of baking and confectionery. Prepares students for careers in commercial kitchens, bakeries, and food industries.',
-                image: 'https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Computerized Accounting',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'Focuses on modern accounting software tools like Tally and QuickBooks. Equips learners to manage financial records and reports digitally with precision and efficiency.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Advanced Digital Marketing',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'Teaches SEO, SEM, social media marketing, analytics, and content strategy. Ideal for those looking to excel in online branding and digital business growth.',
-                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Android App Development',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'Hands-on course covering Java/Kotlin, UI/UX, and Android Studio. Enables learners to design, develop, and deploy functional mobile applications on the Android platform.',
-                image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Certificate Course in GST',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'Offers practical knowledge of Goods and Services Tax law and procedures. Equips learners with skills in tax computation, filing returns, and GST compliance.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            },
-            {
-                name: 'Business and Finance Professional',
-                category: 'C&D',
-                duration: null,
-                semester: null,
-                description: 'The Business and Finance Professional certificate course provides foundational knowledge in accounting, financial planning, and business strategy. It equips learners with essential skills to make informed financial decisions and manage business operations effectively.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'
-            }
-        ]
-    }
-]
+  {
+    course: "Master of Arts (M.A)",
+    icon: "M.A",
+    imageURL:
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    specializations: [
+      {
+        name: "Master of Arts in English",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Explore advanced literary analysis, linguistics, and critical theory while studying global literature across historical periods and genres.",
+        image:
+          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Hindi",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Dive into classical and modern Hindi literature, folklore, and sociolinguistics while developing advanced creative writing and translation skills.",
+        image:
+          "https://images.unsplash.com/photo-1588482364533-317a39d8c9f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Telugu",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Analyze Telugu literary heritage, from ancient inscriptions to contemporary works, with emphasis on cultural context and linguistic evolution.",
+        image:
+          "https://images.unsplash.com/photo-1596495577876-7a6e3af3a0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Sanskrit",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Study Vedic texts, classical Sanskrit poetry, and philosophical treatises while mastering grammatical structures and historical linguistic developments.",
+        image:
+          "https://images.unsplash.com/photo-1596495578071-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Economics",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Investigate macroeconomic policies, econometric modeling, and developmental economics with practical applications in real-world financial systems.",
+        image:
+          "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in History",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Examine global historical narratives, archival research methods, and historiography across ancient, medieval, and modern civilizations.",
+        image:
+          "https://images.unsplash.com/photo-1533689033436-5ad2e3d0ba8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Political Science",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Analyze comparative governance, political ideologies, and international diplomacy through case studies and policy simulations.",
+        image:
+          "https://images.unsplash.com/photo-1507676184212-d03ab07a8929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Sociology",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Investigate social stratification, urbanization trends, and cultural anthropology using qualitative and quantitative research methodologies.",
+        image:
+          "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Journalism and Mass Communication (JMC)",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Develop multimedia storytelling skills, ethical reporting practices, and strategic communication strategies for digital and traditional media platforms.",
+        image:
+          "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Master of Arts in Human Resource Management (HRM)",
+        category: "M.A",
+        duration: 2,
+        semester: 4,
+        description:
+          "Master organizational behavior, talent acquisition strategies, and labor law compliance for effective workforce development and management.",
+        image:
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Master of Science (M.Sc)",
+    icon: "M.Sc",
+    imageURL:
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    specializations: [
+      {
+        name: "M.Sc Botany",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Investigate plant physiology, genetic engineering, and ecological conservation through laboratory experiments and field research projects.",
+        image:
+          "https://images.unsplash.com/photo-1494597564530-871a3e0d6c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Zoology",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Explore animal biodiversity, evolutionary biology, and wildlife conservation techniques using advanced microscopy and genomic tools.",
+        image:
+          "https://images.unsplash.com/photo-1544635902-8cbbf5d3349c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Microbiology",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Study pathogenic mechanisms, industrial fermentation processes, and antimicrobial resistance through hands-on laboratory experimentation.",
+        image:
+          "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Physics",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Delve into quantum field theory, condensed matter physics, and astrophysics with computational modeling and experimental verification.",
+        image:
+          "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Chemistry",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Master spectroscopic analysis, nanomaterial synthesis, and reaction mechanisms in organic/inorganic chemistry laboratories.",
+        image:
+          "https://images.unsplash.com/photo-1532187853781-51cdbb32c3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Mathematics",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Solve complex problems in differential equations, topology, and mathematical modeling for engineering and scientific applications.",
+        image:
+          "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Statistics",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Apply Bayesian inference, machine learning algorithms, and multivariate analysis to solve real-world data challenges.",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Food & Nutrition Science",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Research food chemistry, clinical nutrition, and sustainable diet planning for health promotion and disease prevention.",
+        image:
+          "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Computer Science",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Develop expertise in cloud computing, neural networks, and cybersecurity through programming labs and capstone projects.",
+        image:
+          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "M.Sc Psychology",
+        category: "M.Sc",
+        duration: 2,
+        semester: 4,
+        description:
+          "Investigate cognitive neuroscience, psychometric testing, and therapeutic interventions through clinical observations and research studies.",
+        image:
+          "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Master of Business Administration (MBA)",
+    icon: "MBA",
+    imageURL:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    specializations: [
+      {
+        name: "MBA in Information Technology Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Integrate business strategy with IT infrastructure management, cybersecurity, digital transformation, and cloud solutions.",
+        image:
+          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Data Science",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Bridge business analytics with AI-driven decision-making using Python, R, and big data tools.",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Petroleum & Natural Gas Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Optimize energy sector operations through hydrocarbon economics, sustainable policies, and supply chain management.",
+        image:
+          "https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Systems and Operations Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Enhance business efficiency by optimizing logistics, supply chains, production systems, and process automation.",
+        image:
+          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Healthcare Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Learn hospital administration, health policies, medical operations, and financial management for healthcare businesses.",
+        image:
+          "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Entrepreneurship and Leadership",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Develop startup strategies, leadership skills, business innovation, risk management, and venture capital knowledge.",
+        image:
+          "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in IT & FinTech",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Combine financial technology, blockchain, digital banking, cybersecurity, and AI-driven financial strategies.",
+        image:
+          "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Artificial Intelligence & Machine Learning",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Master AI applications, deep learning, automation strategies, and intelligent business decision-making techniques.",
+        image:
+          "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Agri-Business Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Learn agricultural economics, rural marketing, sustainable farming strategies, and agribusiness management policies.",
+        image:
+          "https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in International Business Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Understand global trade, cross-border marketing, foreign policies, and multinational business expansion strategies.",
+        image:
+          "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Power Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Focus on energy efficiency, power generation, renewable energy, grid management, and policy-making strategies.",
+        image:
+          "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Crude Oil and Gas Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Specialize in oil exploration, refining, supply chain logistics, sustainability, and petroleum industry management.",
+        image:
+          "https://images.unsplash.com/photo-1549388604-817d515a8f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in Infrastructure Management",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Plan and manage urban development, real estate, smart city projects, and large-scale infrastructure projects.",
+        image:
+          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MBA in BFSI (Banking, Financial Services, and Insurance)",
+        category: "MBA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Master banking regulations, risk analysis, financial markets, insurance management, and investment banking strategies.",
+        image:
+          "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Master of Computer Applications (MCA)",
+    icon: "MCA",
+    imageURL:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    specializations: [
+      {
+        name: "MCA General",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Focuses on advanced computer science, programming, and application development. Graduates can pursue careers in software development, database management, and system analysis.",
+        image:
+          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Computer Science & IT",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Focuses on software development, database management, and IT system design for real-world applications.",
+        image:
+          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Cyber Security",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Covers network security, encryption, ethical hacking, and digital forensics to protect systems from cyber threats.",
+        image:
+          "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Data Analytics",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Emphasizes data visualization, predictive modeling, and analytical tools for informed decision-making.",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Data Science",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Focuses on machine learning, big data technologies, and data-driven insights for business and research.",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Artificial Intelligence",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Explores neural networks, natural language processing, and AI-driven automation systems.",
+        image:
+          "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Cloud Technology & Information Security",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Combines cloud platform management with cybersecurity protocols for secure data handling.",
+        image:
+          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Artificial Intelligence & Machine Learning",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Specializes in AI algorithms, data modeling, and developing intelligent systems.",
+        image:
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "MCA in Cloud Computing and DevOps",
+        category: "MCA",
+        duration: 2,
+        semester: 4,
+        description:
+          "Focuses on cloud architecture, automation tools, and continuous development strategies for efficient software delivery.",
+        image:
+          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Bachelor Degree",
+    icon: "B.D",
+    imageURL:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    specializations: [
+      {
+        name: "Bachelor of Computer Applications (BCA)",
+        category: "B.D",
+        duration: 3,
+        semester: 6,
+        description:
+          "Master programming languages like Java/Python while learning database management, web development, and software engineering principles.",
+        image:
+          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "B.Com (Hons.)",
+        category: "B.D",
+        duration: 3,
+        semester: 6,
+        description:
+          "Gain expertise in corporate accounting, financial markets, and e-commerce strategies with practical auditing experience.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Bachelor of Business Administration (BBA)",
+        category: "B.D",
+        duration: 3,
+        semester: 6,
+        description:
+          "Develop leadership skills in operations management, digital marketing, and entrepreneurial ventures through case-based learning.",
+        image:
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Bachelor of Arts (B.A.)",
+        category: "B.D",
+        duration: 3,
+        semester: 6,
+        description:
+          "Engage with interdisciplinary studies in philosophy, performing arts, and global political systems through electives.",
+        image:
+          "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Bachelor of Commerce (B.Com)",
+        category: "B.D",
+        duration: 3,
+        semester: 6,
+        description:
+          "Study taxation laws, business ethics, and financial accounting systems for corporate and entrepreneurial careers.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Advanced Diploma Programs",
+    icon: "ADCP",
+    imageURL:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Advance_Diploma_Courses_xnwmji.png",
+    specializations: [
+      {
+        name: "Advanced Diploma in Dietetics and Therapeutic Nutrition (ADDTN)",
+        category: "ADCP",
+        duration: 1.5,
+        semester: 0,
+        description:
+          "Focuses on clinical nutrition and diet planning for therapeutic health outcomes. Ideal for careers in hospitals, wellness centers, and nutrition consultancy.",
+        image:
+          "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Advanced Diploma in Drug Regulatory Affairs (ADDRA)",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers global drug approval processes, compliance, and regulatory policies. Prepares professionals for pharma regulatory roles across international markets.",
+        image:
+          "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Online Advanced Diploma in Medical Record Techniques (ADMRT)",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Trains in health information management, coding, and electronic medical records. Designed for roles in hospitals, clinics, and healthcare administration.",
+        image:
+          "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "General Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Develops leadership, strategic planning, and organizational skills. Suitable for aspirants seeking versatile management roles across industries.",
+        image:
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Human Resource Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Teaches HR planning, recruitment, labor law, and performance management. Prepares professionals for effective people management in businesses.",
+        image:
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Marketing Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers branding, advertising, consumer behavior, and market strategy. Equips learners to lead marketing efforts in competitive markets.",
+        image:
+          "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Finance Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Focuses on investment, budgeting, and financial analysis. Trains professionals for key roles in corporate finance and banking.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Retail Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Teaches store operations, visual merchandising, and customer service. Prepares learners for careers in the retail and FMCG sectors.",
+        image:
+          "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Operations Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers logistics, supply chain, and production planning. Ideal for managing processes in manufacturing and service industries.",
+        image:
+          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Banking & Finance Management",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Provides knowledge of banking operations, risk management, and financial instruments. Designed for careers in banking and finance sectors.",
+        image:
+          "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Information Technology",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers foundational IT skills, networks, databases, and systems. Suitable for beginners entering the tech industry.",
+        image:
+          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Human Resource Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Explores advanced HR analytics, strategic HRM, and organizational development. Ideal for senior HR roles and consultants.",
+        image:
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Marketing Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Delves into digital strategy, market analytics, and global marketing. Prepares professionals for leadership in marketing departments.",
+        image:
+          "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Finance Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers financial modeling, risk assessment, and global finance. Suited for CFO-track professionals and finance leaders.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Retail Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Offers deeper insight into retail analytics, supply chain integration, and retail marketing strategy. Best for managerial roles in retail.",
+        image:
+          "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Operations Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Emphasizes lean management, Six Sigma, and enterprise operations. Tailored for professionals managing complex operational systems.",
+        image:
+          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Banking & Finance Management – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Focuses on advanced financial regulations, investment banking, and credit analysis. Ideal for strategic finance professionals.",
+        image:
+          "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Information Technology – Advanced",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Provides advanced training in cloud computing, cybersecurity, and enterprise IT systems. Prepares candidates for senior IT roles.",
+        image:
+          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Cyber Security Program",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers network security, ethical hacking, and data protection. Equips learners to secure IT systems against cyber threats.",
+        image:
+          "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Application Development",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Teaches programming, software lifecycle, and user-centric app creation. Prepares learners for software development roles.",
+        image:
+          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Internet of Things (IoT)",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Focuses on connected devices, sensors, and smart systems. Equips learners for careers in smart tech and automation.",
+        image:
+          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Artificial Intelligence",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Covers machine learning, neural networks, and intelligent systems. Prepares professionals for AI-driven industry applications.",
+        image:
+          "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Computer Applications",
+        category: "ADCP",
+        duration: 0.5,
+        semester: 0,
+        description:
+          "Introduces key software tools for office productivity and data management. Useful for administrative and support roles.",
+        image:
+          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "French Language (Online)",
+        category: "ADCP",
+        duration: 0.5,
+        semester: 0,
+        description:
+          "Builds reading, writing, and speaking skills in French. Suitable for academic, travel, or international business use.",
+        image:
+          "https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Naturopathy & Yoga Science",
+        category: "ADCP",
+        duration: 1,
+        semester: 0,
+        description:
+          "Teaches natural healing, yoga techniques, and holistic wellness. Ideal for careers in alternative medicine and lifestyle coaching.",
+        image:
+          "https://images.unsplash.com/photo-1506629904605-7f3b0f4e3d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Foreign Language – Japanese",
+        category: "ADCP",
+        duration: 0.5,
+        semester: 0,
+        description:
+          "Introduces basic grammar, vocabulary, and communication in Japanese. Useful for tourism, trade, and cultural exchange.",
+        image:
+          "https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+  {
+    course: "Certificate Courses",
+    icon: "C&D",
+    imageURL:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1760883721/Certificate_Cources_vlaxnh.png",
+    specializations: [
+      {
+        name: "Certificate in Modern Persian Language (CMPL)",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "This course builds proficiency in reading, writing, and speaking Modern Persian. It enhances cultural understanding and communication skills for academic or professional use.",
+        image:
+          "https://images.unsplash.com/photo-1588482364533-9160b6619270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Diploma in Professional Arabic (DPA)",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "A comprehensive program in spoken and written Arabic, designed for professional and academic applications. It emphasizes grammar, vocabulary, and real-world usage.",
+        image:
+          "https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Diploma in Bakery and Confectionery Technology (DBCT)",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "Covers theoretical and practical aspects of baking and confectionery. Prepares students for careers in commercial kitchens, bakeries, and food industries.",
+        image:
+          "https://images.unsplash.com/photo-1506220926022-cc5c12bdb1f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Computerized Accounting",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "Focuses on modern accounting software tools like Tally and QuickBooks. Equips learners to manage financial records and reports digitally with precision and efficiency.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Advanced Digital Marketing",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "Teaches SEO, SEM, social media marketing, analytics, and content strategy. Ideal for those looking to excel in online branding and digital business growth.",
+        image:
+          "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Android App Development",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "Hands-on course covering Java/Kotlin, UI/UX, and Android Studio. Enables learners to design, develop, and deploy functional mobile applications on the Android platform.",
+        image:
+          "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Certificate Course in GST",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "Offers practical knowledge of Goods and Services Tax law and procedures. Equips learners with skills in tax computation, filing returns, and GST compliance.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        name: "Business and Finance Professional",
+        category: "C&D",
+        duration: null,
+        semester: null,
+        description:
+          "The Business and Finance Professional certificate course provides foundational knowledge in accounting, financial planning, and business strategy. It equips learners with essential skills to make informed financial decisions and manage business operations effectively.",
+        image:
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      },
+    ],
+  },
+];
 
 // export const courses = [
 //     {
@@ -1415,96 +1609,132 @@ export const courses = [
 // ]
 
 export const studentsFeedback = [
-    {
-        name: "Vijay Kumar",
-        course: "BLisc",
-        rating: 4,
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577410/student1_ihjaba.jpg',
-        feedBack: 'My experience with WIMSE educational consultancy has been superb! I received comprehensive support for my education, and I\'m incredibly grateful for their guidance and resources.'
-    },
-    {
-        name: "Kishore",
-        course: "MBA",
-        rating: 5,
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577409/student2_eueple.jpg',
-        feedBack: 'Thanks to WIMSE Institute of Management and Science, I successfully completed my MBA. When I joined, my academic confidence was low, but WIMSE truly motivated me to excel in my studies.'
-    },
-    {
-        name: "Venkata Ramana",
-        course: "MCA",
-        rating: 4.5,
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896689/1712166883930_v4cqwv.jpg',
-        feedBack: 'The faculty at WIMSE Institute of Management and Science is incredibly helpful. Deciding to study at WIMSE has been one of my best decisions, and I strongly recommend this institute to everyone!'
-    },
-    {
-        name: "Pillimetla Surendra",
-        course: "Hotel Management",
-        rating: 4,
-        profilePicture: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896692/1708097843118_ikrato.jpg',
-        feedBack: 'WIMSE Institute of Management and Science played a crucial role in helping me complete my Hotel Management program. Their personalized support and excellent faculty made a significant difference in my academic journey.'
-    },
-    {
-        name: "Rina desai",
-        course: "BSc",
-        rating: 5,
-        profilePicture: '',
-        feedBack: 'My experience with WIMSE Institute of Management and Science has been outstanding. They provided all the necessary resources and support for my BSc program, exceeding all my expectations.'
-    },
-    {
-        name: "Jilani Basha",
-        course: "MA",
-        rating: 4.5,
-        profilePicture: '',
-        feedBack: 'WIMSE\'s guidance was invaluable for my MA studies. The structured approach and dedicated faculty helped me achieve my academic goals with confidence. Highly recommended for anyone seeking quality education.'
-    }
-]
+  {
+    name: "Vijay Kumar",
+    course: "BLisc",
+    rating: 4,
+    profilePicture:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577410/student1_ihjaba.jpg",
+    feedBack:
+      "My experience with WIMSE educational consultancy has been superb! I received comprehensive support for my education, and I'm incredibly grateful for their guidance and resources.",
+  },
+  {
+    name: "Kishore",
+    course: "MBA",
+    rating: 5,
+    profilePicture:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747577409/student2_eueple.jpg",
+    feedBack:
+      "Thanks to WIMSE Institute of Management and Science, I successfully completed my MBA. When I joined, my academic confidence was low, but WIMSE truly motivated me to excel in my studies.",
+  },
+  {
+    name: "Venkata Ramana",
+    course: "MCA",
+    rating: 4.5,
+    profilePicture:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896689/1712166883930_v4cqwv.jpg",
+    feedBack:
+      "The faculty at WIMSE Institute of Management and Science is incredibly helpful. Deciding to study at WIMSE has been one of my best decisions, and I strongly recommend this institute to everyone!",
+  },
+  {
+    name: "Pillimetla Surendra",
+    course: "Hotel Management",
+    rating: 4,
+    profilePicture:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1739896692/1708097843118_ikrato.jpg",
+    feedBack:
+      "WIMSE Institute of Management and Science played a crucial role in helping me complete my Hotel Management program. Their personalized support and excellent faculty made a significant difference in my academic journey.",
+  },
+  {
+    name: "Rina desai",
+    course: "BSc",
+    rating: 5,
+    profilePicture: "",
+    feedBack:
+      "My experience with WIMSE Institute of Management and Science has been outstanding. They provided all the necessary resources and support for my BSc program, exceeding all my expectations.",
+  },
+  {
+    name: "Jilani Basha",
+    course: "MA",
+    rating: 4.5,
+    profilePicture: "",
+    feedBack:
+      "WIMSE's guidance was invaluable for my MA studies. The structured approach and dedicated faculty helped me achieve my academic goals with confidence. Highly recommended for anyone seeking quality education.",
+  },
+];
 
 export const universitiesData = [
-    {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402535/Andhra-university-image_igje1c.webp',
-        website: ''
-    },
-    {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402597/Mangalayatan-DES.jpg_lgri5w.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402597/SGVU-DES.jpg_duz7x8.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402608/Jain-N.jpg_ivgi1p.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402547/mizoram-university-home_nqkoo5.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402604/LPU-N.jpg_u4u3q5.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Uttaranchal-DES.jpg_kielh9.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Manipal-DES.jpg_psym37.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Sikkim-Manipal-university-DES.jpg_smlo38.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/amity-university_vsqb6s.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/DPU-Home.jpg_ofm0ye.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/UPES-DES.jpg_zmfzad.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/vgu-for-home-page-DES_eaqasj.webp',
-        website: ''
-    }, {
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402601/Vignan-DES.jpg_z1i7ei.webp',
-        website: ''
-    }
-]
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402535/Andhra-university-image_igje1c.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402597/Mangalayatan-DES.jpg_lgri5w.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402597/SGVU-DES.jpg_duz7x8.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402608/Jain-N.jpg_ivgi1p.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402547/mizoram-university-home_nqkoo5.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402604/LPU-N.jpg_u4u3q5.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Uttaranchal-DES.jpg_kielh9.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Manipal-DES.jpg_psym37.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/Sikkim-Manipal-university-DES.jpg_smlo38.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402603/amity-university_vsqb6s.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/DPU-Home.jpg_ofm0ye.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/UPES-DES.jpg_zmfzad.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402602/vgu-for-home-page-DES_eaqasj.webp",
+    website: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740402601/Vignan-DES.jpg_z1i7ei.webp",
+    website: "",
+  },
+];
 
 // {
 //     qNo: 1,
@@ -1533,22 +1763,26 @@ export const universitiesData = [
 // },
 
 export const CoursesList = [
-    {
-        title: "DISTANCE EDUCATION",
-        about: "Pursue your degree with flexibility through our distance education programs, designed for working professionals and students seeking quality education from anywhere, with comprehensive support and accredited courses."
-    },
-    {
-        title: "REGULAR ADMISSIONS",
-        about: "Secure your spot in top universities with our expert guidance for regular admissions, offering personalized counseling, application support, and access to a wide range of academic programs."
-    },
-    {
-        title: "CREDIT TRANSFER SYSTEM",
-        about: "Seamlessly transfer your existing credits to continue your education at leading institutions, with our dedicated assistance ensuring a smooth transition and maximum credit recognition."
-    },
-    {
-        title: "ABROAD ADMISSIONS",
-        about: "Achieve your global education dreams with our abroad admissions service, providing end-to-end support for international university applications, visa processes, and cultural adaptation."
-    }
+  {
+    title: "DISTANCE EDUCATION",
+    about:
+      "Pursue your degree with flexibility through our distance education programs, designed for working professionals and students seeking quality education from anywhere, with comprehensive support and accredited courses.",
+  },
+  {
+    title: "REGULAR ADMISSIONS",
+    about:
+      "Secure your spot in top universities with our expert guidance for regular admissions, offering personalized counseling, application support, and access to a wide range of academic programs.",
+  },
+  {
+    title: "CREDIT TRANSFER SYSTEM",
+    about:
+      "Seamlessly transfer your existing credits to continue your education at leading institutions, with our dedicated assistance ensuring a smooth transition and maximum credit recognition.",
+  },
+  {
+    title: "ABROAD ADMISSIONS",
+    about:
+      "Achieve your global education dreams with our abroad admissions service, providing end-to-end support for international university applications, visa processes, and cultural adaptation.",
+  },
 ];
 // {
 //     title: "DEGREE PROGRAMES",
@@ -1602,171 +1836,244 @@ export const CoursesList = [
 //   ];
 
 export const studentsQandA = [
-    {
-        qNo: 6,
-        question: 'Can I continue my degree after 10 years?',
-        ans: <p><mark className="marked-text">Absolutely yes. You can continue your degree even after ten years because education sees no age.</mark> Moreover, to make this process easier for you, we have a dedicated team of professionals who will help you in your journey. Therefore, we can help you with your graduation.</p>
-    },
-    {
-        qNo: 7,
-        question: 'Is a distance degree valid for government jobs?',
-        ans: <p><mark className="marked-text">Yes, distance degrees are generally valid for government jobs in India, provided they are from a UGC-DEB approved university.</mark> The central government has made it clear that qualifications acquired through distance learning are recognized for employment purposes.</p>
-    },
-    {
-        qNo: 8,
-        question: 'Is Distance Graduation Valid or Not?',
-        ans: <p><mark className="marked-text">You can rest assured that distance education in India is valid. However, you need to make sure that your university is UGC-DEB-approved.</mark> Moreover, UGC-DEB-approved universities give you legitimate and fair degrees. Therefore, you can apply for government jobs as well.</p>
-    },
-    {
-        qNo: 9,
-        question: 'How do I attend classes online?',
-        ans: <p><mark className="marked-text">Classes are typically delivered through learning management systems (LMS) like Moodle, Google Classroom, or proprietary platforms.</mark> You’ll log in with your credentials to access lectures, readings, assignments, and participate in discussions.</p>
-    },
-    {
-        qNo: 10,
-        question: 'What is a Learning Management System (LMS)?',
-        ans: <p>An LMS is an online platform used to deliver courses, track progress, manage resources, conduct discussions, and facilitate communication between students and teachers.</p>
-    },
-    {
-        qNo: 11,
-        question: 'Will I receive a certificate after completing an online course?',
-        ans: <p><mark className="marked-text">Yes, most online courses offer a certificate of completion.</mark> Degree programs issue diplomas just like traditional programs — often without mentioning "online" on the certificate.</p>
-    },
-    {
-        qNo: 12,
-        question: 'What are MOOCs?',
-        ans: <p>MOOCs (Massive Open Online Courses) are free or low-cost courses offered by top universities or platforms (like Coursera, edX, FutureLearn) available to anyone around the world.</p>
-    }
+  {
+    qNo: 6,
+    question: "Can I continue my degree after 10 years?",
+    ans: (
+      <p>
+        <mark className="marked-text">
+          Absolutely yes. You can continue your degree even after ten years
+          because education sees no age.
+        </mark>{" "}
+        Moreover, to make this process easier for you, we have a dedicated team
+        of professionals who will help you in your journey. Therefore, we can
+        help you with your graduation.
+      </p>
+    ),
+  },
+  {
+    qNo: 7,
+    question: "Is a distance degree valid for government jobs?",
+    ans: (
+      <p>
+        <mark className="marked-text">
+          Yes, distance degrees are generally valid for government jobs in
+          India, provided they are from a UGC-DEB approved university.
+        </mark>{" "}
+        The central government has made it clear that qualifications acquired
+        through distance learning are recognized for employment purposes.
+      </p>
+    ),
+  },
+  {
+    qNo: 8,
+    question: "Is Distance Graduation Valid or Not?",
+    ans: (
+      <p>
+        <mark className="marked-text">
+          You can rest assured that distance education in India is valid.
+          However, you need to make sure that your university is
+          UGC-DEB-approved.
+        </mark>{" "}
+        Moreover, UGC-DEB-approved universities give you legitimate and fair
+        degrees. Therefore, you can apply for government jobs as well.
+      </p>
+    ),
+  },
+  {
+    qNo: 9,
+    question: "How do I attend classes online?",
+    ans: (
+      <p>
+        <mark className="marked-text">
+          Classes are typically delivered through learning management systems
+          (LMS) like Moodle, Google Classroom, or proprietary platforms.
+        </mark>{" "}
+        You’ll log in with your credentials to access lectures, readings,
+        assignments, and participate in discussions.
+      </p>
+    ),
+  },
+  {
+    qNo: 10,
+    question: "What is a Learning Management System (LMS)?",
+    ans: (
+      <p>
+        An LMS is an online platform used to deliver courses, track progress,
+        manage resources, conduct discussions, and facilitate communication
+        between students and teachers.
+      </p>
+    ),
+  },
+  {
+    qNo: 11,
+    question: "Will I receive a certificate after completing an online course?",
+    ans: (
+      <p>
+        <mark className="marked-text">
+          Yes, most online courses offer a certificate of completion.
+        </mark>{" "}
+        Degree programs issue diplomas just like traditional programs — often
+        without mentioning "online" on the certificate.
+      </p>
+    ),
+  },
+  {
+    qNo: 12,
+    question: "What are MOOCs?",
+    ans: (
+      <p>
+        MOOCs (Massive Open Online Courses) are free or low-cost courses offered
+        by top universities or platforms (like Coursera, edX, FutureLearn)
+        available to anyone around the world.
+      </p>
+    ),
+  },
 ];
 
 export const regulardashBoardData = [
-    {
-        title: 'Explore Top Colleges',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/explore-college.png_nqzmkw.webp',
-        description: 'Choose among the Best Colleges in India based on location, fees offered, counseling, and much more. Get admission'
-    }, {
-        title: 'courses',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/courses.png_lbu6th.webp',
-        description: 'Find out all your options among 300+ courses to choose from. Know all about the eligibility criteria, admission process, and more.'
-    }, {
-        title: 'Exams',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/exams.png_e4qh8k.webp',
-        description: 'One-stop solution for all your queries related to Competitive Exams for your dream college and Government Exams for your dream job'
-    }, {
-        title: 'Get Admission',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/admission.png_ksqodr.webp',
-        description: 'Wondering how to get admission to your dream college? Find all about eligibility criteria, admission process, application process, and more. e'
-    }, {
-        title: 'STUDY MBBS',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/study-mbbs.png_linzw0.webp',
-        description: 'Get complete information on all national and international Olympiads. For more information, inquire with us and get free suggestions.'
-    }, {
-        title: 'Student Credit Card',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/student-card.png_jwovu2.webp',
-        description: 'All you need to know about Student Credit CarYojanana. For more information, inquire with us and get free suggestions.'
-    },
-]
+  {
+    title: "Explore Top Colleges",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/explore-college.png_nqzmkw.webp",
+    description:
+      "Choose among the Best Colleges in India based on location, fees offered, counseling, and much more. Get admission",
+  },
+  {
+    title: "courses",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/courses.png_lbu6th.webp",
+    description:
+      "Find out all your options among 300+ courses to choose from. Know all about the eligibility criteria, admission process, and more.",
+  },
+  {
+    title: "Exams",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/exams.png_e4qh8k.webp",
+    description:
+      "One-stop solution for all your queries related to Competitive Exams for your dream college and Government Exams for your dream job",
+  },
+  {
+    title: "Get Admission",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/admission.png_ksqodr.webp",
+    description:
+      "Wondering how to get admission to your dream college? Find all about eligibility criteria, admission process, application process, and more. e",
+  },
+  {
+    title: "STUDY MBBS",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/study-mbbs.png_linzw0.webp",
+    description:
+      "Get complete information on all national and international Olympiads. For more information, inquire with us and get free suggestions.",
+  },
+  {
+    title: "Student Credit Card",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/student-card.png_jwovu2.webp",
+    description:
+      "All you need to know about Student Credit CarYojanana. For more information, inquire with us and get free suggestions.",
+  },
+];
 
 export const regularCountriesData = [
-    {
-        country: 'Kazakhstan',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp'
-    },
-    {
-        country: 'Kyrgyzstan',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/kazakistan.png_wvlqxj.webp'
-    }, {
-        country: 'Georgia',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/gorgia.png_be5yrb.webp'
-    },
-    {
-        country: 'Bangaldesh',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp'
-    }, {
-        country: 'Russia',
-        image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/russia.png_uteqx5.webp'
-    },
-
-]
-
-
+  {
+    country: "Kazakhstan",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp",
+  },
+  {
+    country: "Kyrgyzstan",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/kazakistan.png_wvlqxj.webp",
+  },
+  {
+    country: "Georgia",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/gorgia.png_be5yrb.webp",
+  },
+  {
+    country: "Bangaldesh",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486659/bangladesh.png_yziag2.webp",
+  },
+  {
+    country: "Russia",
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1747486658/russia.png_uteqx5.webp",
+  },
+];
 
 // Cloudinary optimization parameters
-const CLOUDINARY_OPTIMIZE = 'f_webp,q_auto,w_auto,dpr_auto';
+const CLOUDINARY_OPTIMIZE = "f_webp,q_auto,w_auto,dpr_auto";
 
 // Top cities array with optimized URLs
 export const topCities = [
-    {
-        title: 'Bengaluru',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879684/benguluru2_p83f5l.jpg`
-    },
-    {
-        title: 'Delhi',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/delhi_k9e4ud.jpg`
-    },
-    {
-        title: 'Mumbai',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879689/mumbai_azv16d.jpg`
-    },
-    {
-        title: 'Kolkata',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/kolkatha_vszibk.jpg`
-    },
-    {
-        title: 'Chennai',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/chennai_k7k681.jpg`
-    },
-    {
-        title: 'Hyderabad',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/hyd_ltr3gn.jpg`
-    },
-    {
-        title: 'Ahmedabad',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879683/ahmadabad_yzz2e2.jpg`
-    },
-    {
-        title: 'Pune',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Pune_x6ajvs.jpg`
-    },
-    {
-        title: 'Surat',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Surat_plzx8n.jpg`
-    },
-    {
-        title: 'Jaipur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/Jaipur_dsqxsr.jpg`
-    },
-    {
-        title: 'Lucknow',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879688/Lucknow_muc4io.jpg`
-    },
-    {
-        title: 'Kanpur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879687/Kanpur_dimh5d.jpg`
-    },
-    {
-        title: 'Nagpur',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Nagpur_asaem0.jpg`
-    },
-    {
-        title: 'Indore',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879674/Indore_optimized_450_dixeco.jpg`
-    },
-    {
-        title: 'Visakhapatnam',
-        imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879675/Vishakapatnam_optimized_450_pijcjl.jpg`
-    }
+  {
+    title: "Bengaluru",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879684/benguluru2_p83f5l.jpg`,
+  },
+  {
+    title: "Delhi",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/delhi_k9e4ud.jpg`,
+  },
+  {
+    title: "Mumbai",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879689/mumbai_azv16d.jpg`,
+  },
+  {
+    title: "Kolkata",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/kolkatha_vszibk.jpg`,
+  },
+  {
+    title: "Chennai",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879686/chennai_k7k681.jpg`,
+  },
+  {
+    title: "Hyderabad",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/hyd_ltr3gn.jpg`,
+  },
+  {
+    title: "Ahmedabad",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879683/ahmadabad_yzz2e2.jpg`,
+  },
+  {
+    title: "Pune",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Pune_x6ajvs.jpg`,
+  },
+  {
+    title: "Surat",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Surat_plzx8n.jpg`,
+  },
+  {
+    title: "Jaipur",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879685/Jaipur_dsqxsr.jpg`,
+  },
+  {
+    title: "Lucknow",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879688/Lucknow_muc4io.jpg`,
+  },
+  {
+    title: "Kanpur",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879687/Kanpur_dimh5d.jpg`,
+  },
+  {
+    title: "Nagpur",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879690/Nagpur_asaem0.jpg`,
+  },
+  {
+    title: "Indore",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879674/Indore_optimized_450_dixeco.jpg`,
+  },
+  {
+    title: "Visakhapatnam",
+    imgUrl: `https://res.cloudinary.com/dpk6qsn0e/image/upload/${CLOUDINARY_OPTIMIZE}/v1760879675/Vishakapatnam_optimized_450_pijcjl.jpg`,
+  },
 ];
-
-
-
 
 // export const coursesConstants = [
 //     "M.A","M.Sc","MBA","B.D"
 // ]
-
-
-
 
 // {
 //     name: 'Bachelor of Arts(B.A)',
@@ -1801,3 +2108,193 @@ export const topCities = [
 //     discription: 'A Bachelor of Computer Applications (BCA) is an undergraduate degree focused on computer science, programming.',
 //     image: 'https://res.cloudinary.com/dpk6qsn0e/image/upload/v1740403631/WhatsApp_Image_2025-02-24_at_18.31.12_cd951343_dpqgbe.jpg'
 // },
+
+export const researchAreas = [
+  {
+    id: 1,
+    name: "Commerce & Management Department",
+    icon: <FaBuildingColumns />,
+    color: "from-blue-600 to-indigo-700",
+    description:
+      "Commerce & Business Management, Economics, Business Management, Public Administration, Tourism Management, Hotel Management",
+  },
+  {
+    id: 2,
+    name: "Computer Science & IT Department",
+    icon: <FaComputer />,
+    color: "from-blue-500 to-cyan-600",
+    description:
+      "Computer Science Engineering, Electronics and Communication Engineering, Information-related fields",
+  },
+  {
+    id: 3,
+    name: "Engineering & Technology Department",
+    icon: <FaGears />,
+    color: "from-gray-500 to-slate-700",
+    description:
+      "Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronics and Communication Engineering",
+  },
+  {
+    id: 4,
+    name: "Science Department",
+    icon: <FaMicroscope />,
+    color: "from-purple-500 to-indigo-600",
+    description:
+      "Physics, Chemistry, Mathematics, Statistics, EVS (Environmental Science)",
+  },
+  {
+    id: 5,
+    name: "Life Sciences Department",
+    icon: <FaDna />,
+    color: "from-green-500 to-teal-600",
+    description:
+      "Biology, Botany, Zoology, Microbiology, Biotechnology, Biochemistry, Agriculture, Forensic Sciences",
+  },
+  {
+    id: 6,
+    name: "Social Sciences Department",
+    icon: <FaUsers />,
+    color: "from-orange-500 to-amber-600",
+    description:
+      "Sociology, Psychology, Clinical Psychology, Political Science, Geography, History, Social Work, Philosophy",
+  },
+  {
+    id: 7,
+    name: "Arts & Humanities Department",
+    icon: <FaBookOpen />,
+    color: "from-pink-500 to-rose-600",
+    description:
+      "English, Hindi, Sanskrit, Punjabi, Journalism & Mass Communication, Music, Fine Arts",
+  },
+  {
+    id: 8,
+    name: "Education & Teaching Department",
+    icon: <FaChalkboardUser />,
+    color: "from-teal-500 to-cyan-600",
+    description: "Education, Physical Education, Yoga",
+  },
+  {
+    id: 9,
+    name: "Law Department",
+    icon: <FaScaleBalanced />,
+    color: "from-gray-700 to-gray-900",
+    description: "Law",
+  },
+  {
+    id: 10,
+    name: "Home & Health Sciences Department",
+    icon: <FaHouseMedical />,
+    color: "from-rose-500 to-red-600",
+    description: "Home Science, Foods and Nutrition",
+  },
+  {
+    id: 11,
+    name: "Library & Information Science Department",
+    icon: <FaBook />,
+    color: "from-amber-500 to-yellow-600",
+    description: "Library & Information Science",
+  },
+];
+export const phdRoadmap = [
+  {
+    id: 1,
+    step: "01",
+    title: "Entrance Exam",
+    description: "Candidates must qualify the entrance test.",
+    icon: <FaPenToSquare />,
+    color: "from-blue-500 to-indigo-600",
+  },
+  {
+    id: 2,
+    step: "02",
+    title: "Admission Form",
+    description:
+      "Applicants need to fill and submit the official Ph.D. admission",
+    icon: <FaFileLines />,
+    color: "from-indigo-500 to-purple-600",
+  },
+  {
+    id: 3,
+    step: "03",
+    title: "Fee",
+    description: "Admission and registration fees to confirm enrollment.",
+    icon: <FaDollarSign />,
+    color: "from-purple-500 to-pink-600",
+  },
+  {
+    id: 4,
+    step: "04",
+    title: "Ph.D. Provisional Registration Letter",
+    description:
+      "The university issues a provisional registration letter after admission approval.",
+    icon: <FaFileSignature />,
+    color: "from-pink-500 to-red-600",
+  },
+  {
+    id: 5,
+    step: "05",
+    title: "Course Work",
+    description:
+      "coursework related to research methodology and subject specialization.",
+    icon: <FaChalkboardUser />,
+    color: "from-red-500 to-orange-600",
+  },
+  {
+    id: 6,
+    step: "06",
+    title: "Synopsis Approval",
+    description: "Get approval for the research topic",
+    icon: <FaFileCircleCheck />,
+    color: "from-orange-500 to-yellow-600",
+  },
+  {
+    id: 7,
+    step: "07",
+    title: "Synopsis Letter",
+    description:
+      "candidate submits a synopsis outlining the proposed research topic.",
+    icon: <FaScroll />,
+    color: "from-yellow-500 to-green-600",
+  },
+  {
+    id: 8,
+    step: "08",
+    title: "Research Work",
+    description: "Provide a brief summary of research.",
+    icon: <FaBook />,
+    color: "from-green-500 to-teal-600",
+  },
+  {
+    id: 9,
+    step: "09",
+    title: "Progress Report",
+    description: "Submit periodic research progress reports.",
+    icon: <FaClipboardList />,
+    color: "from-teal-500 to-cyan-600",
+  },
+  {
+    id: 10,
+    step: "10",
+    title: "Thesis General Publication",
+    description:
+      "Thesis General Publication(Two), Seminar Certificate (Two), Affidavit",
+    icon: <FaFileLines />,
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    id: 11,
+    step: "11",
+    title: "Master Thesis Submission",
+    description: "Submit the final Ph.D. thesis.",
+    icon: <FaGraduationCap />,
+    color: "from-blue-500 to-indigo-600",
+  },
+  {
+    id: 12,
+    step: "12",
+    title: "Viva",
+    description: "Defend research in viva voce.",
+    icon: <FaUserGraduate />,
+    color: "from-indigo-500 to-purple-600",
+  },
+];

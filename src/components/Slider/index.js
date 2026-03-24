@@ -1,13 +1,22 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Link } from 'react-router-dom';
-import { Fade } from 'react-awesome-reveal';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const slides = [
+  {
+    id: 7,
+    image:
+      "https://res.cloudinary.com/dpk6qsn0e/image/upload/v1774368813/group-colleagues-with-diploma_optimized_300_laii1y.jpg",
+    heading: "Unlock Your Research Potential with a PhD",
+    text: "Join world-class doctoral programs with expert guidance, advanced research facilities, and opportunities to publish, innovate, and lead in your field.",
+    buttonText: "Explore PhD Programs",
+    buttonLink: "/courses/phd",
+  },
   {
     id: 1,
     image:
