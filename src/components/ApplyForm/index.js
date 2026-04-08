@@ -1,13 +1,21 @@
 import { useContext, useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { MdClose, MdPerson, MdEmail, MdPhone, MdSchool, MdBook } from "react-icons/md";
+import {
+  MdClose,
+  MdPerson,
+  MdEmail,
+  MdPhone,
+  MdSchool,
+  MdBook,
+} from "react-icons/md";
 import AppContext from "../../Context/context";
 import { motion, AnimatePresence } from "framer-motion";
 import { RotatingLines } from "react-loader-spinner";
 
 const ApplyForm = () => {
   const [showSuccess, setShowSuccess] = useState(false);
-  const { openedApplyForm, changeApplyFormStatus, courseName,formTitle } = useContext(AppContext);
+  const { openedApplyForm, changeApplyFormStatus, courseName, formTitle } =
+    useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -42,49 +50,104 @@ const ApplyForm = () => {
     changeApplyFormStatus(!openedApplyForm);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    // Clear previous errors
+    setErrorMsg("");
+    setSubmissionError("");
+
     if (!formData.name.trim()) {
       setErrorMsg("Name is required");
-    } else if (!formData.email) {
+      return;
+    }
+
+    if (!formData.email) {
       setErrorMsg("Email is required");
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
       setErrorMsg("Email is invalid");
-    } else if (!formData.mobile) {
+      return;
+    }
+
+    if (!formData.mobile) {
       setErrorMsg("Mobile number is required");
-    } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
+      return;
+    }
+
+    if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
       setErrorMsg("Invalid mobile number");
-    } else {
+      return;
+    }
+
+    try {
       setFormLoading(true);
-      emailjs
-        .send(
+
+      // Run both requests in parallel
+      const [emailRes, apiRes] = await Promise.all([
+        emailjs.send(
           "service_5q5t3da",
           "template_b4x1p5g",
           formData,
-          "5WS9x7gFrYdpyQ_Vi"
-        )
-        .then(() => {
-          setFormLoading(false);
-          setShowSuccess(true);
-          // GTM push
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: "form_submit",
-            form_id: "apply_form",
-            form_name: "Apply Now Form",
-            form_destination: window.location.href,
-            form_length: Object.values(formData).join(" ").length,
-          });
-          setTimeout(() => {
-            setShowSuccess(false);
-            changeApplyFormStatus(!openedApplyForm);
-          }, 3500);
-        })
-        .catch((error) => {
-          setFormLoading(false);
-          console.error("Error sending email:", error);
-          setSubmissionError("Something went wrong. Please try again.");
-        });
+          "5WS9x7gFrYdpyQ_Vi",
+        ),
+        fetch(
+          "https://wimse.neomatrics.com/api/public/integrations/leads/google?tenant=wimse",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // "x-webhook-token":
+              //   "crm_bc7d3cad675f9ead10f757726982f13a08512e1393469267",
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              phone: formData.mobile,
+              message: formData.message || "",
+              campaign: "Apply Now Form",
+            }),
+          },
+        ),
+      ]);
+
+      const apiData = await apiRes.json();
+
+      if (!apiRes.ok) {
+        throw new Error(apiData?.error || "CRM lead submission failed");
+      }
+
+      setFormLoading(false);
+      setShowSuccess(true);
+
+      // GTM push
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "form_submit",
+        form_id: "apply_form",
+        form_name: "Apply Now Form",
+        form_destination: window.location.href,
+        form_length: Object.values(formData).join(" ").length,
+      });
+
+      // Optional: reset form
+      // setFormData({
+      //   name: "",
+      //   email: "",
+      //   mobile: "",
+      //   message: "",
+      // });
+
+      setTimeout(() => {
+        setShowSuccess(false);
+        changeApplyFormStatus(!openedApplyForm);
+      }, 3500);
+    } catch (error) {
+      setFormLoading(false);
+      console.error("Submission error:", error);
+      setSubmissionError("Something went wrong. Please try again.");
     }
   };
 
@@ -133,11 +196,26 @@ const ApplyForm = () => {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ delay: 0.2, type: "spring", stiffness: 500 }}
+                      transition={{
+                        delay: 0.2,
+                        type: "spring",
+                        stiffness: 500,
+                      }}
                       className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4"
                     >
-                      <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-8 h-8 text-green-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </motion.div>
                     <motion.h3
@@ -176,7 +254,7 @@ const ApplyForm = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-indigo-900/90"></div>
                   </div> */}
-                  
+
                   {/* Form Content */}
                   <div className="relative z-10 bg-white/90 backdrop-blur-sm p-8 rounded-2xl">
                     <motion.button
@@ -187,7 +265,7 @@ const ApplyForm = () => {
                     >
                       <MdClose className="text-2xl" />
                     </motion.button>
-                    
+
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -195,12 +273,12 @@ const ApplyForm = () => {
                       className="text-center mb-8"
                     >
                       <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                            {formTitle}
-                            {console.log("formTitle",formTitle)}
+                        {formTitle}
+                        {console.log("formTitle", formTitle)}
                       </h2>
                       <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
                     </motion.div>
-                    
+
                     <form onSubmit={sendEmail} className="space-y-5">
                       {/* Name Field */}
                       <motion.div
@@ -223,7 +301,7 @@ const ApplyForm = () => {
                           className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                         />
                       </motion.div>
-                      
+
                       {/* Mobile Field */}
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -245,7 +323,7 @@ const ApplyForm = () => {
                           className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                         />
                       </motion.div>
-                      
+
                       {/* Email Field */}
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -267,7 +345,7 @@ const ApplyForm = () => {
                           className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                         />
                       </motion.div>
-                      
+
                       {/* Course Field */}
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -288,7 +366,7 @@ const ApplyForm = () => {
                           className="w-full pl-10 pr-4 py-3 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                         />
                       </motion.div>
-                      
+
                       {/* Mode Field */}
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -310,15 +388,28 @@ const ApplyForm = () => {
                           <option value="distance">Distance</option>
                           <option value="online">Online</option>
                           <option value="regular">Regular</option>
-                          <option value="credit transfer">Credit Transfer</option>
+                          <option value="credit transfer">
+                            Credit Transfer
+                          </option>
                         </select>
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                          <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <svg
+                            className="w-5 h-5 text-gray-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
                           </svg>
                         </div>
                       </motion.div>
-                      
+
                       {/* Error Messages */}
                       <AnimatePresence>
                         {(errorMsg || submissionError) && (
@@ -332,7 +423,7 @@ const ApplyForm = () => {
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      
+
                       {/* Submit Button */}
                       <motion.button
                         whileHover={{ scale: 1.02 }}

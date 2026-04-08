@@ -96,7 +96,7 @@ const StudentSupport = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here you would typically send the form data to your backend
-        console.log('Form submitted:', formData);
+        // console.log('Form submitted:', formData);
         alert('Your support request has been submitted. We will contact you soon!');
         setFormData({
             name: '',

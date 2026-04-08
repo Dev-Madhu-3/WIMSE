@@ -20,7 +20,7 @@ const PhDRoute = () => {
 
   const onTriggerApply = (name) => {
     changeApplyFormStatus(!openedApplyForm);
-    updateCourceName("");
+    updateCourceName("PhD Consultation");
     changeFormTitle(name);
   };
 
