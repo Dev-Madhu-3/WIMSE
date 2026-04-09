@@ -6,6 +6,10 @@ import AppContext from '../../Context/context'
 import { Fade } from "react-awesome-reveal"
 import { RotatingLines } from 'react-loader-spinner'
 
+const CRM_LEADS_URL = "https://wimse.neomatrics.com/api/public/integrations/leads/google?tenant=wimse"
+const CRM_WEBHOOK_TOKEN = "crm_37bbb3499e007ede9cc6f4049d28c6b7bb74573424400b8e"
+const CRM_LEADS_REQUEST_URL = `${CRM_LEADS_URL}&token=${encodeURIComponent(CRM_WEBHOOK_TOKEN)}`
+
 const ApplyForm = () => {
     const [showSuccess, setShowSuccess] = useState(false)
     const { openedApplyForm, changeApplyFormStatus, courseName } = useContext(AppContext)
@@ -44,7 +48,7 @@ const ApplyForm = () => {
         changeApplyFormStatus(!openedApplyForm)
     }
 
-    const sendEmail = (e) => {
+        const sendEmail = async (e) => {
         e.preventDefault()
         if (!formData.name.trim()) {
             setErrorMsg('Name is required')
@@ -59,38 +63,57 @@ const ApplyForm = () => {
         } else if (!formData.course.trim()) {
             setErrorMsg('Course name is required')
         } else {
-            setFormLoading(true)
-            emailjs
-                .send(
-                    "service_5q5t3da",  // Your EmailJS Service ID
-                    "template_b4x1p5g", // Your EmailJS Template ID
-                    formData,
-                    "5WS9x7gFrYdpyQ_Vi"  // Your EmailJS Public Key
-                )
-                .then((response) => {
-                    setFormLoading(false)
-                    setShowSuccess(true)
+            try {
+                setFormLoading(true)
 
-                    // ✅ Push GTM Custom Event
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        event: "form_submit", // Custom event name
-                        form_id: "apply_form",
-                        form_name: "Apply Now Form",
-                        form_destination: window.location.href,
-                        form_length: Object.values(formData).join(" ").length
-                    });
+                const crmPayload = {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.mobile,
+                    course: formData.course,
+                    mode: formData.mode,
+                    campaign: "Apply Now Form"
+                }
 
-                    setTimeout(() => {
-                        setShowSuccess(false)
-                        changeApplyFormStatus(!openedApplyForm)
-                    }, 3500)
-                })
-                .catch((error) => {
-                    setFormLoading(false)
-                    console.error("Error sending email:", error)
-                    setSubmissionError("Something went wrong. Please try again.") // Show inline error
-                })
+                await Promise.all([
+                    emailjs.send(
+                        "service_5q5t3da",
+                        "template_b4x1p5g",
+                        formData,
+                        "5WS9x7gFrYdpyQ_Vi"
+                    ),
+                    fetch(CRM_LEADS_REQUEST_URL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: {
+                            "Content-Type": "text/plain;charset=UTF-8"
+                        },
+                        body: JSON.stringify(crmPayload)
+                    })
+                ])
+
+                setFormLoading(false)
+                setShowSuccess(true)
+
+                // Push GTM custom event
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: "form_submit",
+                    form_id: "apply_form",
+                    form_name: "Apply Now Form",
+                    form_destination: window.location.href,
+                    form_length: Object.values(formData).join(" ").length
+                });
+
+                setTimeout(() => {
+                    setShowSuccess(false)
+                    changeApplyFormStatus(!openedApplyForm)
+                }, 3500)
+            } catch (error) {
+                setFormLoading(false)
+                console.error("Submission error:", error)
+                setSubmissionError("Something went wrong. Please try again.")
+            }
         }
     }
 
@@ -171,3 +194,4 @@ const ApplyForm = () => {
 }
 
 export default ApplyForm
+

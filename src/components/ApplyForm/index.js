@@ -12,6 +12,13 @@ import AppContext from "../../Context/context";
 import { motion, AnimatePresence } from "framer-motion";
 import { RotatingLines } from "react-loader-spinner";
 
+const CRM_LEADS_URL =
+  "https://wimse.neomatrics.com/api/public/integrations/leads/google?tenant=wimse";
+const CRM_WEBHOOK_TOKEN = "crm_37bbb3499e007ede9cc6f4049d28c6b7bb74573424400b8e";
+const CRM_LEADS_REQUEST_URL = `${CRM_LEADS_URL}&token=${encodeURIComponent(
+  CRM_WEBHOOK_TOKEN,
+)}`;
+
 const ApplyForm = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const { openedApplyForm, changeApplyFormStatus, courseName, formTitle } =
@@ -85,39 +92,32 @@ const ApplyForm = () => {
     try {
       setFormLoading(true);
 
-      // Run both requests in parallel
-      const [emailRes, apiRes] = await Promise.all([
+      const crmPayload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.mobile,
+        course: formData.course,
+        mode: formData.mode,
+        campaign: "Apply Now Form",
+      };
+
+      // Use a CORS-safe request for browser clients.
+      await Promise.all([
         emailjs.send(
           "service_5q5t3da",
           "template_b4x1p5g",
           formData,
           "5WS9x7gFrYdpyQ_Vi",
         ),
-        fetch(
-          "https://wimse.neomatrics.com/api/public/integrations/leads/google?tenant=wimse",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              // "x-webhook-token":
-              //   "crm_bc7d3cad675f9ead10f757726982f13a08512e1393469267",
-            },
-            body: JSON.stringify({
-              name: formData.name,
-              email: formData.email,
-              phone: formData.mobile,
-              message: formData.message || "",
-              campaign: "Apply Now Form",
-            }),
+        fetch(CRM_LEADS_REQUEST_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=UTF-8",
           },
-        ),
+          body: JSON.stringify(crmPayload),
+        }),
       ]);
-
-      const apiData = await apiRes.json();
-
-      if (!apiRes.ok) {
-        throw new Error(apiData?.error || "CRM lead submission failed");
-      }
 
       setFormLoading(false);
       setShowSuccess(true);
